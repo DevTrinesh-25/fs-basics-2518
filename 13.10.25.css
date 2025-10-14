@@ -1,0 +1,21 @@
+h1{
+    color: aqua;
+    
+}
+
+p{
+    color: coral;
+}
+
+div{
+    border: 2px solid black;
+}
+
+#h1{
+    color: chartreuse;
+}
+
+.header{
+    color:darkseagreen;
+    font-size:20px;
+}

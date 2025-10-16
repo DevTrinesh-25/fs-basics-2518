@@ -1,0 +1,555 @@
+9-10-25
+========
+
+IDE (Integrated Development Environment) - Provides all the features required to build a web application.
+
+    Link to download vsc: https://code.visualstudio.com/download
+
+        In windows - .exe - Double click on it. -> Install -> Next -> Finish
+
+2. Create a folder in file system
+
+    Open the folder -> File -> Open folder -> select folder -> open
+
+3. Technologies we learn as part of this batch FS-Basics-2518 11 AM (Frontend)
+
+    > HTML (Hyper Text Markup Language)
+
+    > CSS (Cascading Style Sheets)
+
+    > Javascript
+
+    > Bootstrap
+
+    React-25**-**
+
+    ES6
+
+    Typescript
+
+    React Js (Web) / React Native (Mobile)
+
+4. Develop web application/website. 
+
+    -> Design as a input -> Develop web app.
+
+    UI / UX Designer 
+
+        UI - User Interface
+
+        UX - User Experience
+
+    Tool -> Mockup -> Figma / Adobe XD
+
+    BA - Business Analyst -> Wireframes & Documents
+
+SDLC
+
+    Client -> Business Analyst -> UI / UX Designer -> Developers -> DevOps Engineer () -> Testing QA -> Customers
+
+HTML: 
+
+> It consists of predefined Markup tags/elements. -> To display the information (Text/Audio/Video/Image).
+
+CSS: (Cascading Style Sheets)
+
+-> To add styles & design layouts for HTML Tags.
+
+    Welcome to HTML Classes.
+
+Javascript: It's a programming Language
+
+    -> It adds functionality to HTML Tag.
+
+        Create an account
+
+Bootstrap:
+
+    -> To reduces the development time.
+
+        -> Predefined Components (Functionalities)
+
+HTML & CSS - Website - Static behaviour.
+
+> It consists of predefined markup tags.
+
+    Syntax: Tag
+
+        <tagName>Content</tagName>
+
+        <tagName> - Starting tag
+
+        </tagName> - Ending tag
+
+> Basic syntax of every HTML File:
+
+    <html>
+
+        <head>
+
+        </head>
+
+        <body>
+
+        </body>
+
+    </html>
+
+    File Explorer -> Search for the file -> Double click on the file -> O/p will be displayed automatically in browser.
+
+    > Header Tags
+
+        (h1 - h6) - Difference b/w each header tag is font size.
+
+        Syntax:
+
+            <h1>Content</h1>
+
+            <h2>Content</h2>
+
+            <h3>Content</h3>
+
+            <h4>Content</h4>
+
+            <h5>Content</h5>
+
+            <h6>Content</h6>
+
+Task: Setup vsc
+
+    Create a html file.
+
+10-10-25
+========
+
+   Headers
+
+Paragraph: For displaying paragraph in web page.
+
+    Syntax:
+
+        <p>Content</p>
+
+HTML Complier: Complier takes input from user, executes it and displays output in browser.
+
+VSC - Extensions - Live Server
+
+    > It monitors the file changes, and when file is changed it will automatically refresh the web page.
+
+        In a laptop, we want to run multiple applications.
+
+            - Ports (0 - 65***)
+
+            27017
+
+            300
+
+    > http://127.0.0.1:5500/
+
+> Image: 
+
+    Syntax:
+
+        <img src="filename.ext" alt="Image Name">
+
+            src - Source
+
+            alt - Alternate
+
+> Attribute: It adds additional functionality to tag.
+
+    Syntax:
+
+        <tagName attribute1="value1" attribute2="value2" attribute3=value3  attributeN=valueN>Content</tagName>
+
+> Anchor: Navigate from one web page to another web page.
+
+    Syntax:
+
+        <a href="filename.html">Content</a>
+
+            href - Hyper Reference
+
+> Favicon: (Needs to added in head tag of html file)
+
+    <link rel="icon" href="filename.ext">
+
+> Title: (Needs to added in head tag of html file)
+
+    Syntax:
+
+    <title>Content</title>
+
+> Button: 
+
+    Syntax:
+
+        <button>Content</button>
+
+> Division: Used to group set of HTML Tags into one unit. Used to divide the web page into different parts.
+
+    Syntax:
+
+        <div>
+
+        </div>     
+
+13-10-25
+========
+
+CSS (Cascading Style Sheets): CSS is used for applying styles to html tags.
+
+Stylesheets
+
+1. Inline Stylesheet (In html tag)
+
+2. Internal Stylesheet (Head tag)
+
+3. External Stylesheet (Seperate file) - Projects
+
+External Stylesheet: Writing css in a seperate file.
+
+> CSS comes in form of predefined properties (Property-value pair)
+
+    Syntax:
+
+        property: value;
+
+        margin
+
+        padding
+
+        color: green | yellow | red 
+
+        font-size: 14px | 16px | 20px;
+
+        font-weight: normal | bold | 100 - 600;
+
+        text-align: left | center | right;
+
+        font-family: Arial | Time New Roman
+
+            #0070D2;
+
+External Stylesheet:
+
+    filename.css
+
+    selector {
+
+        property1: value1;
+
+        property2: value2;
+
+        property3: value;
+
+        propertyN: valuenN;
+
+    }
+
+    <head>
+
+        <link rel="stylesheet" href="filename.css">
+
+    </head>
+
+    100 MB
+
+    300 MB
+
+> Id: It is used to uniquely refer a html tag.
+
+    Syntax:
+
+        <tagName id="idname"></tagName>
+
+        #idname {
+
+            property1: value1;
+
+            property2: value2;
+
+            property3: value;
+
+            propertyN: valuenN;
+
+        }
+
+> Class: It is used to refer a group of html tags.
+
+    Syntax:
+
+        <tagName class="classname1 classname2 classname3"></tagName>
+
+        .idname {
+
+            property1: value1;
+
+            property2: value2;
+
+            property3: value;
+
+            propertyN: valuenN;
+
+        }
+
+Note: Id & Class name should be in lowercase. Every word should be seperated by (-) Hypen.
+
+> Tag: It is used to refer all the html tags.
+
+14-10-25
+========
+
+Colors:
+
+    green | blueviolet | red | white
+
+Color Codes: (Given by designer)
+
+1. Hex Codes
+
+2. RGB (Red Green Blue)
+
+3. HSL (Hue Saturation Lightness)
+
+1. Hex Codes: Hexa Decimal Format
+
+    Syntax:
+
+        #000000 - #FFFFFF
+
+            First two values - Red Color
+
+            Second two values - Green Color
+
+            Third two values - Blue Color
+
+    Eg.
+
+        #001E4A
+
+        color: #001E4A;
+
+2. RGB:
+
+    R - Red
+
+    G - Green
+
+    B - Blue
+
+        Syntax:
+
+            rgb(0, 0, 0) - rgb(255, 255, 255);
+
+            rgba(0, 0, 0, 0) - rgba(255, 255, 255, 1);
+
+            a - Opacity
+
+3. HSL
+
+    H - Hue - Specifies the intensity of the color. - (0 - 360)
+
+        0 - 120 - Red
+
+        121 - 240 - Green
+
+        240 - 360 - Blue
+
+    S - Saturation - If saturation is more, color will be more brighter. (0% - 100%)
+
+    L - Lightness - If lightness is more, color will be more lighter. (0% - 100%)
+
+    Syntax:
+
+        color: hsl(0, 0%, 0%);
+
+> Reference to install Color Picker chrome extensions (Used for picking color codes)
+
+    https://chromewebstore.google.com/category/extensions
+
+> Division: Used to group multiple html tags into one unit.
+
+    Syntax:
+
+        <div>
+
+            // Multiple HTML Tags...
+
+        </div>
+
+> Border: 
+
+    Syntax:
+
+        border: border-width border-style border-color;
+
+        border-width: 1px | 3px;
+
+        border-style: solid | dashed | dotted;
+
+        border-color: colorName | colorCode;
+
+        border-direction: border-width border-style border-color;
+
+    Eg.
+
+        border: 1px solid black;
+
+        border-left: 1px solid black;
+
+        border-right: 1px solid black;
+
+        border-top: 1px solid black;
+
+        border-bottom: 1px solid black;
+
+> Border Radius: Applies rounded corners for html element.
+
+    Syntax:
+
+        border-radius: 4px;
+
+Task:  https://preview.colorlib.com/theme/raptor/
+
+    Design recent blog portion of raptor website.
+
+    https://preview.colorlib.com/theme/raptor/images/image_1.jpg.webp
+
+    https://preview.colorlib.com/theme/raptor/images/image_2.jpg.webp
+
+    https://preview.colorlib.com/theme/raptor/images/image_3.jpg.webp
+
+15-10-25
+========
+
+Padding: Used to apply empty space around the content.
+
+    Syntax:
+
+        padding: 10px;
+
+        padding: top-bottom left-right;
+
+        padding: top right bottom left;
+
+        padding-left: 10px;
+
+        padding-right: 10px;
+
+        padding-top: 10px;
+
+        padding-bottom: 10px;
+
+Margin: Applies empty around the border.
+
+    Syntax:
+
+        margin: 10px;
+
+        margin: top-bottom left-right;
+
+        margin: top right bottom left;
+
+        margin-left: 10px;
+
+        margin-right: 10px;
+
+        margin-top: 10px;
+
+        margin-bottom: 10px;
+
+Height of Tag: margin-top + border-top + padding-top + height + padding-bottom + border-bottom + margin-bottom
+
+Width of Tag: margin-left + border-left + padding-left + width + padding-right + border-right + margin-right
+
+Outline: Applies border around the border:
+
+    Syntax:
+
+        outline: outline-width outline-style outline-color;
+
+Fontawesome library link:
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+Fontawesome library icons link:
+
+    https://fontawesome.com/icons
+
+Task Link: https://preview.colorlib.com/theme/unioncorp/
+
+16-10-25
+========
+
+Background Properties:
+
+1. background-color:
+
+2. background-image:
+
+3. background-size: Specify the size of the background.
+
+4. background-position: Specify the position of the background.
+
+5. background-attachment: Decide whether to fix or scroll background along with the content.
+
+6. background-repeat: Controls the repeation of background image
+
+2. background-image:
+
+    Syntax:
+
+        background-image: url('filename.ext');
+
+3. background-size:
+
+    Syntax:
+
+        background-size: 50px | 50% | cover;
+
+4. background-position:
+
+    Syntax:
+
+        background-position: center center | top center | bottom center | top left | bottom right | top center | bottom center;
+
+5. background-attachment:
+
+    Syntax:
+
+        background-attachment: fixed | scroll;
+
+6. background-repeat:
+
+    Syntax:
+
+        background-repeat: no-repeat | repeat;
+
+Font Family:
+
+    Syntax:
+
+        font-family: Arial | Times News Roman;
+
+Box Shadow: Applies shadow around the box.
+
+    Syntax:
+
+        box-shadow: horizontal-offset vertical-offset blur-radius spread-radius color;
+
+Text Shadow: Applies shadow around the text.
+
+    Syntax:
+
+        text-shadow: horizontal-offset vertical-offset blur-radius color;
+
+Overflow: Used to control the overflowed content.
+
+    Syntax:
+
+        overflow: scroll | scroll-x | scroll-y | hidden | auto | visible;
+
+Task: Design our pricing block of buildream website
+
+https://preview.colorlib.com/theme/buildream/

@@ -1,0 +1,19 @@
+body{
+    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+}
+
+h3,h1{
+    text-align: center;
+}
+.sub h3,h2{
+text-align: left;
+}
+.sub{
+    border: 2px solid black;
+     margin: 20px;
+    height: 350px;
+    width: 20%;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.4);
+     padding: 5px;
+     float: left;
+}

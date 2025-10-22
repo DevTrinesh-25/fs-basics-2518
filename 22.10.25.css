@@ -1,0 +1,79 @@
+ul {
+
+    list-style-type: none;
+
+}
+
+li::marker {
+
+    color: #01ac61;
+
+}
+
+ul i {
+
+    margin-right: 5px;
+
+    color: #01ac61;
+
+}
+
+ol {
+
+    list-style-type: numeric;
+
+}
+
+body {
+
+    margin: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#navbar {
+
+    background: linear-gradient(45deg, #29bae4 0%, #ee76ad 100%);
+
+    color: white;
+
+    height: 60px;
+
+    padding: 10px 12rem;
+
+}
+
+#navbar div {
+
+    float: left;
+
+}
+
+#logo {
+
+    width: 45%;
+
+}
+
+#nav-links {
+
+    width: 55%;
+
+}
+
+#nav-links li {
+
+    float: left;
+
+    margin-right: 45px;
+
+}
+
+#nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+}

@@ -553,3 +553,87 @@ Overflow: Used to control the overflowed content.
 Task: Design our pricing block of buildream website
 
 https://preview.colorlib.com/theme/buildream/
+
+21-10-25
+========
+
+Types of HTML Elements/Tags
+
+1. Block Elements: It occupies parent element size.
+
+    Eg. Div, h1-h6, p, 
+
+2. Inline Elements: It occupies content size.
+
+    Eg. Img, a
+
+> We need to convert block elements into inline elements.
+
+    div
+
+Floats: Float is used to convert block element into inline elements.
+
+    > We can display block elements side by side.
+
+    Syntax:
+
+        float: left | right
+
+            > Left: It starts displaying the elements from left side.
+
+            > right: Starts displaying the elements from right side.
+
+        clear: left | right | both
+
+22-10-25
+========
+
+List: Used to display collection of similar data.
+
+Types
+
+1. Unordered list
+
+2. Ordered list
+
+1. Unordered list: Symbolic representation
+
+    Syntax:
+
+        <ul>
+
+            <li>Content</li>
+
+            <li>Content</li>
+
+            <li>Content</li>
+
+            <li>Content</li>
+
+        </ul>
+
+        li - list item
+
+        ul - unordered list
+
+        list-style-type: disc | circle | square | none;
+
+2. Ordered list: Ordered representation of the data.
+
+    Syntax:
+
+        <ol>
+
+            <li>Content</li>
+
+            <li>Content</li>
+
+            <li>Content</li>
+
+            <li>Content</li>
+
+        </ol>
+
+        list-style-type: numeric | lower-alpha | upper-alpha | lower-roman | upper-roman | none;
+
+Task: https://preview.colorlib.com/theme/docmed/

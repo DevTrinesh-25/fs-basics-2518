@@ -1,0 +1,58 @@
+/* div {
+
+    padding: 100px;
+
+    border: 2px solid black;
+
+}
+
+h1 {
+
+    border: 2px solid black;
+}
+
+a, img, p {
+
+    border: 2px solid black;
+
+} */
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#sub-title, #title {
+
+    text-align: center;
+
+}
+
+#happy-clients {
+
+    padding: 34px;
+
+}
+
+#happy-clients img {
+
+    width: 100px;
+
+    border-radius: 50%;
+
+}
+
+.happy-client {
+
+    float: left;
+
+    width: 28.5%;
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+    margin-right: 20px;
+
+    padding: 20px;
+
+}

@@ -1,0 +1,131 @@
+body {
+
+    margin: 0px;
+    background-color:gainsboro ;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#row {
+background: linear-gradient(45deg, #dae2e4 0%, #dedadc 100%);
+color: rgb(189, 36, 36);
+height: 40px;
+padding: 10px 4rem;
+}
+#row div {
+    float: left;
+}
+
+#nav1 {
+  width:65%;
+}
+
+#nav11 {
+  width:35%;
+}
+
+#nav11 li {
+    float: left;
+    margin-right: 45px;
+     display: inline;
+     padding: 10px;
+     box-sizing: border-box;
+}
+
+#row2 {
+background: linear-gradient(45deg, #eff0f0 0%, #f3f3f3 100%);
+height: 60px;
+padding: 10px 4rem;
+}
+
+#row2 div {
+    float: left;
+}
+
+#nav2 {
+    width: 25%;
+}
+
+#nav22 {
+    width: 55%;
+}
+#nav222 {
+    width:20%;
+}
+
+#nav22 li {
+    float: left;
+    display: inline;
+    margin-right: 35px;
+   
+}
+
+#nav22 a {
+    color: black;
+    text-decoration: none;
+}
+
+.App {
+  text-transform: uppercase;
+  font-style: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  width: 60%;
+  background-color: rgb(18, 212, 226);
+  padding: 4px;
+}
+
+h1 {
+    font-style: normal;
+    font-size: 80px;
+    padding-top:140px;
+    font-weight: 700;
+    margin-left: 70px;
+}
+
+p{
+     font-style: normal;
+     padding-bottom:10px;
+    margin-left: 70px;
+    line-height: 28px;
+}
+
+
+/*.check {
+  text-transform: uppercase;
+  font-style: 16px;
+  font-size: medium;
+  font-weight: 600;
+  letter-spacing: 1px;
+  width: 60%;
+  background-color: rgb(18, 212, 226);
+  padding: 25px;
+  text-decoration: none;
+  margin-left: 60px;
+  padding-bottom:20px;
+  margin-top: 120px;
+}*/
+
+.check{
+    background: linear-gradient(to right, #0181f5 0%, #5db2ff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0181f5', endColorstr='#5db2ff',GradientType=1 );
+    color: #fff;
+    display: inline-block;
+    padding: 18px 44px;
+    font-size: 15px;
+    font-weight: 500;
+    border: 0;
+    border: 1px solid transparent;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff !important;
+    text-transform: capitalize;
+    margin-left: 70px;
+    text-decoration: none;
+}
+
+#container{
+    background-image: url('');
+}

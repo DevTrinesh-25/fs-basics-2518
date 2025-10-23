@@ -637,3 +637,17 @@ Types
         list-style-type: numeric | lower-alpha | upper-alpha | lower-roman | upper-roman | none;
 
 Task: https://preview.colorlib.com/theme/docmed/
+
+21-10-25
+========
+
+Float: Converts block elements into inline elements (Display elements side by side).
+Flexbox: Displays content either side by side or one below another.
+Syntax:
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>    
+    </div>
+    1 - Parent Element
+    3 - Child Elements

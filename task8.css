@@ -127,5 +127,7 @@ p{
 }
 
 #container{
-    background-image: url('');
+    background-image: url('https://preview.colorlib.com/theme/docmed/img/banner/banner2.png.webp');
+    background-position: 35%;
+    padding-top: 10%;
 }

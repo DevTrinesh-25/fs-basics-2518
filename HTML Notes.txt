@@ -638,7 +638,7 @@ Types
 
 Task: https://preview.colorlib.com/theme/docmed/
 
-21-10-25
+23-10-25
 ========
 
 Float: Converts block elements into inline elements (Display elements side by side).
@@ -651,3 +651,8 @@ Syntax:
     </div>
     1 - Parent Element
     3 - Child Elements
+
+23-10-25
+========
+
+Task: https://preview.colorlib.com/theme/ogani/

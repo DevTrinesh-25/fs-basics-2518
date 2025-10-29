@@ -652,7 +652,66 @@ Syntax:
     1 - Parent Element
     3 - Child Elements
 
-23-10-25
+24-10-25
 ========
 
 Task: https://preview.colorlib.com/theme/ogani/
+
+27-10-25
+========
+
+Positions: Specifies the position of an HTML Element.
+    -> Using positions, we can change the position of an HTML Element from one to another.
+    Syntax:
+        position: fixed | sticky | relative | absolute;
+            fixed: Element will be fixed to the web page, even we scroll the web page.
+            sticky: Element will be fixed to the web page but when user starts scrolling the web page.
+            relative: Used to move element from one position to another.
+            absolute: Used to move child element from one position to another, by taking the reference of parent element.
+            -> top: 0px
+                left
+                right
+                bottom
+Task: https://preview.colorlib.com/theme/consultingbiz/
+
+29-10-25
+========
+
+Absolute: Used to move the child element from one position to another position by taking the reference of parent element.
+    Syntax:
+        position: relative;
+        position: absolute;
+        top: 0px;
+Task: https://preview.colorlib.com/theme/hvacompany/
+
+Table: Collection of rows & columns.
+    Syntax:
+        <table>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Content 1</td>
+                    <td>Content 2</td>
+                    <td>Content 3</td>
+                </tr>
+                <tr>
+                    <td>Content 1</td>
+                    <td>Content 2</td>
+                    <td>Content 3</td>
+                </tr>
+                <tr>
+                    <td>Content 1</td>
+                    <td>Content 2</td>
+                    <td>Content 3</td>
+                </tr>
+            </tbody>
+        </table>
+        tr - table row
+        th - table head (Bold format)
+        td - table data (Non bold format)

@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#parent-container {
+    position: relative;
+    background-color: #f7f7f7;
+    border: 1px solid black;
+    width: 650px;
+    margin: 50px;
+}
+#parent-container img {
+    width: 100%;
+}
+
+#child-container {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid brown;
+    font-size: 20px;
+    padding: 20px;
+    width: 80%;
+    top: 24rem;
+    left: 0px;
+}
+#users-container {
+    height: 500px;
+    overflow: scroll;
+    width: 500px;
+}
+th, td {
+    padding: 14px;
+}
+table, th, td {
+    border: 1px solid brown;
+    border-collapse: collapse;
+}

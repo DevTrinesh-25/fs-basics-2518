@@ -1,0 +1,98 @@
+body{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    width: 100%;
+}
+#nav{
+    display: flex;
+    background-color:rgb(0, 0, 0);
+    padding: 0px 1rem;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    height: 13vh;
+}
+
+#nav i{
+    margin-left: 12px;   
+}
+
+#nav li{
+    display: flex;
+    float: left;
+    margin-right: 35px;
+   
+}
+#div1{
+    width: 20%;
+}
+#div2{
+    width: 60%;
+   
+}
+
+#div2 ul{
+    display: flex;
+    justify-content: space-between;
+
+}
+.logo{
+    width: 40px;
+    height: auto;
+}
+
+#div3{
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Mulish", sans-serif;
+  color: #4586D5;
+  padding: 9px 30px 7px;
+  border: 2px solid #FAD110;
+  margin: 22px 0 23px;
+    
+}
+#main{
+    background-image: url('https://preview.colorlib.com/theme/hvacompany/img/hero/hero-1.jpg');
+    height: 800px;
+    padding-top: 170px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.hero{
+  max-width: 400px;
+  background: #ffffff;
+  padding: 45px 50px 60px;
+  overflow: hidden;
+  margin: 40px;
+}
+.btn{
+    background-color: #ced817;
+    padding: 10px;
+}
+.benifit-item{
+  text-align: center;
+  border: 1px solid #e1e1e1;
+  padding: 30px 25px 25px;
+  background: #ffffff;
+  margin-bottom: 30px;
+}
+
+#main img{
+    max-width: 100%;
+}
+
+#main2{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  gap: 120px;
+  padding: 70px;
+  position: absolute;
+  top: 650px;
+}

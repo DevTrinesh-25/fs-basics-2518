@@ -1,0 +1,88 @@
+#nav{
+    background-color: aquamarine;
+    height: 10vh;
+    display: flex;
+}
+
+#left img{
+    width: 50px;
+    padding: 11px;
+    padding-left: 60px;
+}
+
+#right img{
+     width: 40px;
+    padding: 10px;
+    padding-left: 960px;
+}
+#main{
+    display: flex;
+    justify-content: space-between;
+}
+
+#left1{
+    display: inline; 
+    justify-content: space-between;
+    width: 40%;
+    padding: 10%;
+}
+#left1 p{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#registration-form {
+    display: flex;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-control input{
+     padding: 4px;
+    border: 1.5px solid #dee2e6;
+    border-radius: 8px;
+    width: 480px;
+}
+
+.error{
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+    background-color: #ffe6e6;
+    color: red;
+    padding: 8px;
+    border-radius: 3px;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.error2{
+    border: 1px solid rgba(9, 179, 205, 0.933);
+    background-color: #a5deee;
+    color: rgba(8, 98, 154, 0.638);
+    padding: 8px;
+    border-radius: 3px;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #7430f9;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+}

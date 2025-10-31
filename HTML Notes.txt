@@ -715,3 +715,26 @@ Table: Collection of rows & columns.
         tr - table row
         th - table head (Bold format)
         td - table data (Non bold format)
+
+31-10-25
+========
+
+Forms: Forms is used to get data from the user in different formats.
+    Formats: Text / File
+    Syntax:
+        <form>
+            <label></label> - Label for the input field
+            <input type="text" placeholder="Message" >
+            <select>
+                <option>Select City</option>
+                <option>Hyderabad</option>
+                <option>Pune</option>
+            </select>
+            <textarea rows="5" cols="10"></textarea>
+            <button>Save</button>
+        
+        </form>
+            type - text | email | password | date | datetime-local | checkbox | radio | file | button
+            
+Task: Design IRCTC Registration Form
+    https://www.irctc.co.in/nget/profile/user-signup

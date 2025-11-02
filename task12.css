@@ -26,6 +26,7 @@
     width: 40%;
     padding: 10%;
 }
+
 #left1 p{
     border: 1px solid black;
     padding: 10px;
@@ -38,11 +39,11 @@
 .form-control {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .form-control input{
-     padding: 4px;
+    padding: 10px;
     border: 1.5px solid #dee2e6;
     border-radius: 8px;
     width: 480px;
@@ -59,7 +60,7 @@
     width: -moz-fit-content;
     width: fit-content;
     max-width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .error2{
@@ -71,7 +72,7 @@
     width: -moz-fit-content;
     width: fit-content;
     max-width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 button {
@@ -86,3 +87,93 @@ button {
     margin: 20px auto;
     border-radius: 5px;
 }
+
+#right1{
+    padding: 10%;
+    width: 30%;
+    
+}
+
+#faq-sec{
+    background-color: #f9f3e3;
+    padding: 11px;
+    border-radius: 8px;
+    margin: 0 auto;
+    width: 0px 4rem;
+    position: relative;
+    left: -25px;
+    width: 250px;
+    padding-right: -10px;
+}
+#sub{
+    /*
+    background-color: #e1d0b5;
+    padding: 11px;
+    border-radius: 8px;
+    max-height: 630px;
+    overflow-y: scroll;
+    margin: auto 20px;
+    padding-right: 25px;
+    width: 250px;
+    */
+    background-color: #e6d4b8;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius:5px;
+    cursor: pointer;
+    transition: background 0.3 ease;
+    text-align: left;
+    outline: none;
+    font-weight: 700;
+    box-sizing: border-box;
+    height: 10%;
+    width: 500px;
+    padding-right: 50px;
+}
+
+.sub1{
+   padding: 8px;
+   font-size: 14px;
+   background-color: #e1d0b5;
+    color: #444;
+    cursor: pointer;
+    margin: 2px 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-weight: 700;
+    box-sizing: border-box;
+    height: 10%;
+}
+
+/*
+#right1{
+    width: 450px;
+    margin-left: 20px;
+    background-color: #e1d0b5;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+#faq-sec{
+    background-color: #f6f1e7;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.sub1{
+    background-color: #e6d4b8;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius:5px;
+    cursor: pointer;
+    transition: background 0.3 ease;
+    text-align: left;
+    outline: none;
+    font-weight: 700;
+    box-sizing: border-box;
+    height: 10%;
+}
+    */

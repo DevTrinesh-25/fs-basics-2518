@@ -1,0 +1,19 @@
+#table {
+    height: 500px;
+    overflow: scroll;
+    width: 100%;
+}
+th, td {
+    padding: 14px;
+}
+table, th, td {
+    border: 1px solid brown;
+    border-collapse: collapse;
+}
+th{
+    background-color: rgb(24, 203, 24);
+    color: white;
+}
+#sec{
+    background-color: rgb(198, 195, 195);
+}

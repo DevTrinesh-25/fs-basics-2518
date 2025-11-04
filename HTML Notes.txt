@@ -738,3 +738,72 @@ Forms: Forms is used to get data from the user in different formats.
             
 Task: Design IRCTC Registration Form
     https://www.irctc.co.in/nget/profile/user-signup
+
+3-11-25
+========
+
+    Advanced Tags
+1. Multimedia Tags
+2. Semantic Tags
+3. Embedding External Content (Iframe)
+1. Multimedia Tags
+    > Audio
+        <audio>
+            <source src=""></source>
+        </audio>
+    > Video
+        <video controls autoplay muted>
+            <source src=""/>
+        </video>
+2. Iframe
+    > To display external content.
+    > To display youtube videos, embedding external websites.
+    Syntax:
+        <iframe src=""></iframe>
+Semantic Tags
+1. nav
+2. section
+3. footer
+4. header
+5. aside
+
+4-11-25
+========
+
+Display: It specifies the way of displaying the HTML tag. - Used to show & hide the element from ui.
+    Syntax:
+        display: block | inline | none | flex (1 Dimensional) | grid (2 Dimensional) - Table - Rows & Columns;
+            <h1></h1>
+                block -display
+        none: It will hide the element from user, along with that it also removes the allocated space. (DOM)
+Visibility: Used to show & hide the element from ui.
+    Syntax:
+        visibility: visible | hidden;
+            visible -
+            hidden: It will hide the element from user.
+Z-index: It helps us in changing the position of the layer.
+    Foreground layer
+    Background layer
+        Syntax:
+        z-index: 1;
+            > 1
+Animations
+    > Transformations
+    > Transitions
+    > Animations
+1. Transformations: Used to move the element, change the size, rotate the element.
+    Syntax:
+        transform: translate(x-value, y-value);
+                        translateX(value);
+                        translateY(value);
+            > Move element from one position to another position.
+        > scale: To increase or decrease size of the element.
+            Syntax:
+                transform: scale(1);
+        > rotate:
+            Syntax:
+                transform: rotate(30deg)
+        > skew: 
+            Syntax:
+                transform: skewX(30deg) / skewY(30deg)
+                            skew(x, y);

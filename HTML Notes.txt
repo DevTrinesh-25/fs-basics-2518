@@ -807,3 +807,34 @@ Animations
             Syntax:
                 transform: skewX(30deg) / skewY(30deg)
                             skew(x, y);
+
+6-11-25
+========
+
+Transitions: Allows us to change value of properties from one to another smoothly.
+    Syntax:
+        transition: transition-property transition-duration transition-delay transition-timing-function
+            transition-property: margin | padding | font-size
+            transition-duration: 1s | 2s | 4s;
+            transition-delay: 0s | 1s | 10s;
+            transition-timing-function: ease | linear | ease-in | ease-out | ease-in-out (Speed Curve)
+            0s - 2s
+Animations: Let's an element gradually change from one style to another style & another to another.
+    Syntax:
+        animation: name duration timing-function delay iteration-count direction;
+            iteration-count: 1 | 2 | 3 ... infinite;
+            direction: normal | reverse | alternate | alternate-reverse
+ 
+        @keyframes animationName {
+            0% {
+            }
+            25% {
+            }
+            50% {
+            }
+            75% {
+            }
+            100% {
+            }
+        }
+        0s - 4s

@@ -838,3 +838,29 @@ Animations: Let's an element gradually change from one style to another style & 
             }
         }
         0s - 4s
+
+7-11-25
+========
+
+Media Queries: It adds responsiveness for the website.
+    Responsiveness - Indicates making application compartiable with every device.
+        Mobile / Tablet / Desktop
+    Syntax:
+        @media only screen and (max-width: 600px) {
+            selector {
+                margin: 10px;
+            }
+        }
+        @media only screen and (min-width: 600px) and (max-width: 768px) {
+            selector {
+                margin: 10px;
+            }
+        }
+Sizes
+1. Extra small devices (phones, 600px and down) - xs
+2. Small devices (portrait tablets and large phones, 600px and up) - sm
+3. Medium devices (landscape tablets, 768px and up) - md
+4. Large devices (laptops/desktops, 992px and up) - lg
+5. Extra large devices (large laptops and desktops, 1200px and up) - xl
+Relative Path
+Grid

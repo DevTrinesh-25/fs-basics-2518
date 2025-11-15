@@ -864,3 +864,91 @@ Sizes
 5. Extra large devices (large laptops and desktops, 1200px and up) - xl
 Relative Path
 Grid
+
+10-11-25
+========
+
+To access a file from file system
+    > Absolute Path
+    > Relative Path (Software Applications)
+> HTML File
+    <img src="" />
+/Volumes/DL/DLA/fs-basics-2518 11 AM/10.11.25.html
+
+11-11-25
+========
+
+Flexbox: Displaying content side by side or one below another. (One direction) - 1 Dimensional Layout.
+Grid: Displaying content side by side as well one below another (Two dimensional layout)
+    > Using grid we can display data in rows & columns format.
+    Syntax:
+        display: grid;
+        grid-template-rows: 100px 200px 1fr
+        grid-template-columns: 100px 150px 100px 1fr 1fr
+
+12-11-25
+========
+
+HTML - To display content (Text/Image/Audio/Video) in web page.
+CSS - Adds styles to the HTML Content & Design Layouts.
+    - Websites - Static Content
+Javascript - Functionality / Behaviour to HTML Content
+    Dynamic
+    - Static + Dynamic - Web Applications
+Programming Language: A programming language is an artificial or formal language composed of a set of instructions that allows humans 
+    to write software programs which instruct computers to perform specific tasks.
+    > Java, C# .Net, Go, C, C++, Typescript etc...
+    > Compilation: In compilation, complier verifies the syntax, if no errors, it will convert the source code from Human-understandable to machine understandable language.
+    > Execution: Machine understandable language source code will be executed and output will be displayed.
+    1. Scripting Languages: Syntax Errors, if no errors it displayed output. - Interpreter
+        > Source code will be executed line by line.
+        > Javascript, Python, PHP
+    MERN - Javascript
+    Full Stack Java - JavaScript + Java
+    Full Stack Python - JavaScript + Python
+    name String
+    id Number
+    
+Javascript Intro:
+> JavaScript (JS)[a] is a programming language and core technology of the www, alongside HTML and CSS. 
+    JavaScript - React Js / Angular / Vue Js
+    Framework - Predefined functionalities + Templates
+    Library - Predefined functionalities
+    Java - Spring Boot, Spring, Java Micro Services
+    Python - Django, Flask, FastAPI
+    Javascript - Express Js, Nest Js
+Client Side + Server Side
+> 2012
+Tablets, Mobiles, Smart Watches
+
+                            JavaScript Notes
+                            ================
+14-11-25
+========
+
+> Ways of writing Js.
+1. Internal Javascript
+    Syntax:
+        <body>
+        
+        
+            <script>
+            
+            
+            </script>
+        </body>
+2. External Javascript
+    filename.js
+    filename.html
+    <body>
+        <script src="filename.js"></script>
+    </body>
+> Output Parameters
+1. document.getElementById(idName).innerHTML = value;
+2. console.log(value) - Used to map value to browser console. - Developers - To debug the app
+3. window.alert(value) - To display output in alert.
+Variables: Variables are used to store information temporarily.
+    Syntax:
+        var variableName = value;
+            Starting from second word, every word first letter should be capital letter (SNAKE CASE)
+Data Types: Type of information which we are storing in variables.

@@ -952,3 +952,39 @@ Variables: Variables are used to store information temporarily.
         var variableName = value;
             Starting from second word, every word first letter should be capital letter (SNAKE CASE)
 Data Types: Type of information which we are storing in variables.
+
+17-11-25
+========
+
+Variables:
+    Syntax:
+        var variableName = value; - Variable Definition
+        var variableName - Variable Declaration
+        variableName = value - Variable Initialization
+        let, const
+        > If your are creating a variable using const keyword, we can assign value only for once.
+        value - ? - Data Type
+Data Types:
+1. Predefined Data Types: Number, String, Boolean, Null, Undefined - Single Value
+2. Userdefined Data Types: Array, Object & Function. - Multiple Values
+    Number - Collection of digits & decimals.
+    String - Collection of alpha numeric values in single or double quotes.
+    Boolean - true / false
+    > Array: Collection of multiple similar datatype values.
+        Syntax:
+            var variableName = [value1, value2, value3, ..., valueN];
+                            index 0        1                    n - 1
+            > to print specific value:
+                variableName[index]
+    > Object: Collection of key-value pairs.
+        Syntax:
+            var variableName = {
+                key1: value1,
+                key2: value2,
+                key3: value3,
+                .., ..,
+                keyN: valueN
+            };
+            > To read value of key:
+                Syntax:
+                    variableName.keyName / variableName['keyName']

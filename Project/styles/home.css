@@ -253,7 +253,7 @@ width: 100%;
 #mp{
     border-radius: 20px;
     margin-left: 550px;
-    margin-top: 50px;
+    margin-top: 40px;
     background-color:white;
     color: #FDAE5C;
     border-radius:30px;
@@ -266,7 +266,7 @@ width: 100%;
 }
 
 #mid1{
-    background-image:url(./assets/home_details.png);
+    background-image:url(./../assets/home_details.png);
     background-size: cover;
     background-position: center center;
     padding: 140px 20px;

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var deviceName = "Manideep's iPhone";
+
+        var price = 9890;
+
+        var isActive = true;
+
+        console.log(typeof isActive);
+
+        var meetingName1 = 'Ai-2501 8AM M W F';
+
+        var meetingName2 = 'SQL 10 AM';
+
+        var meetingName3 = 'Fs-Basic-2518 11 AM';
+
+        var meetingName4 = 'React-2507 8 AM T T S';
+
+        var meetings = ['Ai-2501 8AM M W F', 'SQL 10 AM', 'Fs-Basic-2518 11 AM', 'React-2507 8 AM T T S'];
+
+        console.log(meetings);
+        
+        console.log(meetings[1]);
+
+        meetings[2] = 'Agentic Ai 10 AM';
+
+        console.log(meetings);
+
+        meetings.push('Fs-Basic-2518 11 AM');
+
+        console.log(meetings);
+
+        var productInfo = [56, 45];
+
+        var student_marks = [45, 78, 12, 89, 45, 90];
+
+        var address = ['Digital Edify Pvt Ltd', '2nd Floor, Opp. Cyber Towers', 'Madhapur', 'Hyderabad', 500001];
+
+
+        var address = {
+            addressLine1: 'Digital Edify Pvt Ltd',
+            addressLine2: '2nd Floor, Opp. Cyber Towers',
+            area: 'Madhapur',
+            city: 'Hyderabad',
+            pincode: 500001
+        };
+
+        console.log(address['area']);
+
+        address.pincode = 500002;
+
+        console.log(address);
+
+        address.state = 'Telangana';
+
+        console.log(address);
+
+        var customerInfo = {
+            id: 1,
+            name: 'Durga Prasad',
+            email: 'durga.prasad@gmail.com',
+            mobileNo: 9032345245,
+            addressLine1: 'Digital Edify Pvt Ltd',
+            addressLine2: '2nd Floor, Opp. Cyber Towers',
+            area: 'Madhapur',
+            city: 'Hyderabad',
+            pincode: 500001,
+            courseName: 'Full Stack Python',
+            fee: 25000,
+            instructor: 'Bhaskar'
+        };
+
+        var customer = {
+            id: 1,
+            name: 'Durga Prasad',
+            email: 'durga.prasad@gmail.com',
+            mobileNo: 9032345245,
+            address: {
+                addressLine1: 'Digital Edify Pvt Ltd',
+                addressLine2: '2nd Floor, Opp. Cyber Towers',
+                area: 'Madhapur',
+                city: 'Hyderabad',
+                pincode: 500001,
+            },
+            course: {
+                courseName: 'Full Stack Python',
+                fee: 25000,
+                instructor: 'Bhaskar',
+                technologies: ['HTML', 'CSS', 'Javascript', 'React Js']
+            },
+            isAccountActivated: false
+        };
+
+        console.log(customer.address.addressLine1);
+
+        console.log(customer.course.technologies[0]);
+
+        var meetings = [
+            {
+                name: 'Ai-2501 8AM M W F',
+                id: '861 1259 4876',
+                isRecurring: true
+            },
+            {
+                name: 'SQL 10 AM',
+                id: '886 0756 1310',
+                isRecurring: true
+            },
+            {
+                name: 'Fs-Basic-2518 11 AM',
+                id: '874 2566 4534',
+                isRecurring: true
+            }
+        ];
+
+        console.log(meetings[0].isRecurring);
+        
+
+    </script>
+</body>
+</html>

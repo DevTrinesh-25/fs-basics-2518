@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .calculator-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .calculator-container > div {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .button-group {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        button {
+            flex: 1;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        button:first-of-type {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        button:first-of-type:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        button:last-of-type {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        button:last-of-type:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        p {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            font-size: 18px;
+            text-align: center;
+            color: #333;
+        }
+
+        #result {
+            font-weight: 700;
+            font-size: 24px;
+            color: #667eea;
+        }
+
+        @media (max-width: 480px) {
+            .button-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <h2>Company Name: <span id="company-name"></span></h2> -->
+    
+    <div class="calculator-container">
+        <div>
+            <label>Number 1: </label>
+            <input type="text" placeholder="Number 1" id="num1"/>
+        </div>
+        <div>
+            <label>Number 2: </label>
+            <input type="text" placeholder="Number 2" id="num2"/>
+        </div>
+        <div class="button-group">
+            <button onclick="calculateSum()">Sum</button>
+            <button onclick="calculateDifference()">Subtract</button>
+            <button onclick="calculateProduct()">Multiply</button>
+            <button onclick="calculateDivision()">Divide</button>
+        </div>
+        <p>Result: <span id="result"></span></p>
+    </div>
+    
+    <script>
+
+        // document.getElementById('company-name').innerHTML = 'Cognizant';
+
+        function sum(num1, num2) {
+            var result = num1 + num2;
+            console.log(result);
+            return result;
+        }
+
+        sum(10, 20);
+
+        sum(45, 90);
+
+        sum(45, 78);
+
+        var result = sum(89, 12);
+
+        console.log(result);
+
+        document.getElementById('num1').value = 0;
+        document.getElementById('num2').value = 0;
+        
+        function calculateSum() {
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+            var result = parseInt(num1) + parseInt(num2);
+            document.getElementById('result').innerHTML = result;
+        }
+
+        function calculateDifference() {
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+            var result = parseInt(num1) - parseInt(num2);
+            document.getElementById('result').innerHTML = result;
+        }
+
+        function calculateProduct() {
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+            var result = parseInt(num1) * parseInt(num2);
+            document.getElementById('result').innerHTML = result;
+        }
+
+        function calculateDivision() {
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+            var result = parseInt(num1) / parseInt(num2);
+            document.getElementById('result').innerHTML = result;
+        }
+
+    </script>
+</body>
+</html>

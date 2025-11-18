@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info Card</title>
+</head>
+<body>
+
+    <div class="Product">
+        <h3>User Info</h3>
+        <div class="info-row">
+            <span>Name:</span>
+            <span class="value" id="Name">—</span>
+        </div>
+        <div class="info-row">
+            <span>Price:</span>
+            <span class="value" id="Price">—</span>
+        </div>
+        <div class="info-row">
+            <span>RAM:</span>
+            <span class="value" id="RAM">—</span>
+        </div>
+        <div class="info-row">
+            <span>Display:</span>
+            <span class="value" id="Display">—</span>
+        </div>
+        <div class="info-row">
+            <span>Camera:</span>
+            <span class="value" id="Camera">—</span>
+        </div>
+        <div class="info-row">
+            <span>Battery:</span>
+            <span class="value" id="Battery">—</span>
+        </div>
+        <div class="info-row">
+            <span> Processor:</span>
+            <span class="value" id="Processor">—</span>
+        </div>
+        <div class="info-row">
+            <span>Warranty:</span>
+            <span class="value" id="Warranty">—</span>
+        </div>
+        <button onclick="getproductinfo()">Get Info</button>
+    </div>
+
+    <script>
+        function getproductinfo() {
+           var product = {
+         Name:'Samsung Galaxy F36 5G (Violet, 128 GB)  (6 GB RAM)',
+         price:'₹22,999',
+         RAM:'6 GB RAM | 128 GB ROM | Expandable Upto 2 TB',
+         display:'17.02 cm (6.7 inch) Full HD+ Display',
+         cam:'50MP + 8MP + 2MP | 13MP Front Camera',
+         battery:'5000 mAh Battery',
+         processor:'Samsung Exynos 1380 Processor',
+         warranty:'1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories'
+           };
+
+           document.getElementById('Name').innerHTML = product.Name;
+           document.getElementById('Price').innerHTML = product.price;
+           document.getElementById('RAM').innerHTML = product.RAM;
+           document.getElementById('Display').innerHTML = product.display;
+           document.getElementById('Camera').innerHTML = product.cam;
+           document.getElementById('Battery').innerHTML = product.battery;
+           document.getElementById('Processor').innerHTML = product.processor;
+           document.getElementById('Warranty').innerHTML = product.warranty;
+        }
+    </script>
+</body>
+</html>

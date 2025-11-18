@@ -988,3 +988,28 @@ Data Types:
             > To read value of key:
                 Syntax:
                     variableName.keyName / variableName['keyName']
+
+18-11-25
+========
+
+Function: A function in JavaScript is a reusable block of code that performs a specific task and can optionally return a value. 
+    Syntax:
+    > Function Definition: It will be executed only when we call it.
+        function functionName(param1, param2, param3, ..., paramN) {
+            // Block of code...
+            return value;
+        }
+        -> Parameters: Recieving information into the function.
+        -> Return: Returning value from function to external sources.
+    Function Call: 
+        Syntax:
+            functionName(value1, value2, value3, ..., valueN);
+            functionName(value1, value2, value3, ..., valueN);
+            functionName(value1, value2, value3, ..., valueN);
+        Note: Function is defined only once, but can be called for n no of times.
+Events: User interactions to the application.
+onload: 
+onclick: Mouse click on any HTML Element.
+onmouseover: Placing cursor on an element.
+onmouseout: Removing the cursor from the element.
+onkeyup: Entering key in a keyboard.

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            color: #1f2933;
+        }
+
+        .card {
+            background: #fff;
+            width: min(440px, 90vw);
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 20px 40px rgba(249, 115, 22, 0.25);
+        }
+
+        h3 {
+            font-size: 26px;
+            margin-bottom: 24px;
+            color: #0f172a;
+            letter-spacing: 0.5px;
+        }
+
+        .info-row {
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 12px;
+        }
+
+        .info-row span {
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .info-row span.value {
+            font-weight: 500;
+            color: #475569;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #f97316 0%, #fb7185 100%);
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 24px;
+            }
+
+            .info-row {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h3>User Info</h3>
+        <div class="info-row">
+            <span>Id:</span>
+            <span class="value" id="user-id">—</span>
+        </div>
+        <div class="info-row">
+            <span>Name:</span>
+            <span class="value" id="name">—</span>
+        </div>
+        <div class="info-row">
+            <span>Age:</span>
+            <span class="value" id="age">—</span>
+        </div>
+        <div class="info-row">
+            <span>Email:</span>
+            <span class="value" id="email-address">—</span>
+        </div>
+        <div class="info-row">
+            <span>Phone:</span>
+            <span class="value" id="phone">—</span>
+        </div>
+        <div class="info-row">
+            <span>Address:</span>
+            <span class="value" id="address">—</span>
+        </div>
+        <button onclick="getUserInfo()">Get Info</button>
+    </div>
+    
+    <script>
+
+        function getUserInfo() {
+            var user = {
+                id: 1,
+                name: "Rahul Sharma",
+                age: 21,
+                email: "rahul.sharma@example.com",
+                phone: "9876543210",
+                address: "Delhi, India"
+            };
+
+            document.getElementById('user-id').innerHTML = user.id;
+            document.getElementById('name').innerHTML = user.name;
+            document.getElementById('age').innerHTML = user.age;
+            document.getElementById('email-address').innerHTML = user.email;
+            document.getElementById('phone').innerHTML = user.phone;
+            document.getElementById('address').innerHTML = user.address;
+        }
+    </script>
+</body>
+</html>

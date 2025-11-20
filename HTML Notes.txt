@@ -1013,3 +1013,42 @@ onclick: Mouse click on any HTML Element.
 onmouseover: Placing cursor on an element.
 onmouseout: Removing the cursor from the element.
 onkeyup: Entering key in a keyboard.
+
+20-11-25
+========
+
+Operators:
+1. Arithematic Operators
+    i. Addition (+)
+    ii. Subtraction (-)
+    iii. Multiplication (*)
+    iv. Division (/)
+    vi. Modules (%)
+    vii. Increment (++): Increments the current value by 1.
+    viii. Decrement (--): Decrement the current value by 1.
+2. Assignment Operators (Shorthand Operators)
+    i. = - Assigns right side value with left side variable
+    ii. +=
+    iii. -=
+    iv. *=
+    v. /=
+    vi. %=
+3. Comparison Operators
+    i. == - Double Equal to - Compares both the values, if values are matching it returns true.
+    ii. === - Triple Equal to - Compares both the values & data types, if values & data types are matching returns true.
+    iii. != - Not Equal to - Compares both the values, if values not are matching it returns true.
+    iv. !== - Not Double Equal to - Compares both the values & data types, if values & data types are not matching returns true.
+    v. >
+    vi. <
+    vii. >=
+    viii. <=
+    ix. ? - Ternary Operator
+        Syntax:
+            condition ? true_statements : false_statement;
+4. Logical Operators
+    i. && - AND: If both are the conditons are matching it returns true.
+    ii. || - OR: If any of the condition is matching it returns true.
+    iii. ! - NOT
+Typings
+1. Static Typing: Assigning data type to the variable during variable declaration phase. (Java, Typescript, C# .Net, Go)
+2. Dynamic Typing: Assigning data type to the variable during execution phase. (Javascript, Python)

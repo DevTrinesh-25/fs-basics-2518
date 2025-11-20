@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+    
+    <script>
+
+        var counter = 0;
+
+        counter++ // counter = counter + 1;
+
+        counter++; // counter = counter + 1;
+
+        counter++;
+
+        counter--; // counter = counter - 1;
+
+        console.log('Counter: ', counter);
+
+        var users = [
+            'Rajesh Kumar',
+            'Priya Menon',
+            'Suresh Reddy',
+            'Lakshmi Iyer',
+            'Karthik Nair',
+            'Meera Krishnan',
+            'Vikram Rao',
+            'Anjali Pillai',
+            'Arjun Subramanian',
+            'Divya Venkatesh'
+        ]; 
+
+        var i = 0;
+
+        console.log('User 1: ', users[i]);
+
+        i++;
+
+        console.log('User 2: ', users[i]);
+
+        i++;
+
+        console.log('User 3: ', users[i]);
+
+        i++;
+
+        console.log('User 4: ', users[i]);
+
+        var marks = [90, 56, 34, 67, 23, 67];
+
+        var totalMarks = 0;
+
+        totalMarks += marks[0] // totalMarks = totalMarks + marks[0];
+
+        totalMarks += marks[1] // totalMarks = totalMarks + marks[1];
+
+        totalMarks += marks[2] // totalMarks = totalMarks + marks[2];
+
+        totalMarks += marks[3] // totalMarks = totalMarks + marks[3];
+
+        totalMarks += marks[4] // totalMarks = totalMarks + marks[4];
+
+        totalMarks += marks[5] // totalMarks = totalMarks + marks[5];
+
+        console.log('Total marks of a student: ', totalMarks);
+
+        // var timer = 60;
+
+        // setInterval(function() {
+        //     timer -= 1;
+        //     console.log('Remaining seconds: ', timer);
+        // }, 1000);
+
+        // Email Comparsion
+
+        var email = 'support@digitaledify.ai';
+
+        var dbEmail = 'support@digitaledify.ai';
+
+        var result = email == dbEmail;
+
+        console.log('Both email ids are matching: ', result);
+
+        // Balance Comparsion
+
+        var currentBalance = 8900;
+
+        var dbCurrentBalance = '8900';
+
+        var result = currentBalance === dbCurrentBalance;
+
+        console.log('Both balances are matching: ', result);
+
+        // Password Comparsion
+
+        var enteredPassword = 'Test@!23';
+
+        var dbPassword = 'Test#!23';
+
+        var result = enteredPassword != dbPassword;
+
+        console.log('Passwords are matching', result);
+
+        // Total Marks
+
+        var totalMarks = 450;
+
+        var dbTotalMarks = '450';
+
+        var result = totalMarks !== dbTotalMarks;
+
+        console.log('Total marks are matching: ', result);
+
+        var result = (email == dbEmail) ? 'Emails matched' : 'Emails not matched';
+
+        console.log(result);
+
+        var isAccountActived = true;
+
+        var result = 'Account ' +  (isAccountActived ? 'Activated' : 'Not Activated');
+
+        console.log(result);
+
+        isAccountActived = !isAccountActived;
+
+        console.log(!false);
+
+
+    </script>
+</body>
+</html>

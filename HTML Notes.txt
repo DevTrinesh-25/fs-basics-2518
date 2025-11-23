@@ -1052,3 +1052,61 @@ Operators:
 Typings
 1. Static Typing: Assigning data type to the variable during variable declaration phase. (Java, Typescript, C# .Net, Go)
 2. Dynamic Typing: Assigning data type to the variable during execution phase. (Javascript, Python)
+
+21-11-25
+========
+
+Logical Operators
+1. AND (&&)
+2. OR (||)
+3. NOT (!)
+
+Logical AND:
+Condition 1    Condition 2      Result
+True            True            True
+True            False           False
+False           True            False
+False           False           False
+
+Logical OR:
+Condition 1    Condition 2      Result
+True            True            True
+True            False           True
+False           True            True
+False           False           False
+
+Logical NOT:
+Condition   Result
+True        False
+False       True
+
+ES - ECMA Script - Organization - Features of Javascript
+    Every browser will have JS Complier
+    Chrome - V8
+    Safari - Javascript Core
+    Mozilla Firefox - Spider Monkey
+    Edge/Internet Explorer - Chakra
+
+ES6 - Default Parameters
+const / let - ES6
+> Default Parameters: Assigning default value to the function parameter if value is not passed from function call.
+    Syntax:
+        function functionName(parameter1 = defaultValue, parameter2 = defaultValue) {
+            // Source code...
+            return value;
+        }
+        functionName(value1, value2, ,,,valueN);
+
+> Scope: Visibility of value of a variable.
+1. Global Scope: Value can be accessed across the file.
+2. Function Scope: Value can be accessed only within in a file.
+3. Block Scope: Value can be accessed only within a block. (let & const) - ES6
+    let - Value can be assigned for multiple times.
+    const - Value can be assigned only once.   
+    Syntax:
+        let variableName = value;
+        const variableName = value; 
+        
+Control Structures
+1. Conditional Statements
+2. Looping Statements

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        var userInfo = {
+            firstname: "Amit",
+            lastname: 'Sharma',
+            email: "amit.sharma1990@example.in",
+            mobile: "9876543210",
+            password: "Amit@1234"
+        };
+
+        var entered_email = 'amit.sharma1998@example.in';
+        var entered_password = 'Amit@1256';
+        var entered_mobile = '9876543216';
+
+        // LOGICAL AND
+
+        var result = ((entered_email === userInfo.email) && (entered_password === userInfo.password)) ? 'Valid email address and password' : 'Incorrect email or password';
+
+        console.log(result);
+
+        // LOGICAL OR
+
+        var result = entered_email === userInfo.email || entered_mobile === userInfo.mobile;
+
+        console.log(result);
+
+        // LOGICAL NOT
+
+        var isLoggedIn = false;
+
+        isLoggedIn = !isLoggedIn;
+
+        console.log(isLoggedIn);
+
+
+        function getUserInfo(firstname = '', lastname = '') {
+            var fullname = firstname + ' ' + lastname;
+            console.log('Fullname: ', fullname);
+        }
+
+        getUserInfo();
+
+        // console.log(fullname);
+
+        let username = 'Amit901';
+
+        const deviceName = 'Apple Watch';
+
+        username = 'Lokesh989';
+
+        deviceName = 'Macbook Pro';
+
+
+
+    </script>
+    
+</body>
+</html>

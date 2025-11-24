@@ -1,0 +1,79 @@
+body{
+     font-family: Arial, Helvetica, sans-serif;
+}
+#navbar{
+    background-color: rgb(0, 29, 56);
+    color: white;
+    height: 5vh;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+#social-media li{
+    margin-right: 1px;
+    display: inline-block;
+    padding-right: 30px;
+}
+
+.con li{
+    display: inline-block;
+    justify-content: space-between;
+    text-align: right;
+    margin-left: 120px;
+}
+
+#navbar2{
+   /* background-color: rgb(83, 93, 122);*/
+    padding: 20px;
+    padding-left: 80px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 140px;
+}
+#mid li{
+    /*float: left;
+    display: inline;
+    margin-right: 20px;
+    font-size: 20px;
+    margin: 0px 10px;
+    position: relative;
+    justify-content: center;
+    padding: 0px 20px;
+    gap: 25px;*/
+    float: left;
+    display: inline;
+    font-size: 20px;
+    justify-content: space-between;
+    padding: 0px 15px;
+
+}
+#mid a{
+    color: rgb(238, 235, 235);
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+button {
+background-color: rgb(252, 154, 93);
+display: inline;
+border-radius: 30px;
+font-size: 14px;
+padding :12px 20px;
+color: white;
+}
+
+#hero{
+    background-image: url('./../assets/property.png.webp');
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#container{
+    padding-top: 90px;
+    color: white;
+    text-align: center;
+    font-size: 36px;
+}

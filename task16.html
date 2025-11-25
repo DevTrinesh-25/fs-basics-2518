@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        var requestedamount = 20000;
+        var atmcash = 100000;
+        var userbalance = 50000;
+
+        if(atmcash >= requestedamount){
+            console.log('ATM has sufficient cash');
+        }else{
+            console.log('ATM has no sufficient cash');
+        }
+
+        if(userbalance >= requestedamount){
+             console.log('User has enough balance');
+        }else{
+             console.log('User not has enough balance');
+        }
+
+        if(requestedamount % 100 == 0){
+            console.log('Amount is in multiple of 100');
+        }else{
+            console.log('Amount must be in multiples of 100');
+        }
+
+        atmcash -= requestedamount;
+        userbalance -= requestedamount;
+
+        console.log(userbalance);
+
+    </script>
+</body>
+</html>

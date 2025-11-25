@@ -1110,3 +1110,56 @@ const / let - ES6
 Control Structures
 1. Conditional Statements
 2. Looping Statements
+
+25-11-25
+========
+
+Control Structures:
+1. Conditional Statements:
+2. Looping Statements
+1. Conditional Statements: Conditional statements in JavaScript that allow the execution of specific blocks of 
+code based on whether certain conditions are true or false.
+Types of conditional statements
+i. if else
+    if (One Scenario)
+    if else (Two Scenario)
+    if else if (More than two scenarios)
+
+ii. switch
+
+i. if: If condition is true, statements present in it will be executed, if condition is false it will ign
+    Syntax:
+        if (condition) {
+            // Specific block of code...
+        }
+2. if-else:
+        if (condition) {
+            // Specific block of code...
+        } else {
+            // Specific block of code...
+        }
+3. if-else-if:
+        if (condition) {
+            // Specific block of code...
+        } else if (condition) {
+            // Specific block of code...
+        } else if (condition) {
+            // Specific block of code...
+        } else if (condition) {
+            // Specific block of code...
+        } else if (condition) {
+            // Specific block of code...
+        } else if (condition) {
+            // Specific block of code...
+        } else {
+            // Specific block of code...
+        }
+
+Today's task:
+=============        
+ATM Withdrawal Validation
+🎯 Rules
+When a user tries to withdraw cash:
+1. First check whether ATM has sufficient cash
+2. Then check whether the user’s account balance is enough
+3. Then check whether the amount is in multiples of 100

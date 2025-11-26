@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="changeTheme('light')">Light</button>
+    <button onclick="changeTheme('dark')">Dark</button>
+
+    <h1>Key points about the switch statement:</h1>
+
+    <div>
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('about')">About</button>
+        <button onclick="showPage('contact')">Contact</button>
+        <div id="content">
+
+        </div>
+    </div>
+
+
+    <script>
+
+        // Show Payment Status - PENDING / SUCCESS / FAILED
+
+        const paymentStatus = 'SUCCESS';
+
+        if (paymentStatus === 'PENDING') {
+            console.log('Your payment is being processed, please wait...');
+        } else if (paymentStatus === 'SUCCESS') {
+            console.log('Payment is successful!');
+        } else if (paymentStatus === 'FAILED') {
+            console.log('Payment is failed, please try again...');
+        } else {
+            console.log('Unknown payment status');
+        }
+
+        switch (paymentStatus) {
+            case 'PENDING': {
+                console.log('Your payment is being processed, please wait...');
+                break;
+            }
+            case 'SUCCESS': {
+                console.log('Payment is successful!');
+                break;
+            }
+            case 'FAILED': {
+                console.log('Payment is failed, please try again...');
+                break;
+            }
+            default: {
+                console.log('Unknown payment status');
+            }
+        }
+
+        // Theme Switcher (Light / Dark)
+        function changeTheme(selectedTheme) {
+            switch(selectedTheme) {
+                case 'light': {
+                    document.body.style.backgroundColor = '#fff';
+                    document.body.style.color = '#000';
+                    break;
+                } 
+                case 'dark': {
+                    document.body.style.backgroundColor = '#000';
+                    document.body.style.color = '#fff';
+                    break;
+                }
+                default: {
+                    console.log('Unknown theme')
+                }
+            }
+        }
+
+        function showPage(pageName) {
+            switch(pageName) {
+                case 'home': {
+                    document.getElementById('content').innerHTML = '<h2>Home Page</h2><p>Welcome to our website!</p>';
+                    document.getElementById('content').style.color = 'green';
+                    break;
+                }
+                case 'about': {
+                    document.getElementById('content').innerHTML = '<h2>About Page</h2><p>This site loads content using JavaScript DOM manipulation.</p>';
+                    document.getElementById('content').style.color = 'red';
+                    break;
+                }
+                case 'contact': {
+                    document.getElementById('content').innerHTML = '<h2>Contact Page</h2><p>You can reach us at: contact@example.com</p>';
+                    document.getElementById('content').style.color = 'blue';
+                    break;
+                }
+                default: {
+                    document.getElementById('content').innerHTML = '<h2>404 Page Not Found</h2>';
+                    break;
+                }
+            }
+        }
+
+
+        if (10) {
+            let username = 'Manikanta';
+            console.log(username);
+        }
+
+        console.log(username);
+
+
+
+    </script>
+</body>
+
+</html>

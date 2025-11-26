@@ -1163,3 +1163,29 @@ When a user tries to withdraw cash:
 1. First check whether ATM has sufficient cash
 2. Then check whether the user’s account balance is enough
 3. Then check whether the amount is in multiples of 100
+
+26-11-25
+========
+
+Switch: The switch statement in JavaScript is a conditional control structure that evaluates an expression 
+and executes the block of code associated with the first matching case value.
+    Syntax:
+        switch(condition/value) {
+            case value: {
+                // Block of code...
+                break;
+            } case value: {
+                // Block of code...
+                break;
+            } case value: {
+                // Block of code...
+                break;
+            } default {
+                // Block of code...
+            } 
+        }
+        value - String / Number
+        break: Once statements present in case is executed, JS Engine will come out of switch block.
+const & let keyword - Block Scope
+    const: Value can be assigned only for once.
+    let: Value can be assigned for multiple times.

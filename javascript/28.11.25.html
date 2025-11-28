@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var i = 0;
+
+        while (i < 5) {
+            console.log('Iteration: ' + i);
+            i++;
+        }
+
+        const users = [
+            { id: 1, name: "Alice", age: 25, email: "alice@example.com" },
+            { id: 2, name: "Bob", age: 30, email: "bob@example.com" },
+            { id: 3, name: "Charlie", age: 28, email: "charlie@example.com" }
+        ];
+
+        var j = 0;
+
+        while (j < users.length) {
+            console.log('User: ', j + 1, users[j]);
+            j++;
+        }
+
+        while (false) {
+            console.log('In while loop.');
+        }
+
+
+        // Ask the user until they the enter correct value
+
+        // let age;
+
+        // do {
+        //     age = prompt('Enter your age (must be a number)');
+        // } while(isNaN(age));
+
+        // console.log('Valid age entered: ', age);
+
+        do {
+            console.log('In do while loop.');
+        } while (false);
+
+        for (var k = 0; k < users.length; k++) {
+            console.log('User: ', users[k]);
+        }
+
+        for (let k = users.length - 1; k >= 0; k--) {
+            console.log('User: ', users[k]);
+        }
+
+        const employee = {
+            id: 101,
+            name: "John Doe",
+            department: "Engineering",
+            designation: "Software Developer",
+            salary: 75000,
+            email: "john.doe@company.com",
+            isActive: true,
+            joinDate: "2023-05-10"
+        };
+
+        for (let key in employee) {
+            console.log(key, employee[key]);
+        }
+
+        const employees = [
+            {
+                id: 101,
+                name: "Alice Johnson",
+                department: "Engineering",
+                designation: "Software Engineer",
+                salary: 85000,
+                email: "alice.johnson@company.com",
+                isActive: true,
+                joinDate: "2023-03-14"
+            },
+            {
+                id: 102,
+                name: "Bob Smith",
+                department: "Human Resources",
+                designation: "HR Manager",
+                salary: 65000,
+                email: "bob.smith@company.com",
+                isActive: true,
+                joinDate: "2022-11-01"
+            },
+            {
+                id: 103,
+                name: "Charlie Davis",
+                department: "Sales",
+                designation: "Sales Executive",
+                salary: 54000,
+                email: "charlie.davis@company.com",
+                isActive: false,
+                joinDate: "2021-07-20"
+            },
+            {
+                id: 104,
+                name: "Diana Brown",
+                department: "Finance",
+                designation: "Accountant",
+                salary: 60000,
+                email: "diana.brown@company.com",
+                isActive: true,
+                joinDate: "2024-01-10"
+            },
+            {
+                id: 105,
+                name: "Edward Wilson",
+                department: "Engineering",
+                designation: "UI/UX Designer",
+                salary: 72000,
+                email: "edward.wilson@company.com",
+                isActive: true,
+                joinDate: "2023-09-05"
+            }
+        ];
+
+        for (let i = 0; i < employees.length; i++) {
+            let employee = employees[i];
+            console.log('Employee: ', i + 1);
+            console.log('--------------------');
+            for (let key in employee) {
+                console.log(key, employee[key]);
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

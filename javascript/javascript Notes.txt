@@ -1,0 +1,299 @@
+
+                            JavaScript Notes
+                            ================
+14-11-25
+========
+
+> Ways of writing Js.
+1. Internal Javascript
+    Syntax:
+        <body>
+        
+        
+            <script>
+            
+            
+            </script>
+        </body>
+2. External Javascript
+    filename.js
+    filename.html
+    <body>
+        <script src="filename.js"></script>
+    </body>
+> Output Parameters
+1. document.getElementById(idName).innerHTML = value;
+2. console.log(value) - Used to map value to browser console. - Developers - To debug the app
+3. window.alert(value) - To display output in alert.
+Variables: Variables are used to store information temporarily.
+    Syntax:
+        var variableName = value;
+            Starting from second word, every word first letter should be capital letter (SNAKE CASE)
+Data Types: Type of information which we are storing in variables.
+
+17-11-25
+========
+
+Variables:
+    Syntax:
+        var variableName = value; - Variable Definition
+        var variableName - Variable Declaration
+        variableName = value - Variable Initialization
+        let, const
+        > If your are creating a variable using const keyword, we can assign value only for once.
+        value - ? - Data Type
+Data Types:
+1. Predefined Data Types: Number, String, Boolean, Null, Undefined - Single Value
+2. Userdefined Data Types: Array, Object & Function. - Multiple Values
+    Number - Collection of digits & decimals.
+    String - Collection of alpha numeric values in single or double quotes.
+    Boolean - true / false
+    > Array: Collection of multiple similar datatype values.
+        Syntax:
+            var variableName = [value1, value2, value3, ..., valueN];
+                            index 0        1                    n - 1
+            > to print specific value:
+                variableName[index]
+    > Object: Collection of key-value pairs.
+        Syntax:
+            var variableName = {
+                key1: value1,
+                key2: value2,
+                key3: value3,
+                .., ..,
+                keyN: valueN
+            };
+            > To read value of key:
+                Syntax:
+                    variableName.keyName / variableName['keyName']
+
+18-11-25
+========
+
+Function: A function in JavaScript is a reusable block of code that performs a specific task and can optionally return a value. 
+    Syntax:
+    > Function Definition: It will be executed only when we call it.
+        function functionName(param1, param2, param3, ..., paramN) {
+            // Block of code...
+            return value;
+        }
+        -> Parameters: Recieving information into the function.
+        -> Return: Returning value from function to external sources.
+    Function Call: 
+        Syntax:
+            functionName(value1, value2, value3, ..., valueN);
+            functionName(value1, value2, value3, ..., valueN);
+            functionName(value1, value2, value3, ..., valueN);
+        Note: Function is defined only once, but can be called for n no of times.
+Events: User interactions to the application.
+onload: 
+onclick: Mouse click on any HTML Element.
+onmouseover: Placing cursor on an element.
+onmouseout: Removing the cursor from the element.
+onkeyup: Entering key in a keyboard.
+
+20-11-25
+========
+
+Operators:
+1. Arithematic Operators
+    i. Addition (+)
+    ii. Subtraction (-)
+    iii. Multiplication (*)
+    iv. Division (/)
+    vi. Modules (%)
+    vii. Increment (++): Increments the current value by 1.
+    viii. Decrement (--): Decrement the current value by 1.
+2. Assignment Operators (Shorthand Operators)
+    i. = - Assigns right side value with left side variable
+    ii. +=
+    iii. -=
+    iv. *=
+    v. /=
+    vi. %=
+3. Comparison Operators
+    i. == - Double Equal to - Compares both the values, if values are matching it returns true.
+    ii. === - Triple Equal to - Compares both the values & data types, if values & data types are matching returns true.
+    iii. != - Not Equal to - Compares both the values, if values not are matching it returns true.
+    iv. !== - Not Double Equal to - Compares both the values & data types, if values & data types are not matching returns true.
+    v. >
+    vi. <
+    vii. >=
+    viii. <=
+    ix. ? - Ternary Operator
+        Syntax:
+            condition ? true_statements : false_statement;
+4. Logical Operators
+    i. && - AND: If both are the conditons are matching it returns true.
+    ii. || - OR: If any of the condition is matching it returns true.
+    iii. ! - NOT
+Typings
+1. Static Typing: Assigning data type to the variable during variable declaration phase. (Java, Typescript, C# .Net, Go)
+2. Dynamic Typing: Assigning data type to the variable during execution phase. (Javascript, Python)
+
+21-11-25
+========
+
+Logical Operators
+1. AND (&&)
+2. OR (||)
+3. NOT (!)
+
+Logical AND:
+Condition 1    Condition 2      Result
+True            True            True
+True            False           False
+False           True            False
+False           False           False
+
+Logical OR:
+Condition 1    Condition 2      Result
+True            True            True
+True            False           True
+False           True            True
+False           False           False
+
+Logical NOT:
+Condition   Result
+True        False
+False       True
+
+ES - ECMA Script - Organization - Features of Javascript
+    Every browser will have JS Complier
+    Chrome - V8
+    Safari - Javascript Core
+    Mozilla Firefox - Spider Monkey
+    Edge/Internet Explorer - Chakra
+
+ES6 - Default Parameters
+const / let - ES6
+> Default Parameters: Assigning default value to the function parameter if value is not passed from function call.
+    Syntax:
+        function functionName(parameter1 = defaultValue, parameter2 = defaultValue) {
+            // Source code...
+            return value;
+        }
+        functionName(value1, value2, ,,,valueN);
+
+> Scope: Visibility of value of a variable.
+1. Global Scope: Value can be accessed across the file.
+2. Function Scope: Value can be accessed only within in a file.
+3. Block Scope: Value can be accessed only within a block. (let & const) - ES6
+    let - Value can be assigned for multiple times.
+    const - Value can be assigned only once.   
+    Syntax:
+        let variableName = value;
+        const variableName = value; 
+        
+Control Structures
+1. Conditional Statements
+2. Looping Statements
+
+25-11-25
+========
+
+Control Structures:
+1. Conditional Statements:
+2. Looping Statements
+1. Conditional Statements: Conditional statements in JavaScript that allow the execution of specific blocks of 
+code based on whether certain conditions are true or false.
+Types of conditional statements
+i. if else
+    if (One Scenario)
+    if else (Two Scenario)
+    if else if (More than two scenarios)
+
+ii. switch
+
+i. if: If condition is true, statements present in it will be executed, if condition is false it will ign
+    Syntax:
+        if (condition) {
+            // Specific block of code...
+        }
+2. if-else:
+        if (condition) {
+            // Specific block of code...
+        } else {
+            // Specific block of code...
+        }
+3. if-else-if:
+        if (condition) {
+            // Specific block of code...
+        } else if (condition) {
+            // Specific block of code...
+        } else if (condition) {
+            // Specific block of code...
+        } else if (condition) {
+            // Specific block of code...
+        } else if (condition) {
+            // Specific block of code...
+        } else if (condition) {
+            // Specific block of code...
+        } else {
+            // Specific block of code...
+        }
+
+Today's task:
+=============        
+ATM Withdrawal Validation
+🎯 Rules
+When a user tries to withdraw cash:
+1. First check whether ATM has sufficient cash
+2. Then check whether the user’s account balance is enough
+3. Then check whether the amount is in multiples of 100
+
+26-11-25
+========
+
+Switch: The switch statement in JavaScript is a conditional control structure that evaluates an expression 
+and executes the block of code associated with the first matching case value.
+    Syntax:
+        switch(condition/value) {
+            case value: {
+                // Block of code...
+                break;
+            } case value: {
+                // Block of code...
+                break;
+            } case value: {
+                // Block of code...
+                break;
+            } default {
+                // Block of code...
+            } 
+        }
+        value - String / Number
+        break: Once statements present in case is executed, JS Engine will come out of switch block.
+const & let keyword - Block Scope
+    const: Value can be assigned only for once.
+    let: Value can be assigned for multiple times.
+
+28-11-25
+========
+
+Looping Statements: Looping statements in JavaScript execute a block of code repeatedly while a specified condition remains true, 
+reducing repetitive code for tasks like iterating over data.
+1. while
+2. do while
+3. for
+4. for in
+1. while: It Executes the statements present in it, until the condition becomes false.
+    Syntax:
+        while(condition) {
+            // Block of code...
+        }
+2. do while: If condition is becoming false for every iteration, statements will be executed for once.
+    Syntax:
+        do {
+            // Block of code...
+        } while(condition);
+3. for:
+    Syntax:
+        for (initialization; condition; increment/decrement) {
+            // Block of code...
+        }
+4. for in:
+    Syntax:
+        for (var key in objectName) {
+            
+        }

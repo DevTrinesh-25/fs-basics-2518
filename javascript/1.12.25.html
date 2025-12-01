@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <ul id="technologies-list">
+    
+    </ul>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody id="users-table">
+
+        </tbody>
+    </table>
+
+    <script>
+
+        var firstname = 'Pavani';
+        var lastname = 'B';
+
+        var fullname = lastname + ' ' + firstname;
+
+        console.log(fullname);
+
+        var greeting = `Welcome, ${lastname} ${firstname}`;
+
+        console.log(greeting);
+
+        var technologiesList = document.getElementById('technologies-list');
+
+        const technologies = [
+            "JavaScript",
+            "Python",
+            "Java",
+            "C++",
+            "C#",
+            "PHP",
+            "Ruby",
+            "Go",
+            "Swift",
+            "Kotlin",
+            "TypeScript",
+            "HTML",
+            "CSS",
+            "React",
+            "Angular",
+            "Vue.js",
+            "Node.js",
+            "Django",
+            "Flask",
+            "FastAPI",
+            "MongoDB",
+            "MySQL",
+            "PostgreSQL",
+            "Docker",
+            "Kubernetes",
+            "AWS",
+            "Azure",
+            "Google Cloud",
+            "TensorFlow",
+            "PyTorch"
+        ];
+
+        let str = '';
+        
+        for (let i = 0; i < technologies.length; i++) {
+            // str = str + `<li>${technologies[i]}</li>`;
+            str = str + '<li>' + technologies[i] + '</li>';
+        }
+
+        technologiesList.innerHTML = str;
+
+        const users = [
+            { name: "Aarav", city: "Mumbai" },
+            { name: "Ananya", city: "Delhi" },
+            { name: "Vikram", city: "Bengaluru" },
+            { name: "Priya", city: "Chennai" },
+            { name: "Rohan", city: "Hyderabad" },
+            { name: "Sara", city: "Pune" },
+            { name: "Krishna", city: "Kolkata" },
+            { name: "Nisha", city: "Ahmedabad" }
+        ];
+
+        var usersTable = document.getElementById('users-table');
+        let str2 = '';
+
+        for (let i = 0; i < users.length; i++) {
+            // str2 += '<tr> <td>' + users[i].name + '</td><td>' + users[i].city + '</td></tr>'
+            str2 += `
+                <tr>
+                    <td>${users[i].name}</td>    
+                    <td>${users[i].city}</td>
+                </tr>
+            `
+        }
+
+        console.log(str2);
+
+        usersTable.innerHTML = str2;
+
+
+    </script>
+
+</body>
+
+</html>

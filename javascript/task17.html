@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <link rel="stylesheet" href="task17.css">
+</head>
+<body>
+    <div id="restaurants">
+     
+    </div>
+
+    <script>
+
+        const restaurants = [
+  {
+    id: 1,
+    name: "Pizza Hut",
+    rating: 4.3,
+    time: "45–50 mins",
+    priceTag: "Items at ₹99",
+    cuisine: "Pizzas",
+    location: "Khairatabad",
+    image: "pizza-hut.jpg"
+  },
+  {
+    id: 2,
+    name: "BOX8 – Desi Meals",
+    rating: 4.4,
+    time: "20–30 mins",
+    priceTag: "Items at ₹99",
+    cuisine: "North Indian, Biryani, Thalis",
+    location: "Khairatabad",
+    image: "box8.jpg"
+  },
+  {
+    id: 3,
+    name: "Mehfil",
+    rating: 4.3,
+    time: "30–35 mins",
+    priceTag: "₹100 OFF",
+    cuisine: "Biryani, Chinese, Kebabs",
+    location: "Narayanguda",
+    image: "mehfil.jpg"
+  },
+  {
+    id: 4,
+    name: "Burger King",
+    rating: 4.1,
+    time: "25–30 mins",
+    priceTag: "Items at ₹59",
+    cuisine: "Burgers, American",
+    location: "Mehdipatnam",
+    image: "burger-king.jpg"
+  },
+  {
+    id: 5,
+    name: "ZAZA Mughal Biryani",
+    rating: 4.0,
+    time: "20–30 mins",
+    priceTag: "Items at ₹99",
+    cuisine: "Biryani",
+    location: "charminar",
+    image: "zaza.jpg"
+  },
+  {
+    id: 6,
+    name: "NH1 Bowls – Highway To North",
+    rating: 4.6,
+    time: "20–30 mins",
+    priceTag: "Items at ₹99",
+    cuisine: "North Indian",
+    location: "miyapur",
+    image: "nh1.jpg"
+  },
+  {
+    id: 7,
+    name: "Yashodamma Non Veg",
+    rating: 3.9,
+    time: "40–45 mins",
+    priceTag: "Items at ₹79",
+    cuisine: "Non-veg, Andhra style",
+    location: "panjagutta",
+    image: "yashodamma.jpg"
+  },
+  {
+    id: 8,
+    name: "Hola Pasta – Fresh",
+    rating: 4.1,
+    time: "20–30 mins",
+    priceTag: "Items at ₹109",
+    cuisine: "Pasta",
+    location: "kondapur",
+    image: "hola-pasta.jpg"
+  }
+];
+
+let str = '';
+for(let i=0; i < restaurants.length; i++){
+    str += `
+        <div id="swiggy">
+        <div class="items">
+        <div class="img">
+        <img src="${restaurants[i].image}" width="100px">
+        <div class="price">${restaurants[i].priceTag}</div>
+        </div>
+        <h5>${restaurants[i].name}</h5>
+        <i class="fa-solid fa-star"></i><span id="rating">${restaurants[i].rating}</span>${restaurants[i].time}
+        <h5>${restaurants[i].cuisine}</h5>
+        <h5>${restaurants[i].location}</h5>  
+      </div>
+    </div>
+    `
+}
+
+ const restuarantsDiv = document.getElementById('restuarants');
+
+        restuarantsDiv.innerHTML = str;
+    </script>
+
+</body>
+</html>

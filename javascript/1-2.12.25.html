@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <link rel="stylesheet" href="1-2.12.25.css">
+</head>
+
+<body>
+
+    <div id="products">
+        
+    </div>
+
+
+    <script>
+        const products = [
+            {
+                id: 1,
+                name: "MOTOROLA Edge 60 Pro (Pantone Shadow, 256 GB)",
+                price: 33999,
+                oldPrice: 40999,
+                rating: 4.3,
+                reviews: "12,398 Ratings & 1,038 Reviews",
+                image: "https://via.placeholder.com/200x350",
+                features: [
+                    "12 GB RAM | 256 GB ROM",
+                    "17.02 cm (6.7 inch) Display",
+                    "50MP + 50MP + 10MP | 50MP Front Camera",
+                    "6000 mAh Battery",
+                    "Dimensity 8350 Processor"
+                ]
+            },
+            {
+                id: 2,
+                name: "Samsung Galaxy S23 FE (Mint, 128 GB)",
+                price: 39999,
+                oldPrice: 54999,
+                rating: 4.4,
+                reviews: "22,100 Ratings & 2,535 Reviews",
+                image: "https://via.placeholder.com/200x350",
+                features: [
+                    "8 GB RAM | 128 GB ROM",
+                    "6.4 inch Dynamic AMOLED Display",
+                    "50MP + 12MP + 8MP | 10MP Front Camera",
+                    "4500 mAh Battery",
+                    "Exynos 2200 Processor"
+                ]
+            },
+            {
+                id: 3,
+                name: "OnePlus 12R (Iron Gray, 256 GB)",
+                price: 37999,
+                oldPrice: 42999,
+                rating: 4.5,
+                reviews: "18,560 Ratings & 1,780 Reviews",
+                image: "https://via.placeholder.com/200x350",
+                features: [
+                    "12 GB RAM | 256 GB ROM",
+                    "6.78 inch AMOLED Display",
+                    "50MP + 8MP + 2MP | 16MP Front Camera",
+                    "5500 mAh Battery",
+                    "Snapdragon 8 Gen 2 Processor"
+                ]
+            },
+            {
+                id: 4,
+                name: "Realme GT 6 (Fluid Silver, 512 GB)",
+                price: 29999,
+                oldPrice: 34999,
+                rating: 4.2,
+                reviews: "9,800 Ratings & 950 Reviews",
+                image: "https://via.placeholder.com/200x350",
+                features: [
+                    "12 GB RAM | 512 GB ROM",
+                    "6.78 inch AMOLED Display",
+                    "50MP + 8MP + 2MP | 32MP Front Camera",
+                    "5500 mAh Battery",
+                    "Snapdragon 7 Gen 3 Processor"
+                ]
+            },
+            {
+                id: 5,
+                name: "iPhone 13 (Midnight, 128 GB)",
+                price: 52999,
+                oldPrice: 59999,
+                rating: 4.6,
+                reviews: "3,50,000 Ratings & 25,000 Reviews",
+                image: "https://via.placeholder.com/200x350",
+                features: [
+                    "4 GB RAM | 128 GB ROM",
+                    "6.1 inch Super Retina XDR Display",
+                    "12MP + 12MP | 12MP Front Camera",
+                    "3227 mAh Battery",
+                    "A15 Bionic Chip"
+                ]
+            }
+        ];
+
+        let str = '';
+
+        for (let i = 0; i < products.length; i++) {
+            str += `
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/200x350" alt="Product Image">
+                    </div>
+
+                    <div class="product-info">
+                        <h2 class="product-title">${products[i].name}</h2>
+                        <div class="rating">
+                            <span class="rating-box">${products[i].rating}★</span>
+                            <span class="rating-text">${products[i].reviews}</span>
+                        </div>
+
+                        <ul class="product-features">
+                            ${getProductFeatures(products[i].features)}
+                        </ul>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="price">₹${products[i].price}</span>
+                        <span class="old-price">₹${products[i].oldPrice}</span>
+                        <span class="offer">17% off</span>
+                        <p class="exchange">Upto ₹33,100 Off on Exchange</p>
+                        <p class="bank-offer">Bank Offer</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        const productsDiv = document.getElementById('products');
+
+        productsDiv.innerHTML = str;
+
+        function getProductFeatures(features) {
+            let str = '';
+            for (let i = 0; i < features.length; i++) {
+                str += `<li>${features[i]}</li>`;
+            }
+            return str;
+        }
+
+    </script>
+
+</body>
+
+</html>

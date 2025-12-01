@@ -297,3 +297,15 @@ reducing repetitive code for tasks like iterating over data.
         for (var key in objectName) {
             
         }
+
+1-12-25
+========
+
+Good Morning Pavani,
+How are you?
+Regards
+Lokesh
+Template Literals
+    Syntax:
+        var variableName = `Hello, ${variableName} ${variableName} Good Morning`;
+https://www.swiggy.com/restaurants - Task Link

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    
+    <button onclick="lowtohigh()">Low to High</button>
+    <button onclick="hightolow()">Low to High</button>
+    
+    <script>
+        
+            const mobiles = [
+  {
+    "id": 1,
+    "brand": "Apple",
+    "model": "iPhone 15 Pro",
+    "price": 999,
+    "storage": "256GB",
+    "ram": "8GB",
+    "battery": "3274mAh",
+    "os": "iOS 17",
+    "color": "Black Titanium"
+  },
+  {
+    "id": 2,
+    "brand": "Samsung",
+    "model": "Galaxy S24 Ultra",
+    "price": 1199,
+    "storage": "512GB",
+    "ram": "12GB",
+    "battery": "5000mAh",
+    "os": "Android 14",
+    "color": "Titanium Gray"
+  },
+  {
+    "id": 3,
+    "brand": "Google",
+    "model": "Pixel 9 Pro",
+    "price": 1099,
+    "storage": "256GB",
+    "ram": "12GB",
+    "battery": "4800mAh",
+    "os": "Android 14",
+    "color": "Obsidian"
+  },
+  {
+    "id": 4,
+    "brand": "OnePlus",
+    "model": "OnePlus 12",
+    "price": 899,
+    "storage": "256GB",
+    "ram": "16GB",
+    "battery": "5400mAh",
+    "os": "Android 14",
+    "color": "Emerald Green"
+  },
+  {
+    "id": 5,
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 Pro",
+    "price": 799,
+    "storage": "512GB",
+    "ram": "12GB",
+    "battery": "4880mAh",
+    "os": "Android 14",
+    "color": "Ceramic White"
+  },
+   {
+    "id": 6,
+    "brand": "Huawei",
+    "model": "Mate 60 Pro",
+    "price": 1099,
+    "storage": "512GB",
+    "ram": "12GB",
+    "battery": "5000mAh",
+    "os": "HarmonyOS 4",
+    "color": "Silver"
+  },
+  {
+    "id": 7,
+    "brand": "Sony",
+    "model": "Xperia 1 VI",
+    "price": 1299,
+    "storage": "256GB",
+    "ram": "12GB",
+    "battery": "5000mAh",
+    "os": "Android 14",
+    "color": "Black"
+  },
+  {
+    "id": 8,
+    "brand": "Oppo",
+    "model": "Find X7 Pro",
+    "price": 999,
+    "storage": "512GB",
+    "ram": "16GB",
+    "battery": "5000mAh",
+    "os": "Android 14",
+    "color": "Glaze Blue"
+  },
+  {
+    "id": 9,
+    "brand": "Vivo",
+    "model": "X100 Pro",
+    "price": 1049,
+    "storage": "256GB",
+    "ram": "16GB",
+    "battery": "5400mAh",
+    "os": "Android 14",
+    "color": "Startrail Blue"
+  },
+  {
+    "id": 10,
+    "brand": "Realme",
+    "model": "GT 6 Pro",
+    "price": 699,
+    "storage": "256GB",
+    "ram": "12GB",
+    "battery": "5200mAh",
+    "os": "Android 14",
+    "color": "Silver Wave"
+  },
+  {
+    "id": 11,
+    "brand": "Motorola",
+    "model": "Edge 50 Ultra",
+    "price": 899,
+    "storage": "512GB",
+    "ram": "12GB",
+    "battery": "4500mAh",
+    "os": "Android 14",
+    "color": "Forest Green"
+  },
+  {
+    "id": 12,
+    "brand": "Asus",
+    "model": "ROG Phone 8",
+    "price": 1099,
+    "storage": "512GB",
+    "ram": "16GB",
+    "battery": "5500mAh",
+    "os": "Android 14",
+    "color": "Phantom Black"
+  },
+  {
+    "id": 13,
+    "brand": "Nothing",
+    "model": "Phone 2",
+    "price": 699,
+    "storage": "256GB",
+    "ram": "12GB",
+    "battery": "4700mAh",
+    "os": "Android 14",
+    "color": "White"
+  },
+  {
+    "id": 14,
+    "brand": "Tecno",
+    "model": "Phantom X3 Pro",
+    "price": 599,
+    "storage": "256GB",
+    "ram": "12GB",
+    "battery": "5160mAh",
+    "os": "Android 14",
+    "color": "Nebula Black"
+  },
+  {
+    "id": 15,
+    "brand": "Infinix",
+    "model": "Zero Ultra 2",
+    "price": 549,
+    "storage": "256GB",
+    "ram": "12GB",
+    "battery": "5000mAh",
+    "os": "Android 14",
+    "color": "Cosmic Silver"
+  }
+];
+
+
+function sortData(paramName) {
+            const sortedmobiles = mobiles.sort(function(a, b) {
+                if (a[paramName] > b[paramName]) {
+                    return 1;
+                } else if (a[paramName] < b[paramName]) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            });
+            return sortedmobiles;
+        }
+
+    const _sortedmobiles = sortData('price');
+
+        console.log(_sortedmobiles);
+    </script>
+</body>
+</html>
+
+

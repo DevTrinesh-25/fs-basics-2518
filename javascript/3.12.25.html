@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const acProduct = {
+            name: "Daikin Split AC",
+            brand: "Daikin",
+            model: "FTL50TV16U1",
+            type: "Split AC",
+            capacityTons: 1.5,
+            starRating: 5,
+            powerConsumption: "1430W",
+            features: [
+                "Inverter Technology",
+                "Copper Condenser",
+                "Low Noise Operation",
+                "Energy Efficient",
+                "Fast Cooling"
+            ],
+            color: "White",
+            price: 38999,
+            warranty: {
+                product: "1 Year",
+                condenser: "5 Years",
+                compressor: "10 Years"
+            },
+            stock: 12,
+            isAvailable: true
+        };
+
+
+        console.log(acProduct.features[0]);
+
+        const productKeys = Object.keys(acProduct);
+
+        console.log(productKeys);
+
+        const productValues = Object.values(acProduct);
+
+        console.log(productValues);
+
+        const productEntries = Object.entries(acProduct);
+
+        delete acProduct.name;
+
+        console.log(acProduct);
+
+        const dbConfig = {
+            host: "localhost",
+            port: 5432,
+            username: "admin",
+            password: "password123",
+            database: "my_database",
+            dialect: "postgres",   // mysql | postgres | sqlite | mariadb | mssql
+            logging: false,
+            pool: {
+                max: 5,
+                min: 0,
+                acquire: 30000,
+                idle: 10000
+            }
+        };
+
+        const freezedDbConfig = Object.freeze(dbConfig);
+
+        freezedDbConfig.host = '127.0.0.1';
+
+        freezedDbConfig.name = 'POSTGRES';
+
+        delete freezedDbConfig.username;
+
+        console.log(freezedDbConfig);
+
+        const currentTimestamp = new Date();
+
+        console.log(currentTimestamp);
+
+
+        console.log(currentTimestamp.toISOString());
+
+
+
+        const currentTimestamp2 = '2025-12-05T06:05:54.390Z';
+
+        const currentDateObj = new Date(currentTimestamp2);
+
+        console.log(currentDateObj.getDate());
+
+        console.log(currentDateObj.getMonth());
+
+        console.log(currentDateObj.getFullYear());
+
+        console.log(currentDateObj.getHours());
+
+        console.log(currentDateObj.getMinutes());
+
+        console.log(currentDateObj.getSeconds());
+
+        console.log(currentDateObj.getDay());
+
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+        console.log(days[currentDateObj.getDay()]);
+
+        const dateStr = `${currentDateObj.getDate()}/${currentDateObj.getMonth() + 1}/${currentDateObj.getFullYear()}`;
+
+        console.log(dateStr);
+
+
+        function timeAgo(date) {
+            const seconds = Math.floor((new Date() - new Date(date)) / 1000);
+
+            const intervals = {
+                year: 31536000,
+                month: 2592000,
+                week: 604800,
+                day: 86400,
+                hour: 3600,
+                minute: 60,
+                second: 1
+            };
+
+            for (let unit in intervals) {
+                const value = Math.floor(seconds / intervals[unit]);
+                if (value >= 1) {
+                    return value === 1
+                        ? `1 ${unit} ago`
+                        : `${value} ${unit}s ago`;
+                }
+            }
+
+            return "Just now";
+        }
+
+        console.log(timeAgo("2025-12-01T10:00:00Z"));
+
+    </script>
+</body>
+</html>

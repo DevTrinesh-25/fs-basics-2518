@@ -336,3 +336,28 @@ toUpperCase(): Convert string to upper case.
 toLowerCase(): Convert string to lower case.
 concat(“ ”, str)                         //"Hello".concat(" ", "World!");
 charAt(index): Find character at a particular index.
+
+3-12-25
+========
+
+Object Methods:
+    Syntax:
+        var variableName = {
+            key1: value1,
+            key2: value2,
+            keyN: valueN
+        }
+Object Methods:
+---------------
+Object.keys()
+Object.values()
+Object.entries()
+Object.freeze()
+Date Methods:
+------------
+    Date Time Time Zone
+    new Date()
+    new - Creating Object using function
+    DD/MM/YYYY
+    MM/DD/YYYY
+    2nd October 2025

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const mobileNames = [
+            "iPhone 16 Pro",
+            "Samsung Galaxy S24",
+            "OnePlus 12",
+            "Google Pixel 9",
+            "Xiaomi 14",
+            "Realme GT 7",
+        ];
+
+        mobileNames.push('Vivo X100');
+
+        mobileNames.push('Oppo Find X7');
+
+        mobileNames.pop();
+
+        mobileNames.pop();
+
+        mobileNames.pop();
+
+
+        mobileNames.splice(1, 1);
+
+        console.log(mobileNames);
+
+        // splice(index, deleteCount, newValue1, newValue2, newValue3)
+        mobileNames.splice(2, 2, 'Samsung Galaxy S24');
+
+        mobileNames.splice(2, 0, 'Nothing Phone 2');
+
+        const gamingMonitors = [
+            "ASUS ROG Strix XG27UQ",
+            "Acer Predator XB273K",
+            "MSI Optix MAG274QRF-QD",
+            "Dell Alienware AW2723DF",
+            "Samsung Odyssey G9"
+        ];
+
+        const officeMonitors = [
+            "Dell UltraSharp U2723QE",
+            "HP E27 G5",
+            "LG 27UL500",
+            "Lenovo ThinkVision P27h",
+            "BenQ GW2785TC"
+        ];
+
+        const budgetMonitors = [
+            "AOC 24B2XH",
+            "Samsung T350",
+            "LG 24MP88HV",
+            "BenQ GW2480",
+            "HP M24fw",
+        ];
+
+        const allMonitors = gamingMonitors.concat(officeMonitors, budgetMonitors);
+
+        console.log(allMonitors);
+
+        const sortedAllMonitors = allMonitors.sort().reverse();
+
+        console.log(sortedAllMonitors);
+
+        const isMonitorExist = allMonitors.includes('Acer UltraSharp U2723QE');
+
+        console.log(isMonitorExist);
+
+        const students = [
+            {
+                id: 1,
+                name: "Aarav Sharma",
+                age: 18,
+                grade: "A",
+                city: "Mumbai"
+            },
+            {
+                id: 2,
+                name: "Sneha Reddy",
+                age: 19,
+                grade: "B",
+                city: "Hyderabad"
+            },
+            {
+                id: 3,
+                name: "Rohan Mehta",
+                age: 17,
+                grade: "A+",
+                city: "Delhi"
+            },
+            {
+                id: 4,
+                name: "Anjali Patel",
+                age: 18,
+                grade: "A",
+                city: "Ahmedabad"
+            },
+            {
+                id: 5,
+                name: "Karan Verma",
+                age: 20,
+                grade: "C",
+                city: "Pune"
+            }
+        ];
+
+        function sortData(paramName) {
+            const sortedStudents = students.sort(function(a, b) {
+                if (a[paramName] > b[paramName]) {
+                    return 1;
+                } else if (a[paramName] < b[paramName]) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            });
+            return sortedStudents;
+        }
+
+        // Return keyword - Used to pass value from function defintion to function call.
+
+        // Parameter - Used to pass value from function call to function definition.
+
+        // Passing a function as a value to another function is called Callback Function.
+
+        const _sortedStudents = sortData('name');
+
+        console.log(_sortedStudents);
+
+        const str = 'Used to pass value from function defintion to function call.';
+
+        const str2 = new String('Used to pass value from function defintion to function call.')
+
+        console.log(str2);
+
+        console.log(str.indexOf('function'));
+
+        console.log(str.lastIndexOf('function'));
+
+        console.log(str.slice(5, 10));
+
+        console.log(str.substr(5, 5));
+
+        console.log(str.toUpperCase());
+
+        console.log(str.toLowerCase());
+
+        const address = {
+            houseNo: "22B",
+            street: "MG Road",
+            area: "Banjara Hills",
+            city: "Hyderabad",
+            state: "Telangana",
+            pincode: 500034,
+            country: "India"
+        };
+
+        const addressStr = address.houseNo.concat(', ', address.street, ', ', address.area, ' ', address.city, ', ', address.state, ', ', address.pincode, ', ', address.country)
+
+        console.log(addressStr);
+
+        const mobileNo = '9032345245';
+
+        // 9032 345 245;
+
+        const formattedMobileNo = `+91 ${mobileNo.charAt(0)}${mobileNo.charAt(1)}${mobileNo.charAt(2)}${mobileNo.charAt(3)} ${mobileNo.charAt(4)}${mobileNo.charAt(5)}${mobileNo.charAt(6)} ${mobileNo.charAt(7)}${mobileNo.charAt(8)}${mobileNo.charAt(9)}`; 
+
+        console.log(formattedMobileNo);
+
+    </script>
+
+
+</body>
+
+</html>

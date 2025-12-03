@@ -309,3 +309,30 @@ Template Literals
     Syntax:
         var variableName = `Hello, ${variableName} ${variableName} Good Morning`;
 https://www.swiggy.com/restaurants - Task Link
+
+2-12-25
+========
+
+Array: Collection of values
+
+    Each value can be string | number | boolean | array | object 
+
+Predefined Methods / Functions
+1. push(): Insert a value at last index position.
+2. pop(): Deletes the value from last index position.
+3. splice(index, deleteCount, newValue1, newValue2, newValue3, ...., ): Inserting / Deleting value from any index.
+4. concat(): To join more than two arrays.
+5. sort(): To sort the data in ascending order.
+6. reverse(): To reverse the current order of array.
+7. includes(): Verifies whether value exist, if value exist it returns true otherwise false.
+
+String: Collection of characters which are included in single or double quotes.
+Length
+indexOf(string): Finds index of sub string of whole string.
+lastIndexOf(string): Finds last index of sub string of whole string.
+slice(start, end): Return sub string of whole string.
+substr(start, len): Return sub string of whole string.
+toUpperCase(): Convert string to upper case.
+toLowerCase(): Convert string to lower case.
+concat(“ ”, str)                         //"Hello".concat(" ", "World!");
+charAt(index): Find character at a particular index.

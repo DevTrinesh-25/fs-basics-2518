@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var sum = function (a, b) {
+            const result = a + b;
+            return result;
+        }
+
+        console.log(sum(45, 4));
+
+        console.log(window.sum(56, 8));
+
+        const user = {
+            id: 1,
+            name: "John Doe",
+            email: "john@example.com",
+            city: "New York",
+            createdAt: '2025-09-18T05:55:26.211Z',
+            isUserLoggedIn: false,
+            getFormattedCreatedAt: function () {
+                const dateObj = new Date(this.createdAt);
+                const date = (dateObj.getDate().toString().length === 1) ? '0' + dateObj.getDate() : dateObj.getDate();
+                const month = ((dateObj.getMonth() + 1).toString().length === 1) ? '0' + (dateObj.getMonth() + 1) : dateObj.getMonth() + 1;
+                return `${date}/${month}/${dateObj.getFullYear()}`;
+            },
+            getFormattedUserLogin: function () {
+                return this.isUserLoggedIn ? 'Logged In' : 'Not Logged In';
+            }
+        };
+
+        console.log(user.getFormattedCreatedAt());
+
+        console.log(user.getFormattedUserLogin());
+
+
+        (function () {
+            // Block of statements...
+            // API call to get data from api on load of the page...
+            console.log('In IIFE function...');
+        })();
+
+        function func1() {
+            console.log('In setinterval function....')
+        }
+
+        setInterval(func1, 1000);
+
+        setTimeout(function () {
+            console.log('In settimeout function...')
+        }, 5000);
+
+        const employees = [
+            {
+                id: 1,
+                name: "Aarav Sharma",
+                department: "Engineering",
+                designation: "Software Engineer",
+                salary: 75000,
+                city: "Bengaluru",
+                createdAt: new Date().toISOString()
+            },
+            {
+                id: 2,
+                name: "Priya Mehta",
+                department: "Human Resources",
+                designation: "HR Manager",
+                salary: 65000,
+                city: "Mumbai",
+                createdAt: new Date().toISOString()
+            },
+            {
+                id: 3,
+                name: "Rohan Verma",
+                department: "Sales",
+                designation: "Sales Executive",
+                salary: 55000,
+                city: "Delhi",
+                createdAt: new Date().toISOString()
+            },
+            {
+                id: 4,
+                name: "Sara Khan",
+                department: "Marketing",
+                designation: "Marketing Specialist",
+                salary: 60000,
+                city: "Hyderabad",
+                createdAt: new Date().toISOString()
+            },
+            {
+                id: 5,
+                name: "Vikram Singh",
+                department: "Finance",
+                designation: "Accountant",
+                salary: 58000,
+                city: "Chennai",
+                createdAt: new Date().toISOString()
+            }
+        ];
+
+        for (let i = 0; i < employees.length; i++) {
+            console.log(employees[i]);
+        }
+
+        // forEach
+
+        employees.forEach(function(employee, index) {
+            console.log(employee, index);
+        });
+
+    </script>
+</body>
+
+</html>

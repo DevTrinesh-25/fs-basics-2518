@@ -361,3 +361,51 @@ Date Methods:
     DD/MM/YYYY
     MM/DD/YYYY
     2nd October 2025
+
+3-12-25
+========
+
+Types of Functions
+1. Function Constructor
+2. Anonymous Function
+3. IIFE - Immediately Invocable Function Expression
+4. Callback Function
+5. Higher Order Function
+6. Closure.
+2. Anonymous Function: A function without a name is called anonymous function.
+    Syntax:
+    Function Expression / Definition:
+        const variableName = function(parameter1, parameter2, ,,, parameterN) {
+            // Block of statements...
+            return value;
+        }
+    Function Call:
+        variableName(value1, value2, ,,,, valueN);
+BODMAS
+IIFE - Immediately Invocable Function Expression: A function which is invoked by itself it called IIFE.
+    Syntax:
+        (function() {
+            // Block of statements...
+        })();
+    -> If we want to call function, while defining then we go for it.
+Callback Function: A function definition which is passed as a parameter to another function is called Callback function.
+    -> API call...
+        Success Path...
+        Failure Path...
+    Syntax:
+        function func1() {
+        }
+        function func2(func1) {
+                func1();
+        }
+        func2(func1);
+        Higher Order Function - func2
+        Callback Function - func1
+Higher Order Function: A function which is expecting one parameter as a function is called Higher Order Function
+Closure: A function which is defined inside another function is called Closure.
+    Syntax:
+        function functionName() {
+            return functionName() {
+                
+            }
+        }

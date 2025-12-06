@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px 20px;
+            min-height: 100vh;
+        }
+
+        #container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .sort-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .sort-label {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .sort-select {
+            padding: 10px 15px;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: white;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .sort-select:hover {
+            border-color: #764ba2;
+            background-color: #f8f9ff;
+        }
+
+        #vehicle {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            padding: 20px;
+        }
+
+        #car {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+        }
+
+        #car:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        #car img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        #car h3 {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        #car h3:first-of-type {
+            font-size: 18px;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .price {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            #vehicle {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #vehicle {
+                grid-template-columns: 1fr;
+            }
+
+            #container {
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h2>Cars</h2>
+        <div class="sort-container">
+            <label for="sortByYearSelect" class="sort-label">Sort by Year: </label>
+            <select onchange="sortByYear()" id="sortByYearSelect" class="sort-select">
+                <option>Select</option>
+                <option>Ascending Order</option>
+                <option>Descending Order</option>
+            </select>
+        </div>
+    </div>
+    <div id="vehicle">
+
+    </div>
+    
+   
+
+    <script>
+        const cars = [
+  {
+    id: 1,
+    brand: "Toyota",
+    model: "Camry",
+    year: 2022,
+    price: 28000,
+    color: "Silver",
+    fuelType: "Petrol",
+    image: "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+  },
+  {
+    id: 2,
+    brand: "Honda",
+    model: "Civic",
+    year: 2021,
+    price: 24000,
+    color: "Red",
+    fuelType: "Petrol",
+    image: "https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg"
+  },
+  {
+    id: 3,
+    brand: "Tesla",
+    model: "Model 3",
+    year: 2023,
+    price: 42000,
+    color: "White",
+    fuelType: "Electric",
+    image: "https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg"
+  },
+  {
+    id: 4,
+    brand: "BMW",
+    model: "X5",
+    year: 2022,
+    price: 61000,
+    color: "Black",
+    fuelType: "Diesel",
+    image: "https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg"
+  },
+  {
+    id: 5,
+    brand: "Audi",
+    model: "A4",
+    year: 2021,
+    price: 39000,
+    color: "Blue",
+    fuelType: "Petrol",
+    image: "https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg"
+  }
+];
+
+    let str = '';
+for(let i=0; i < cars.length; i++){
+    str += `
+        <div id="car">
+        <div>
+            <img src="${cars[i].image}" width="100px">
+        </div>
+        <div class="price">${cars[i].price}</div>
+        <h3>${cars[i].brand}</h3>
+        <h3>${cars[i].model}</h3>
+        <h3>${cars[i].year}</h3>
+        <h3>${cars[i].colour}</h3>
+        <h3>${cars[i].fuelType}</h3>
+    </div>
+    `
+}
+
+const vehicleDiv = document.getElementById('vehicle');
+
+        vehicleDiv.innerHTML = str;
+    </script>
+
+</body>
+</html>

@@ -362,7 +362,7 @@ Date Methods:
     MM/DD/YYYY
     2nd October 2025
 
-3-12-25
+4-12-25
 ========
 
 Types of Functions
@@ -409,3 +409,7 @@ Closure: A function which is defined inside another function is called Closure.
                 
             }
         }
+
+5-12-25
+========
+

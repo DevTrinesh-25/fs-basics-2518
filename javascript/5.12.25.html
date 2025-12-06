@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Nunito", sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h2 {
+            text-align: center;
+        }
+        .header {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        #container {
+            overflow-x: auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            font-size: 14px;
+        }
+
+        thead {
+            background-color: #4a90e2;
+            color: white;
+        }
+
+        thead th {
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #e0e0e0;
+            transition: background-color 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background-color: #f0f7ff;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        tbody tr:nth-child(even):hover {
+            background-color: #f0f7ff;
+        }
+
+        tbody td {
+            padding: 12px 15px;
+            color: #333;
+        }
+
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+        .active {
+            background-color: green;
+            color: white;
+            border-radius: 20px;
+            padding: 5px 10px;
+        }
+        .inactive {
+            background-color: red;
+            color: white;
+            border-radius: 20px;
+            padding: 5px 10px;
+        }
+        .view-btn {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            font-family: "Nunito", sans-serif;
+        }
+        .view-btn:hover {
+            background-color: #357abd;
+            transform: translateY(-1px);
+        }
+        .view-btn:active {
+            transform: translateY(0);
+            background-color: #2a5f8f;
+        }
+        .sort-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+        }
+        .sort-label {
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+            margin: 0;
+        }
+        .sort-select {
+            padding: 10px 15px;
+            font-size: 14px;
+            font-family: "Nunito", sans-serif;
+            border: 2px solid #4a90e2;
+            border-radius: 6px;
+            background-color: white;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 180px;
+            outline: none;
+        }
+        .sort-select:hover {
+            border-color: #357abd;
+            box-shadow: 0 2px 4px rgba(74, 144, 226, 0.2);
+        }
+        .sort-select:focus {
+            border-color: #357abd;
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        }
+        .sort-select option {
+            padding: 10px;
+            font-family: "Nunito", sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h2>Employees</h2>
+        <div class="sort-container">
+            <label for="sortByNameSelect" class="sort-label">Sort by Name: </label>
+            <select onchange="sortByName()" id="sortByNameSelect" class="sort-select">
+                <option>Select</option>
+                <option>Ascending Order</option>
+                <option>Descending Order</option>
+            </select>
+        </div>
+        <table>
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Department</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Salary</th>
+                <th>Location</th>
+                <th>Status</th>
+                <th>Created At</th>
+                <th>Joined At</th>
+                <th>Actions</th>
+            </thead>
+            <tbody id="employees-container">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+
+        // const container = document.getElementById('container');
+
+        // const header1 = document.createElement('h1');
+
+        // header1.innerHTML = 'Create Element Function...';
+
+        // header1.style.color = 'blueviolet';
+
+        // header1.classList.add('header');
+
+        // container.appendChild(header1);
+
+        const employees = [
+            {
+                id: 1,
+                name: "John Doe",
+                role: "Software Engineer",
+                department: "IT",
+                email: "john.doe@example.com",
+                phone: "+1-555-123-4567",
+                salary: 75000,
+                location: "New York",
+                status: "Active",
+                createdAt: "2024-01-12T10:30:00Z",
+                joinedAt: "2022-04-10"
+            },
+            {
+                id: 2,
+                name: "Sarah Smith",
+                role: "Project Manager",
+                department: "Operations",
+                email: "sarah.smith@example.com",
+                phone: "+1-555-234-5678",
+                salary: 90000,
+                location: "Chicago",
+                status: "Active",
+                createdAt: "2024-01-12T10:31:00Z",
+                joinedAt: "2021-11-25"
+            },
+            {
+                id: 3,
+                name: "Michael Brown",
+                role: "Data Analyst",
+                department: "Data Science",
+                email: "michael.brown@example.com",
+                phone: "+1-555-345-6789",
+                salary: 68000,
+                location: "San Francisco",
+                status: "Inactive",
+                createdAt: "2024-01-12T10:32:00Z",
+                joinedAt: "2023-02-18"
+            },
+            {
+                id: 4,
+                name: "Priya Sharma",
+                role: "HR Executive",
+                department: "Human Resources",
+                email: "priya.sharma@example.com",
+                phone: "+91-98765-43210",
+                salary: 55000,
+                location: "Mumbai",
+                status: "Active",
+                createdAt: "2024-01-12T10:33:00Z",
+                joinedAt: "2020-07-03"
+            },
+            {
+                id: 5,
+                name: "David Wilson",
+                role: "Frontend Developer",
+                department: "IT",
+                email: "david.wilson@example.com",
+                phone: "+1-555-456-7890",
+                salary: 72000,
+                location: "Seattle",
+                status: "Active",
+                createdAt: "2024-01-12T10:34:00Z",
+                joinedAt: "2023-01-15"
+            },
+            {
+                id: 6,
+                name: "Emily Chen",
+                role: "UX Designer",
+                department: "Design",
+                email: "emily.chen@example.com",
+                phone: "+1-555-567-8901",
+                salary: 65000,
+                location: "Los Angeles",
+                status: "Active",
+                createdAt: "2024-01-12T10:35:00Z",
+                joinedAt: "2022-08-20"
+            },
+            {
+                id: 7,
+                name: "Robert Taylor",
+                role: "Backend Developer",
+                department: "IT",
+                email: "robert.taylor@example.com",
+                phone: "+1-555-678-9012",
+                salary: 78000,
+                location: "Austin",
+                status: "Active",
+                createdAt: "2024-01-12T10:36:00Z",
+                joinedAt: "2021-05-12"
+            },
+            {
+                id: 8,
+                name: "Lisa Anderson",
+                role: "Marketing Manager",
+                department: "Marketing",
+                email: "lisa.anderson@example.com",
+                phone: "+1-555-789-0123",
+                salary: 85000,
+                location: "Boston",
+                status: "Active",
+                createdAt: "2024-01-12T10:37:00Z",
+                joinedAt: "2020-03-22"
+            },
+            {
+                id: 9,
+                name: "James Martinez",
+                role: "DevOps Engineer",
+                department: "IT",
+                email: "james.martinez@example.com",
+                phone: "+1-555-890-1234",
+                salary: 82000,
+                location: "Denver",
+                status: "Inactive",
+                createdAt: "2024-01-12T10:38:00Z",
+                joinedAt: "2022-09-05"
+            },
+            {
+                id: 10,
+                name: "Maria Garcia",
+                role: "Financial Analyst",
+                department: "Finance",
+                email: "maria.garcia@example.com",
+                phone: "+1-555-901-2345",
+                salary: 70000,
+                location: "Miami",
+                status: "Active",
+                createdAt: "2024-01-12T10:39:00Z",
+                joinedAt: "2023-06-10"
+            },
+            {
+                id: 11,
+                name: "Kevin Johnson",
+                role: "Sales Representative",
+                department: "Sales",
+                email: "kevin.johnson@example.com",
+                phone: "+1-555-012-3456",
+                salary: 60000,
+                location: "Phoenix",
+                status: "Active",
+                createdAt: "2024-01-12T10:40:00Z",
+                joinedAt: "2021-12-01"
+            },
+            {
+                id: 12,
+                name: "Jennifer Lee",
+                role: "Product Manager",
+                department: "Product",
+                email: "jennifer.lee@example.com",
+                phone: "+1-555-123-4567",
+                salary: 95000,
+                location: "Portland",
+                status: "Active",
+                createdAt: "2024-01-12T10:41:00Z",
+                joinedAt: "2019-11-18"
+            },
+            {
+                id: 13,
+                name: "Christopher White",
+                role: "QA Engineer",
+                department: "IT",
+                email: "christopher.white@example.com",
+                phone: "+1-555-234-5678",
+                salary: 68000,
+                location: "Atlanta",
+                status: "Active",
+                createdAt: "2024-01-12T10:42:00Z",
+                joinedAt: "2022-02-14"
+            },
+            {
+                id: 14,
+                name: "Amanda Davis",
+                role: "Content Writer",
+                department: "Marketing",
+                email: "amanda.davis@example.com",
+                phone: "+1-555-345-6789",
+                salary: 58000,
+                location: "Nashville",
+                status: "Inactive",
+                createdAt: "2024-01-12T10:43:00Z",
+                joinedAt: "2023-03-25"
+            },
+            {
+                id: 15,
+                name: "Daniel Rodriguez",
+                role: "Database Administrator",
+                department: "IT",
+                email: "daniel.rodriguez@example.com",
+                phone: "+1-555-456-7890",
+                salary: 76000,
+                location: "Dallas",
+                status: "Active",
+                createdAt: "2024-01-12T10:44:00Z",
+                joinedAt: "2021-07-08"
+            },
+            {
+                id: 16,
+                name: "Rachel Kim",
+                role: "Business Analyst",
+                department: "Operations",
+                email: "rachel.kim@example.com",
+                phone: "+1-555-567-8901",
+                salary: 73000,
+                location: "San Diego",
+                status: "Active",
+                createdAt: "2024-01-12T10:45:00Z",
+                joinedAt: "2020-09-30"
+            },
+            {
+                id: 17,
+                name: "Thomas Moore",
+                role: "Security Specialist",
+                department: "IT",
+                email: "thomas.moore@example.com",
+                phone: "+1-555-678-9012",
+                salary: 88000,
+                location: "Washington DC",
+                status: "Active",
+                createdAt: "2024-01-12T10:46:00Z",
+                joinedAt: "2022-04-17"
+            },
+            {
+                id: 18,
+                name: "Sophia Patel",
+                role: "Accountant",
+                department: "Finance",
+                email: "sophia.patel@example.com",
+                phone: "+1-555-789-0123",
+                salary: 62000,
+                location: "Houston",
+                status: "Active",
+                createdAt: "2024-01-12T10:47:00Z",
+                joinedAt: "2023-05-20"
+            },
+            {
+                id: 19,
+                name: "Ryan Thompson",
+                role: "Customer Support",
+                department: "Support",
+                email: "ryan.thompson@example.com",
+                phone: "+1-555-890-1234",
+                salary: 52000,
+                location: "Orlando",
+                status: "Inactive",
+                createdAt: "2024-01-12T10:48:00Z",
+                joinedAt: "2021-10-12"
+            }
+        ];
+        
+        let sortedEmployees = employees.slice();
+
+        function displayEmps() {
+            const employeesContainer = document.getElementById('employees-container');
+            sortedEmployees.forEach(function(emp) {
+                const tr = document.createElement('tr');
+
+                for (let key in emp) {
+                    const td = document.createElement('td');
+                    if (key === 'createdAt') {
+                        const dateObj = new Date(emp[key]);
+                        const month = (dateObj.getMonth() + 1).toString().length === 1 ? '0' + (dateObj.getMonth() + 1) : dateObj.getMonth() + 1;
+                        const date = (dateObj.getDate()).toString().length === 1 ? '0' + dateObj.getDate() : dateObj.getDate();
+                        td.innerHTML = `${dateObj.getFullYear()}-${month}-${date}`;
+                    } else if (key === 'status') {
+                        const span = document.createElement('span');
+                        span.innerHTML = emp[key];
+                        if (emp[key] === 'Active') {
+                            span.classList.add('active');
+                        } else {
+                            span.classList.add('inactive');
+                        }
+                        td.appendChild(span);
+                    } else {
+                        td.innerHTML = emp[key];
+                    }
+                    tr.appendChild(td);
+                }
+                // Actions 
+                const td = document.createElement('td');
+                const button = document.createElement('button');
+                button.innerHTML = 'View';
+                button.classList.add('view-btn');
+                button.addEventListener('click', function() {
+                    console.log(emp);
+                    window.location.href = './view-employee.html';
+                });
+                td.appendChild(button);
+                tr.appendChild(td);
+                
+                employeesContainer.appendChild(tr);
+            });
+        }
+
+        displayEmps();
+
+        function sortByName(event) {
+            const selectedOrder = document.getElementById('sortByNameSelect').value;
+            if (selectedOrder === 'Ascending Order') {
+                sortedEmployees = employees.sort(function(a, b) {
+                    if (a.name > b.name) {
+                        return 1;
+                    } else if (a.name < b.name) {
+                        return -1;
+                    } else {
+                        return 0;
+                    }
+                });
+                console.log(sortedEmployees);
+            } else if (selectedOrder === 'Descending Order') {
+                sortedEmployees = employees.sort(function(a, b) {
+                    if (a.name > b.name) {
+                        return -1;
+                    } else if (a.name < b.name) {
+                        return 1;
+                    } else {
+                        return 0;
+                    }
+                });
+            } else {
+                sortedEmployees = employees.slice();
+            }
+            const employeesContainer = document.getElementById('employees-container');
+            employeesContainer.innerHTML = '';
+            displayEmps();
+        }
+
+    </script>
+    
+</body>
+</html>

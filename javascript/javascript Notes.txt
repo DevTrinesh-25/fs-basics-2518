@@ -413,3 +413,51 @@ Closure: A function which is defined inside another function is called Closure.
 5-12-25
 ========
 
+task given
+
+8-12-25
+========
+
+Error Handling (try...catch)
+    Syntax:
+        let isShowLoader = true;
+        try {
+            // Error causing Statements needs to be written here...
+            isShowLoader = false;
+        } catch(error) {
+            // Errors are handled here...
+            isShowLoader = false;
+        } finally {
+            // Statements present in it, will be executed irrespective of errors.
+            isShowLoader = false;
+        }
+Callback Function: A function which is passed as an argument to another function is called Callback function.
+    Callback Hell
+    Syntax:
+        function func1() {
+        }
+        function func2() {
+        }
+        function func3(func2) {
+                func2(func1)
+        }
+        func3(func2);
+Promises (ES6): A Promise in JavaScript is an object that represents the eventual completion or failure 
+of an asynchronous operation and its resulting value.
+    Syntax:
+        const promiseObj = new Promise(function(resolve, reject) {
+                resolve() - completion
+                reject(); - failure
+        });
+        promiseObj.then(function(response) {
+        }).catch(function(error) {
+        });
+        Eg. User Login
+            Email & Password -> Validation with db
+                -> Completion / Success
+                -> failure
+            Dependent statements.
+                -> Success -> Navigate to Home page.
+                -> Failure -> Show error message.
+            AJAX -> Fetch
+            AJAX -> AXIOS

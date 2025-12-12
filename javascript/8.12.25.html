@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // const email = 'santhosh@gmail.com';
+
+        // email = 'venkatesh@gmail.com';
+
+        try {
+            // Error causing statements needs to be written here...
+            // let userInfo = [];
+
+            // console.log(userInfo.email);
+        } catch(error) {
+            console.log(error);
+            window.location.href = './error-page.html';
+            // Errors are handled here...
+        }
+
+        const isCredentialsValid = false;
+
+        const loginPromiseObj = new Promise(function(resolve, reject) {
+            if (isCredentialsValid) {
+                resolve('Email and password are valid');
+            } else {
+                reject('Incorrect email or password');
+            }
+        });
+
+        loginPromiseObj.then(function(response) {
+            console.log(response);
+        }).catch(function(error) {
+            console.log(error);
+        });
+
+        // ES7
+
+        async function getData() {
+            try {
+                const response = await loginPromiseObj;
+            } catch(error) {
+                console.log(error);
+            }
+        }
+
+        const isEmailValid = true;
+        const isPasswordValid = true;
+
+        // ES6
+        const emailPromiseObj = new Promise(function(resolve, reject) {
+            if (isEmailValid) {
+                resolve('Email is valid');
+            } else { 
+                reject('Incorrect email');
+            }
+        });
+
+        const passwordPromiseObj = new Promise(function(resolve, reject) {
+            if (isPasswordValid) {
+                resolve('Password is valid');
+            } else { 
+                reject('Incorrect password');
+            }
+        });
+
+        emailPromiseObj.then(function(response) {
+            passwordPromiseObj.then(function() {
+
+            }).catch(function(error) {
+
+            });
+        }).catch(function(error) {
+
+        });
+
+        async function getData() {
+            try {
+                const response1 = await emailPromiseObj;
+                const response2 = await passwordPromiseObj;
+
+                
+            } catch(error) {
+                console.log(error);
+            }
+        }
+
+        getData();
+        
+    </script>
+    
+</body>
+</html>

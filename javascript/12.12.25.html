@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="12.2.12.25.html">12.2.12.25.html</a>
+
+    <script>
+
+        const employeeInfo = {
+            "id": 1,
+            "name": "Rahul Mehta",
+            "position": "Software Engineer",
+            "salary": 60000,
+            "createdAt": "2025-12-09T10:00:00Z"
+        };
+
+        const employeeStr = JSON.stringify(employeeInfo);
+
+        localStorage.setItem('employee-info', employeeStr);
+
+        console.log(JSON.parse(localStorage.getItem('employee-info')));
+
+        localStorage.removeItem('employee-info');
+
+        sessionStorage.setItem('employee-info', employeeStr);
+
+
+
+    </script>
+</body>
+</html>

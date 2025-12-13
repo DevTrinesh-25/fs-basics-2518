@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        async function getAllCars() {
+            try {
+                const response = await fetch('http://localhost:4000/cars', { 'method': 'GET' });
+                const cars = await response.json();
+
+                console.log(cars);
+            } catch(error) {
+
+            }
+        }
+
+        getAllCars();
+
+
+
+    </script>
+</body>
+</html>

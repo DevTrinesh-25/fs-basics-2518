@@ -461,3 +461,59 @@ of an asynchronous operation and its resulting value.
                 -> Failure -> Show error message.
             AJAX -> Fetch
             AJAX -> AXIOS
+
+10-12-25
+========
+
+CRUD Operations
+
+C - Create - POST
+R - Read - GET
+U - Update - PUT / PATCH
+D - Delete - DELETE
+
+
+Request
+
+    Headers
+
+    Body
+
+    Route Parameters
+
+    Query Parameters
+
+     http://localhost:4000/users - No route & query Parameters
+
+    http://localhost:4000/users/routeParamValue1/routeParamValue2/routeParamValue3 - Route Parameters
+
+        Eg. http://localhost:4000/users/1/anusha
+
+        https://app.slack.com/client/T09AFHRFX8X/C09M828VAJK
+
+    http://localhost:4000/users?queryParam1=value1&queryParam2=value2&queryParam3=value3 - Query Parameters
+
+        Eg. http://localhost:4000/users?id=1&name=Anusha
+
+    http://localhost:4000/users/routeParamValue1&routeParamValue2&routeParamValue3?queryParam1=value1&queryParam2=value2&queryParam3=value3 - Route & Query Parameters
+
+    https://docs.google.com/spreadsheets/d/1MYP1zdZu3BTM5uOoF5fzuV6-YANrGavC9U5ad6SrkJg/edit?pli=1&gid=461467170#gid=461467170
+
+
+    Request Body - POST | PUT | PATCH
+
+12-12-25
+========
+
+    Browser Storage
+Predefined Objects:
+1. Local Storage: Data stored in it, will be permanent.
+    Eg. GMAIL
+    localStorage.setItem('key', value) -> Storing
+    localStorage.getItem(key)
+    localStorage.removeItem(key)
+2. Session Storage: Data store in it, will be deleted automatically when we close the application.
+    Eg. Net Banking
+    sessionStorage.setItem('key', value) -> Storing
+    sessionStorage.getItem(key)
+    sessionStorage.removeItem(key)

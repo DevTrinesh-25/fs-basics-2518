@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  background: #ffffff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.employee-table thead {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.employee-table th {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.employee-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.employee-table tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+.employee-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.employee-table td {
+  font-size: 14px;
+  color: #374151;
+}
+
+    </style>
+</head>
+<body>
+  <div class="container">
+  <h2>Employee Directory</h2>
+
+  <table class="employee-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Gender</th>
+        <th>Date Of Birth</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+     <tbody id="Emp">
+      <!-- Rows dynamically generated -->
+    </tbody>
+  </table>
+</div>
+   
+
+    <script>
+    
+      let Employees = [];
+      let str = '';
+      function Emps(){
+        for(i=0;i<Employees.length;i++){
+          str += `
+          <tr>
+          <td>${Employees[i].id}</td>
+          <td>${Employees[i].firstName}</td>
+          <td>${Employees[i].lastName}</td>
+          <td>${Employees[i]. gender}</td>
+          <td>${Employees[i].dateOfBirth}</td> 
+          <td>${Employees[i].address}</td>
+          </tr>
+          `;
+      }
+      document.getElementById('Emp').innerHTML = str;
+      }
+
+      async function getAllEmployees() {
+            try {
+                const response = await fetch('http://localhost:4000/Employees', { method: 'GET' });
+                Employees = await response.json();
+                Emps();
+                console.log(Employees);
+            } catch(error) {
+                console.log(error);
+            }
+          }
+
+        getAllEmployees();
+    
+    
+    </script>
+</body>
+</html>

@@ -4,25 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* Reset */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  padding: 20px;
+}
+
+/* Cars container */
+#cars {
+  display: flex;
+  flex-wrap: wrap;          /* allows multiple rows */
+  gap: 20px;                /* space between cards */
+  justify-content: center;  /* center cards */
+}
+
+/* Car card */
+#car-card {
+  width: 260px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+#car-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+#car-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+/* Text */
+#car-card h3 {
+  padding: 12px 15px 5px;
+  font-size: 18px;
+  color: #222;
+}
+
+#car-card p {
+  padding: 5px 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Price highlight */
+#car-card p strong {
+  color: #333;
+}
+
+.buy-btn {
+  width: calc(100% - 30px);
+  margin: 15px;
+  padding: 12px 0;
+  background: linear-gradient(135deg, #ff8c00, #e67e22);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.buy-btn:hover {
+  background: linear-gradient(135deg, #e67e22, #cf6d17);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(230, 126, 34, 0.4);
+}
+
+/* Click effect */
+.buy-btn:active {
+  transform: scale(0.97);
+}
+
+/* Focus (accessibility) */
+.buy-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.3);
+}
+
+
+    </style>
 </head>
 <body>
+
+    <div id="cars">
+     
+    </div>
     <script>
 
+        let cars = [];
+           
+        function displayCars(){
+            let carsStr = '';
+
+            cars.forEach(function(car){
+                carsStr += `
+                <div id="car-card">
+        <img src="${car.image}" width="50px">
+        <h3>${car.brand} ${car.model} (${car.year})</h3>
+        <p><strong>Price:</strong>$${car.price}</p>
+        <p><strong>Color:</strong>${car.color}</p>
+        <p><strong>Fuel Type:</strong>${car.fuelType}</p>
+
+        <button class="buy-btn">View Details</button>
+      </div>
+                `;
+            });
+            document.getElementById('cars').innerHTML = carsStr;
+
+        }
         async function getAllCars() {
             try {
                 const response = await fetch('http://localhost:4000/cars', { 'method': 'GET' });
-                const cars = await response.json();
-
-                console.log(cars);
+                cars = await response.json();
+                displayCars();
+               
             } catch(error) {
 
             }
         }
 
-        getAllCars();
-
-
-
+        getAllCars();https
     </script>
 </body>
 </html>

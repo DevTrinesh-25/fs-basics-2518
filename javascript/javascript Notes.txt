@@ -517,3 +517,39 @@ Predefined Objects:
     sessionStorage.setItem('key', value) -> Storing
     sessionStorage.getItem(key)
     sessionStorage.removeItem(key)
+
+16-12-25
+========
+
+Form Validations:
+    -> Before submitting the data to api, we need to validate the data in form.
+Client Side Validations - Form
+Server Side Validations - API
+Types of validations:
+1. Minimum length
+2. Maximum length
+3. Required
+4. Pattern (Regular Expression)
+Email
+    word@domain.com
+    word.word@domain.co.in
+    word.word90@domain.ai
+    const emailRegex = /^
+                            [a-zA-Z0-9._%+-]+
+                            @[a-zA-Z0-9.-]+
+                            \.[a-zA-Z]{2,}
+                        $/; - Regular Expression / Pattern
+            /^     $/
+Pan Card No:
+    5 - Alphabets 4 - Digits 1 - Alphabets
+    const panRegex = /^
+                        
+                        [A-Z]{5}
+                        [0-9]{4}
+                        [A-Z]
+                    $/;
+Pin Code:
+Reference: https://regexr.com/
+    Men
+    Man
+    M\.n

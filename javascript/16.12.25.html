@@ -80,6 +80,10 @@
         button:hover {
             background-color: #0056b3;
         }
+        .error-msg {
+            color: red;
+            font-size: 13px;
+        }
     </style>
 </head>
 
@@ -90,36 +94,36 @@
             <!-- Name -->
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter full name" required>
-                <p id="name-msg"></p>
+                <input type="text" id="name" name="name" placeholder="Enter full name" onkeyup="clearValidations()">
+                <p id="name-msg" class="error-msg"></p>
             </div>
 
             <!-- Email -->
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter email">
-                <p id="email-msg"></p>
+                <input type="email" id="email" name="email" placeholder="Enter email" onkeyup="clearValidations()">
+                <p id="email-msg" class="error-msg"></p>
             </div>
 
             <!-- Password -->
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter password">
-                <p id="password-msg"></p>
+                <input type="password" id="password" name="password" placeholder="Enter password" onkeyup="clearValidations()">
+                <p id="password-msg" class="error-msg"></p>
             </div>
 
             <!-- PAN Card -->
             <div class="form-group">
                 <label for="pan">PAN Card No</label>
-                <input type="text" id="pan" name="pan" placeholder="ABCDE1234F">
-                <p id="pan-msg"></p>
+                <input type="text" id="pan" name="pan" placeholder="ABCDE1234F" onkeyup="clearValidations()">
+                <p id="pan-msg" class="error-msg"></p>
             </div>
 
             <!-- Aadhaar Card -->
             <div class="form-group">
                 <label for="aadhaar">Aadhaar No</label>
-                <input type="text" id="aadhaar" name="aadhaar" placeholder="1234 1234 1234">
-                <p id="aadhar-msg"></p>
+                <input type="text" id="aadhaar" name="aadhaar" placeholder="1234 1234 1234" onkeyup="clearValidations()">
+                <p id="aadhar-msg" class="error-msg"></p>
             </div>
 
             <!-- Submit -->
@@ -130,13 +134,37 @@
 
     <script>
 
-        function registerEmp() {
+        async function registerEmp() {
 
             const isFormValid = validateName() && validateEmail() && validatePassword() && validatePanNo() && validateAadharNo();
 
             if (isFormValid) {
-                // API Call...
-            }
+                try {
+
+                    const requestBody = {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        password: document.getElementById('password').value,
+                        pan: document.getElementById('pan').value,
+                        aadhaar: document.getElementById('aadhaar').value
+                    }   
+
+                    const  requestBodyStr = JSON.stringify(requestBody);                   
+
+                    const response = await fetch('http://localhost:4000/employees', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json' // multipart/form-data - JSON + Files
+                        },
+                        body: requestBodyStr
+                    });
+                    const parsedResponse = await response.json();
+
+                    window.alert('Created employee successfully');
+                } catch(error) {
+                    console.log(error);
+                } 
+            } 
 
         }
 
@@ -154,19 +182,68 @@
         }
 
         function validateEmail() {
-
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const emailValue = document.getElementById('email').value;
+            if (emailValue.length === 0) {
+                document.getElementById('email-msg').innerHTML = 'Email is required';
+                return false;
+            } else if (!emailRegex.test(emailValue)) {
+                document.getElementById('email-msg').innerHTML = 'Incorrect email format';
+                return false;
+            } else {
+                return true;
+            }
         }
 
         function validatePassword() {
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
+            const passwordValue = document.getElementById('password').value;
+            if (passwordValue.length === 0) {
+                document.getElementById('password-msg').innerHTML = 'Password is required';
+                return false;
+            } else if (!passwordRegex.test(passwordValue)) {
+                document.getElementById('password-msg').innerHTML = 'Incorrect password format';
+                return false;
+            } else {
+                return true;
+            }
         }
 
         function validatePanNo() {
-
+            const panRegex = /^[A-Z]{5}[0-9]{4}[A-Z]$/;
+            const panValue = document.getElementById('pan').value;
+            if (panValue.length === 0) {
+                document.getElementById('pan-msg').innerHTML = 'Pan is required';
+                return false;
+            } else if (!panRegex.test(panValue)) {
+                document.getElementById('pan-msg').innerHTML = 'Incorrect pan format';
+                return false;
+            } else {
+                return true;
+            }
         }
 
         function validateAadharNo() {
+            const aadhaarRegex = /^\d{12}$/;
+            const aadhaarValue = document.getElementById('aadhaar').value;
+            if (aadhaarValue.length === 0) {
+                document.getElementById('aadhaar-msg').innerHTML = 'Aadhaar is required';
+                return false;
+            } else if (!aadhaarRegex.test(aadhaarValue)) {
+                document.getElementById('aadhaar-msg').innerHTML = 'Incorrect aadhaar format';
+                return false;
+            } else {
+                return true;
+            }
+        }
 
+        function clearValidations() {
+            document.getElementById('name-msg').innerHTML = '';
+            document.getElementById('email-msg').innerHTML = '';
+            document.getElementById('password-msg').innerHTML = '';
+            document.getElementById('pan-msg').innerHTML = '';
+            document.getElementById('aadhaar-msg').innerHTML = '';
         }
 
 

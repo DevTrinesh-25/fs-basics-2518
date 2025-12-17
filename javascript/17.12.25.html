@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Document</title>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-group {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#card-no-msg {
+    margin-top: 5px;
+    font-size: 14px;
+    color: red;
+}
+
+#card-icon{
+    position: absolute;
+    right: 30px;
+    top: 60%;
+    transform: translateY(-50%);
+}
+    </style>
+</head>
+<body>
+    <div>
+    <div class="form-group">
+        <label for="card-no">Card Number </label>
+        <input type="text" id="card-no" name="card-no" placeholder="Enter card number" required>
+        <span id="card-icon"></span>
+    </div>
+    <p id="card-no-msg"></p>
+    </div>
+
+    <script>
+    const cardNoInput = document.getElementById('card-no');
+    const cardNoMsg = document.getElementById('card-no-msg');
+    const cardIcon = document.getElementById('card-icon');
+    cardNoInput.addEventListener('input', function() {
+        const cardNo = cardNoInput.value.replace(/\s+/g, ''); // Remove spaces
+        cardNoInput.value = cardNo;
+        let message = '';
+        const cardType = getCardType(cardNo);
+
+        if (!/^\d*$/.test(cardNo)) {
+            message = 'Card number must contain only digits.';
+        } else if (cardNo.length < 13 || cardNo.length > 19) {
+            message = 'Card number must be between 13 and 19 digits.';
+        } else if (!luhnCheck(cardNo)) {
+            message = 'Invalid card number.';
+        }
+
+        cardNoMsg.textContent = message;
+        showCardIcon(cardType);
+    }); 
+
+    
+function showCardIcon(type) {
+    const icons = {
+        visa: 'fa-brands fa-cc-visa',
+        mastercard: 'fa-brands fa-cc-mastercard',
+        amex: 'fa-brands fa-cc-amex',
+        discover: 'fa-brands fa-cc-discover',
+        diners: 'fa-brands fa-cc-diners-club',
+        jcb: 'fa-brands fa-cc-jcb'
+    };
+
+    if (icons[type]) {
+        cardIcon.className = icons[type];
+        cardIcon.style.display = 'block';
+    } else {
+        cardIcon.style.display = 'none';
+    }
+}
+
+function getCardType(number) {
+    if (/^4/.test(number)) return 'visa';
+    if (/^5[1-5]/.test(number)) return 'mastercard';
+    if (/^3[47]/.test(number)) return 'amex';
+    if (/^6(011|5)/.test(number)) return 'discover';
+    if (/^3(0[0-5]|[68])/.test(number)) return 'diners';
+    if (/^35/.test(number)) return 'jcb';
+    return null;
+}
+
+    function luhnCheck(cardNo) {
+        let sum = 0;
+        let shouldDouble = false;
+
+        for (let i = cardNo.length - 1; i >= 0; i--) {
+            let digit = parseInt(cardNo.charAt(i));
+
+            if (shouldDouble) {
+                digit *= 2;
+                if (digit > 9) digit -= 9;
+            }
+
+            sum += digit;
+            shouldDouble = !shouldDouble;
+        }
+
+        return sum % 10 === 0;
+    }       
+    
+    </script>
+</body>
+</html>

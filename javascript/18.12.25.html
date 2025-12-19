@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="18.12.25.css">
+</head>
+<body>
+
+    <h1>Groceries</h1>
+    
+    <div id="groceries">
+
+    </div>
+
+    <script>
+
+       let groceries = [];
+        function displayGroceries() {
+            let groceriesStr = '';
+
+            groceries.forEach(function(grocery) {
+                groceriesStr += `
+                <div class="groceries-list">
+                    <img src="${grocery.imageUrl}" alt="groceries image">
+                    <p><strong>${grocery.sellingPrice}</strong></p>
+                    <p><strong>${grocery.size}</strong></p>
+                    <h3>${grocery.name}</h3>
+                    <button class="buy-btn" onclick="Additem(${grocery.name})">Add</button>
+                </div>
+                `;
+                
+            });
+            document.getElementById('groceries').innerHTML = groceriesStr;
+        }
+
+        async function getAllgroceries() {
+            try {
+                let response = await fetch('http://localhost:4000/groceries',{ 'method': 'GET' });
+                groceries = await response.json();
+                displayGroceries();
+            } catch (error) {
+                console.error('Error fetching groceries:', error);
+            }
+        }
+        getAllgroceries();
+
+        const Additem =async function(groceriesname){
+            try{
+                const response = await fetch('http://localhost:4000/groceries' + groceriesname,{ method:'POST',
+                    headers:{
+                        'Content-Type':'application/json'
+                    },
+                    body:JSON.stringify(groceriesname)
+                });
+                const parsedResponse = await response.json();
+                window.alert('Item added successfully');
+                console.log('Item added:', parsedResponse);
+            }catch(error){
+                console.error('Error adding item:', error);
+            }
+
+        }
+
+        
+     </script>
+</body>
+</html>

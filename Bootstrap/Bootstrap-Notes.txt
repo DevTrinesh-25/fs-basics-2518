@@ -1,0 +1,21 @@
+HTML: To display content
+CSS: To add styles & design layout for Content.
+Javascript: To add functionality to content.
+
+Framework: Collection of predefined functionalities + Templates / Skeleton 
+
+Library: Collection of predefined functionalities.
+
+Bootstrap: UI Framework
+
+    Responsiveness - Making app compartiable in every device(Tablet, Mobile, Desktop, Smart Tv etc...)
+        Media Queries
+    Components
+        
+React Js: Library
+Bootstrap:
+Grid System:
+    Row - row
+        Column - 12 columns - col-md-6
+            col-sm-12
+            col-12

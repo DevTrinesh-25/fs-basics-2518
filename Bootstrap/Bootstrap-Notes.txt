@@ -1,3 +1,6 @@
+19-12-25
+========
+
 HTML: To display content
 CSS: To add styles & design layout for Content.
 Javascript: To add functionality to content.
@@ -19,3 +22,11 @@ Grid System:
         Column - 12 columns - col-md-6
             col-sm-12
             col-12
+
+22-12-25
+========
+
+bg-{primary | secondary | success | danger | warning | white | black | info}
+btn-{primary | secondary | success | danger | warning | white | black}
+text-{primary | secondary | success | danger | warning | white | black}
+border-{primary | secondary | success | danger | warning | white | black}

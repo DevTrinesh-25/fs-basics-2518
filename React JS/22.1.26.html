@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const watches = [
+            {
+                name: "Omega Seamaster",
+                brand: "Omega",
+                price: 5500,
+                inStock: true,
+                waterResistant: true,
+                warrantyYears: 5
+            },
+            {
+                name: "Rolex Submariner",
+                brand: "Rolex",
+                price: 12000,
+                inStock: false,
+                waterResistant: true,
+                warrantyYears: 5
+            },
+            {
+                name: "Casio G-Shock",
+                brand: "Casio",
+                price: 150,
+                inStock: true,
+                waterResistant: true,
+                warrantyYears: 2
+            },
+            {
+                name: "Tag Heuer Carrera",
+                brand: "Tag Heuer",
+                price: 4500,
+                inStock: true,
+                waterResistant: true,
+                warrantyYears: 3
+            },
+            {
+                name: "Fossil Grant",
+                brand: "Fossil",
+                price: 200,
+                inStock: false,
+                waterResistant: false,
+                warrantyYears: 2
+            }
+        ];
+
+        watches.forEach(function (watch, index) {
+            console.log(watch.name, index);
+        });
+
+        const randomNumbersArr = [12, 57, 33, 8, 91];
+
+        randomNumbersArr.forEach(function (randomNo) {
+            console.log(randomNo);
+        });
+
+        const names = ["Aarav", "Ishita", "Rohan", "Sanya", "Vihaan", "Ananya", "Kabir", "Diya"];
+
+        const formattedNames = names.map(function (name) {
+
+
+
+            return name.toUpperCase();
+        });
+
+        console.log(formattedNames);
+
+        const users = [
+            { name: "Aarav", email: "aarav@example.com", isActive: true },
+            { name: "Ishita", email: "ishita@example.com", isActive: false },
+            { name: "Rohan", email: "rohan@example.com", isActive: true },
+            { name: "Sanya", email: "sanya@example.com", isActive: true },
+            { name: "Vihaan", email: "vihaan@example.com", isActive: false }
+        ];
+
+        // ['Aarav', 'Ishita', 'Rohan', 'Sanya', 'Vihaan']
+
+        const userNames = [];
+
+        users.forEach(function (user) {
+            userNames.push(user.name);
+        });
+
+        console.log(userNames);
+
+        const userNames2 = users.map(function (user) {
+            return user.isActive;
+        })
+
+        console.log(userNames2);
+
+        const products = [
+            {
+                id: 1,
+                name: "Smartphone",
+                category: "Electronics",
+                price: 25000,
+                stock: 10,
+                isAvailable: true
+            },
+            {
+                id: 2,
+                name: "Laptop",
+                category: "Electronics",
+                price: 55000,
+                stock: 0,
+                isAvailable: false
+            },
+            {
+                id: 3,
+                name: "Wrist Watch",
+                category: "Accessories",
+                price: 3000,
+                stock: 15,
+                isAvailable: true
+            },
+            {
+                id: 4,
+                name: "Backpack",
+                category: "Travel",
+                price: 1200,
+                stock: 5,
+                isAvailable: true
+            },
+            {
+                id: 5,
+                name: "Headphones",
+                category: "Electronics",
+                price: 2000,
+                stock: 0,
+                isAvailable: false
+            }
+        ];
+
+        const availableProducts = products.filter(function(product) {
+            return product.price >= 2000 && product.price <= 3000;
+        });
+
+        console.log(availableProducts);
+
+        const productInfo = products.find(function(product) {
+            return product.name === 'Tablet';
+        });
+
+        console.log(productInfo);
+
+    </script>
+</body>
+
+</html>

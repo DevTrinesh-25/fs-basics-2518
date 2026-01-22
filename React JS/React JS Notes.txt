@@ -1,0 +1,52 @@
+                             React JS Notes
+                            ================
+22-1-26
+========
+
+React-2601 10 AM
+----------------
+ES6 & ES7 (Version of Javasript) - ECMA Script Organization who introduces concepts to Javascript programming language.
+Typescript
+React Js
+ES6 & ES7
+Arrow Functions
+Let and Const
+Template Literals
+Destructuring
+Default Parameters
+Spread and Rest Operators
+Object Literal Enhancements
+Modules
+Promises and Async/Await
+Array Methods (map, filter, reduce)
+Promises and Fetch API
+Array Methods (Function):
+------------------------
+forEach(): For iterating each value present in array.
+map()
+filter()
+reduce()
+find()
+forEach():
+    Syntax:
+        arrayName.forEach(function(value, index) {
+            // Statements....
+        });
+map(): Used to format each value present in array.
+    Syntax:
+        const formattedArr = arrayName.map(function(value, index) {
+            // Statements....
+            return formattedValue;
+        });
+function functionName(paramName1) {
+}
+filter: 
+    Syntax:
+        arrayName.filter(function(value, index) {
+            return condition;
+        });
+find: Used to retrieve value from array.
+    Syntax:
+        arrayName.find(function(value, index) {
+            return condition;
+        });

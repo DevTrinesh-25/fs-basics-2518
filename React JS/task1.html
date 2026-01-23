@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+    const employees = [
+  {
+    id: 1,
+    firstName: "Alice",
+    lastName: "Johnson",
+    role: "Software Engineer",
+    department: "Engineering",
+    email: "alice.johnson@company.com",
+    salary: 90000,
+    isActive: true
+  },
+  {
+    id: 2,
+    firstName: "Bob",
+    lastName: "Smith",
+    role: "Product Manager",
+    department: "Product",
+    email: "bob.smith@company.com",
+    salary: 105000,
+    isActive: true
+  },
+  {
+    id: 3,
+    firstName: "Carol",
+    lastName: "Williams",
+    role: "UX Designer",
+    department: "Design",
+    email: "carol.williams@company.com",
+    salary: 85000,
+    isActive: false
+  },
+  {
+    id: 4,
+    firstName: "David",
+    lastName: "Brown",
+    role: "QA Engineer",
+    department: "Quality Assurance",
+    email: "david.brown@company.com",
+    salary: 78000,
+    isActive: true
+  }
+];
+  const active=[];
+
+  employees.forEach(function(employee){
+    if(employee.isActive){
+        active.push(employee);
+    }
+}); 
+  console.log(active);
+
+const inactive=[];
+
+employees.forEach(function(employee){
+    if(!employee.isActive){
+        inactive.push(employee);
+    }
+});
+console.log(inactive);
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        const products = [
+            {
+                id: 1,
+                name: "Laptop",
+                price: 75000,
+                stock: 10,
+                category: "Electronics"
+            },
+            {
+                id: 2,
+                name: "Smartphone",
+                price: 25000,
+                stock: 25,
+                category: "Electronics"
+            },
+            {
+                id: 3,
+                name: "Shoes",
+                price: 2000,
+                stock: 50,
+                category: "Fashion"
+            },
+            {
+                id: 4,
+                name: "Book",
+                price: 500,
+                stock: 100,
+                category: "Education"
+            }
+        ];
+
+        // let totalAmount = 0;
+
+        // products.forEach(function(product) {
+        //     totalAmount += product.price;
+        // });
+
+        // console.log(totalAmount);
+
+        const totalAmount = products.reduce(function(acculumator, product) {
+            return acculumator + product.price;
+        }, 0);
+
+        console.log(totalAmount);
+
+        const numbers = [5, 66, 12, 8, 20, 34, 3];
+
+        // 20
+
+        let maxValue = numbers[0];
+
+        numbers.forEach(function(num) {
+            if (num > maxValue) {
+                maxValue = num;
+            }
+        });
+
+        console.log('Max value of numbers is: ', maxValue);
+
+        maxValue = numbers.reduce(function(acculumator, num) {
+            return num > acculumator ? num : acculumator;
+        }, numbers[0]);
+
+        const fruits = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
+        // { apple: 3, banana: 2, orange: 1 }
+
+        const cities = ['Paris', 'New York', 'Paris', 'London', 'Tokyo', 'New York', 'Paris'];
+
+        const fruitsCounter = {};
+
+        fruits.forEach(function(fruit) {
+            if (Object.keys(fruitsCounter).includes(fruit)) {
+                fruitsCounter[fruit] += 1;
+            } else {    
+                fruitsCounter[fruit] = 1;
+            }
+        });
+
+        console.log(fruitsCounter);
+
+        const citiesCounter = cities.reduce(function(acculumator, city) {
+            if (acculumator[city]) {
+                acculumator[city] += 1;
+            } else {
+                acculumator[city] = 1;
+            }
+            return acculumator;
+        }, {});
+        console.log(citiesCounter);
+
+        const numbers2 = [5, 66, 12, 8, 20, 34, 3];
+
+        maxValue2 = numbers2.reduce((acculumator, num) => num > acculumator ? num : acculumator, numbers[0]);
+        console.log('Max value of numbers2 is: ', maxValue2);
+    </script>
+</body>
+
+</html>

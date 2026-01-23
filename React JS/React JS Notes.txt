@@ -50,3 +50,16 @@ find: Used to retrieve value from array.
         arrayName.find(function(value, index) {
             return condition;
         });
+
+23-1-26
+========
+
+Reduce:
+    Syntax:
+        arrayName.reduce(function(acculumator, value) {
+            return acculumator + value;
+        }, initialValue)
+        acculumator - undefined
+        acculumator - 0
+Arrow function: 
+    function {} return - => 

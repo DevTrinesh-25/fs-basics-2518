@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function calculateSum(num1 = 0, num2 = 0) {
+            const sum = num1 + num2;
+            console.log('Sum of two numbers: ', sum);
+        }
+
+        calculateSum(34);
+
+        const marks = [45, 67, 89];
+
+        const marks2 = [...marks, 34, 78, 15,];
+
+        console.log(marks2);
+
+        const productASales = [10, 12, 15, 8, 20]; // units sold per day
+        const productBSales = [5, 7, 10, 6, 12];
+        const productCSales = [8, 9, 11, 7, 14];
+
+        const allProductsSales = [...productASales, ...productBSales, ...productCSales];
+
+        console.log(allProductsSales);
+
+        const groupAUsers = [
+            { id: 1, name: "Alice", age: 25, email: "alice@example.com" },
+            { id: 2, name: "Bob", age: 30, email: "bob@example.com" }
+        ];
+
+        const groupBUsers = [
+            { id: 3, name: "Charlie", age: 28, email: "charlie@example.com" },
+            { id: 4, name: "Diana", age: 22, email: "diana@example.com" }
+        ];
+
+        const allUsers = [...groupAUsers, ...groupBUsers];
+
+        console.log(allUsers);
+
+        const userInfo = {
+            id: 1,
+            name: 'Aravind',
+            city: 'Hyderabad'
+        };
+
+        const userInfo2 = {
+            designation: 'Private employee',
+            salary: 40000
+        };
+
+        const aUserInfo = {...userInfo, ...userInfo2};
+
+        console.log(aUserInfo);
+
+        function calculateSum2(num1, num2, ...restValues) {
+            console.log(num1, num2, restValues);
+        }
+
+        calculateSum2(30, 56, 78, 89, 56);
+
+        const id = 80;
+
+        const name = 'Lokesh';
+
+        const salary = 75000;
+
+        const employeeInfo = {
+            name,
+            id,
+            salary
+        };
+
+        console.log(employeeInfo);
+
+    </script>
+
+</body>
+
+</html>

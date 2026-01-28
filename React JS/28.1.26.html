@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const bankAccount = {
+            accountNumber: "987654321012",
+            accountHolder: "Ramesh Kumar",
+            accountType: "Savings", // Savings, Current
+            balance: 75000,
+            branch: "MG Road, Bengaluru",
+            IFSC: "ICIC0001234",   // Indian Bank IFSC format
+            isActive: true,
+            address: {
+                street: "45 1st Main, Jayanagar",
+                city: "Bengaluru",
+                state: "Karnataka",
+                postalCode: "560011",
+                country: "India"
+            },
+            authorizedUsers: ["Ramesh Kumar", "Suresh Kumar"], // array of strings
+            recentDeposits: [20000, 15000, 10000],            // array of numbers
+            transactions: [
+                { date: "2026-01-28", type: "deposit", amount: 20000 },
+                { date: "2026-01-25", type: "withdrawal", amount: 10000 },
+                { date: "2026-01-22", type: "deposit", amount: 15000 },
+                { date: "2026-01-20", type: "withdrawal", amount: 5000 },
+            ],
+        };
+
+        // const accountNumber = bankAccount.accountNumber;
+
+        // console.log(accountNumber);
+
+        // const authorizedUser1 = bankAccount.authorizedUsers[0];
+
+        // console.log(authorizedUser1);
+
+        // const transactionType = bankAccount.transactions[3].type;
+
+        // console.log(transactionType);
+
+        const { accountNumber, accountHolder, branch, authorizedUsers: [firstAuthorizedUser, secondAuthorizedUser], address: { country, city } } = bankAccount;
+
+        console.log(accountNumber, accountHolder, branch, firstAuthorizedUser, secondAuthorizedUser);
+
+        console.log(city, country);
+
+        const technologies = [
+            "JavaScript",
+            "Python",
+            "Java",
+            "C++",
+            "C#",
+            "Ruby",
+            "Go",
+            "Rust",
+            "TypeScript"
+        ];
+
+        const [, technology2, ,technology4, , , , ,technology9] = technologies;
+
+        console.log(technology2, technology4, technology9);
+
+        const mobileStr = '9032345245';
+
+        const mobileArr = mobileStr.split('');
+
+        const [n1, n2, n3, n4, n5, n6, n7, n8, n9, n10] = mobileArr;
+
+        const formattedMobileStr = `+91 ${n1}${n2}${n3}${n4} ${n5}${n6}${n7} ${n8}${n9}${n10}`;
+
+        // +91 9032 345 245
+
+        console.log(formattedMobileStr);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,351 @@
+30-1-26
+========
+--------------------------------------------------------------------------------
+Root / Config
+--------------------------------------------------------------------------------
+package.json
+NPM project manifest: app name (ecommerce-app), scripts (npm run dev, build, lint, preview),
+dependencies (React 19, react-dom), and dev tools (Vite, TypeScript, ESLint).
+
+index.html
+Single HTML entry: defines <div id="root"> and loads the app via
+<script type="module" src="/src/main.tsx">. Vite serves this and injects the built JS.
+
+vite.config.ts
+Vite config: enables the React plugin so Vite can compile JSX/TSX and support Fast Refresh.
+
+.gitignore
+Tells Git to ignore node_modules, dist, logs, editor files, etc.
+
+README.md
+Project readme for the Vite + React + TypeScript template (setup, scripts, optional ESLint/React Compiler notes).
+
+eslint.config.js
+ESLint flat config: JS/TS recommended rules, React Hooks, React Refresh for Vite;
+applies to **/*.{ts,tsx}.
+
+--------------------------------------------------------------------------------
+TypeScript Config
+--------------------------------------------------------------------------------
+tsconfig.json
+Root TS config: no files compiled here; only references tsconfig.app.json and tsconfig.node.json.
+
+tsconfig.app.json
+Config for app code in src/: ES2022, DOM types, ESNext modules, "jsx": "react-jsx",
+strict checks; used by the editor and build.
+
+tsconfig.node.json
+Config for Node/tooling (e.g. vite.config.ts): ES2023, Node types; separate from browser app code.
+
+--------------------------------------------------------------------------------
+Source (src/)
+--------------------------------------------------------------------------------
+main.tsx
+App entry: imports global CSS and App, uses createRoot to mount React into #root,
+and wraps the tree in <StrictMode>.
+
+App.tsx
+Root React component: default Vite+React UI (logos, counter with useState,
+"Edit src/App.tsx" message). This is where you'd add e-commerce layout and pages.
+
+App.css
+Styles for the default App UI: #root layout, .logo size/hover, logo-spin animation,
+.card, .read-the-docs.
+
+index.css
+Global styles: :root (font, colors, light/dark), base styles for body, a, button, h1,
+and a prefers-color-scheme media query.
+
+--------------------------------------------------------------------------------
+Other
+--------------------------------------------------------------------------------
+public/vite.svg
+Favicon/asset served at /vite.svg (referenced in index.html).
+
+src/assets/react.svg
+React logo image imported in App.tsx.
+
+2-2-26
+========
+
+Components: A piece of user interface which can be reused multiple times.
+        A piece of ui. (HTML, CSS & Typescript)
+        -> Navbar
+        -> Footer
+        -> Side Navbar
+
+    filename.tsx
+
+    function ComponentName() {
+        // Typescript code here... (Variables & Anonymous Functions)
+
+        return (
+            // HTML code here..
+        )
+    }
+
+    export default ComponentName;
+
+    index.html - SPA (Single Page Application)
+
+    <ComponentName/>
+    const name = 'Pradeep'
+    return (
+        <h1>{name}</h1>
+    )
+
+    () - HTML
+    {} - Javascript/Typescript
+
+String Interpolation:
+    Syntax:
+        {variable}
+        {expression}
+
+4-2-26
+========
+
+String Interpolation:
+const fruits = ['apple', 'banana', 'cherry'];
+const formattedFruits = fruits.map((fruit) => fruit[0].toUpperCase() + fruit.substr(1, fruit.length - 1));
+const fruits = ['Apple', 'Banana', 'Cherry'];
+const formattedFruits = ['APPLE', 'BANANA', 'CHERRY'];
+
+Map method: The .map() method in React is a JavaScript array method used to transform arrays into lists of JSX elements
+    Syntax:
+        arrayName.map(value => (
+            <div>
+                <h1>Value</h1>
+            </div>
+        ))
+BA
+UI / UX Designer
+Testing 
+DevOps
+DSA
+Searching
+Sorting
+Vite.js / Next.js
+Nest Js / Express Js - APIs Backend
+
+6-2-26
+========
+
+Events:
+> onchange
+> onclick
+> onmousehover
+> onkeyup
+> onsubmit
+
+    Syntax:
+        <button onclick="functionName()">Register</button>
+
+        Function without parameters:
+        ----------------------------
+        <button onClick={functionName}>Register</button>
+
+        Function with parameters:
+        -------------------------
+        <button onClick={(event) => functionName(event.target.value)}>Register</button>
+
+React Hooks
+
+useState()
+    Syntax:
+        import { useState } from 'react'
+        function ComponentName() {
+            const [state, setState] = useState(initialValue);
+            initialValue - 
+            state - 
+            setState
+        }
+            const [num1, setNum1] = useState(0);
+            console.log(num1)
+            setNum1(1)
+            console.log(num1)
+
+Component Mount / load
+Component Update
+Component Unmount
+    setInterval
+    setTimeout
+
+useEffect()
+    import { useEffect } from 'react'
+    useEffect(callbackFunc, dependencies)
+
+    Component Mount:
+    useEffect(function() {
+
+    }, []);
+
+    Component Mount + Component Update
+    useEffect(function() {
+
+    }, [stateVariable1, stateVariable2, stateVariable3]);
+
+    Component Unmount:
+    useEffect(() => {
+        return () => {
+        };
+    }, []);
+
+9-2-26
+========
+
+    const getCall = async () => {
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    Content-Type: 'application/json',
+                    Authorization: ''
+                },
+                body: JSON.stringify(requestBody)
+            });
+
+            const parsedResponse = await response.json();
+        } catch(error) {
+
+        }
+    };
+
+useState
+
+useEffect
+
+10-2-26
+========
+
+XMLHttpRequest
+
+Fetch
+
+Axios: Promise based HTTP client for the browser and node.js
+
+Installation:
+
+    npm install axios
+
+CRUD Operations
+
+import axios from 'axios'
+
+
+    try {
+        const response = await axios.get(url, headers: { }); - GET
+
+        const response = await axios.post(url, requestBody, headers: { }); - POST
+
+        const response = await axios.put(url, requestBody, headers: { }); - PUT
+
+        const response = await axios.patch(url, requestBody, headers: { }); - PATCH
+
+        const response = await axios.delete(url, headers: { }); - DELETE
+
+
+        console.log(response);
+    } catch(error) {
+
+    }
+
+12-2-26
+========
+
+Routing: Routing in React enables navigation between different views or components without full page reloads, 
+typically using the React Router library.
+
+Installation:
+
+    npm install react-router-dom
+
+
+Step1:
+main.tsx
+
+    import { BrowserRouter } from 'react-router-dom'
+
+
+
+    <StrictMode>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </StrictMode>,
+
+App.tsx:
+
+    import { Routes, Route } from 'react-router-dom'
+
+    function App() {
+
+        return (
+            <div>
+                <Navbar/>
+                <Routes>
+                    <Route path="" element={<ComponentName/>} />
+                    <Route path="" element={<ComponentName/>} />
+                    <Route path="" element={<ComponentName/>} />
+                    <Route path="" element={<ComponentName/>} />
+                    <Route path="" element={<ComponentName/>} />
+                
+                </Routes>
+                <Footer/>
+            </div>
+        )
+
+    }
+
+
+    http://localhost:3000/route-name1
+
+    http://localhost:3000/employees
+
+    http://localhost:3000/students-list
+
+    http://localhost:3000/route-name1
+
+
+Static navigation:
+import { Link } from 'react-router-dom';
+
+
+<Link to="/route-name">Content</Link>
+
+
+Programmatic Navigation:
+import { useNavigate } from 'react-router-dom';
+
+const navigate = useNavigate();
+
+navigate('/route-name');
+
+
+    Login
+
+        Email & Password -> Continue
+
+            Navigate to home
+
+            Show incorrect email or Password
+            let isCredentialsValid = true;
+
+            if (isCredentialsValid) {
+                navigate('/home');
+            } else {
+                window.alert('Incorrect email and password');
+            }
+
+Route Parameters
+
+    http://localhost:3000/route-name/routeParamValue1/routeParamValue2
+
+    http://localhost:3000/products/1/OnePlus Nord CE
+
+
+Query Parameters
+
+    http://localhost:3000/route-name/routeParamValue1/routeParamValue2?queryParam1=value1&queryParam2=routeParamValue2
+
+    http://localhost:3000/route-name/routeParamValue1/routeParamValue2?id=1&name=OnePlus Nord CE

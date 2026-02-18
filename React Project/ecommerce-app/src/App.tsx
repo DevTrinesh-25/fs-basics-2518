@@ -11,6 +11,7 @@ import RatingsReviews from './pages/RatingsReviews';
 import QuestionAnswers from './pages/QuestionAnswers';
 import Employees from './pages/Employees';
 import Groceries from './pages/Groceries';
+import Profile from './pages/Profile';  
 
 function App() {
 
@@ -28,11 +29,12 @@ function App() {
         </Route>
         <Route path="employees" element={<Employees/>}></Route>
         <Route path="Groceries" element={<Groceries/>}></Route>
+        <Route path="profile" element={<Profile/>}></Route>
       </Routes>
-      
+
       <Footer></Footer>
     </div>
   )
 }
 
-export default App
+export default App;

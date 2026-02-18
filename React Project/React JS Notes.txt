@@ -349,3 +349,39 @@ Query Parameters
     http://localhost:3000/route-name/routeParamValue1/routeParamValue2?queryParam1=value1&queryParam2=routeParamValue2
 
     http://localhost:3000/route-name/routeParamValue1/routeParamValue2?id=1&name=OnePlus Nord CE
+
+17-2-26
+========
+
+Props:
+
+    <tagName attribute1=value1 attribute2=value2></tagName>
+
+    <Employee employee={employee}></Employee>
+
+18-2-26
+========
+
+Inline styles:
+
+    Syntax:
+
+        <tagName style={{ backgroundColor: 'green', margin: '10px' }}></tagName>
+
+    function ComponentName() {
+
+        const styles = {
+            backgroundColor: 'green',
+            margin: '10px'
+        };
+    }
+
+    <tagName style={styles}></tagName>
+
+CSS Modules for local styles
+
+filename.css
+
+import 'filename.css'
+
+sm:rounded-lg lg:rounded-sm

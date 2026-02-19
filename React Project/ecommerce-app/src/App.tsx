@@ -12,6 +12,9 @@ import QuestionAnswers from './pages/QuestionAnswers';
 import Employees from './pages/Employees';
 import Groceries from './pages/Groceries';
 import Profile from './pages/Profile';  
+import Register from './pages/Register';
+import Login from './pages/Login';
+
 
 function App() {
 
@@ -30,6 +33,8 @@ function App() {
         <Route path="employees" element={<Employees/>}></Route>
         <Route path="Groceries" element={<Groceries/>}></Route>
         <Route path="profile" element={<Profile/>}></Route>
+        <Route path="register" element={<Register/>}></Route>
+        <Route path="login" element={<Login/>}></Route>
       </Routes>
 
       <Footer></Footer>

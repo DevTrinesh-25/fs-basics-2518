@@ -385,3 +385,56 @@ filename.css
 import 'filename.css'
 
 sm:rounded-lg lg:rounded-sm
+
+19-2-26
+========
+
+Forms:
+
+Form Validations:
+1. Minimum length & Maximum length
+2. Regular Expression (Pattern)
+3. Required (Mandatory)
+
+React Hook Form: It's a third party library built on top of React for handling form validations.
+
+Installation:
+
+    npm install react-hook-form
+
+Syntax:
+
+    import { useForm } from 'react-hook-form'
+
+    function ComponentName() {
+        const { register, handleSubmit, formState: { errors }, watch } = useForm();
+
+
+
+    }
+
+    {
+        register
+        handleSubmit
+        formState: {
+            errors
+        }
+        watch
+    }
+
+    const register = (formValues) => {
+
+    };
+
+
+    <form onSubmit={handleSubmit(register)}>
+
+        <div>
+            <label>Email Address</label>
+            <input type="email" name="email" {...register('email')}/>
+        </div>
+
+        <button type="submit">Register</button>
+
+    </form>
+

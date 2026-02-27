@@ -12,12 +12,12 @@ function Login() {
         setIsLoading(true);
         setMessage('');
         try {
-            const response = await fetch('http://localhost:4000/Login', {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formValues),
+            const response = await fetch('http://localhost:4000/users/auth', {
+                method: "POST",
+             headers: {
+                'Content-Type': 'application/json',
+              },
+                body: JSON.stringify({...formValues})
             });
             const parsedResponse = await response.json();
             if (response.ok) {

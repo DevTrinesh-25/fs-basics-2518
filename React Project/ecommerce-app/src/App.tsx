@@ -14,6 +14,7 @@ import Groceries from './pages/Groceries';
 import Profile from './pages/Profile';  
 import Register from './pages/Register';
 import Login from './pages/Login';
+import Todos from './pages/Todos';
 
 
 function App() {
@@ -35,8 +36,8 @@ function App() {
         <Route path="profile" element={<Profile/>}></Route>
         <Route path="register" element={<Register/>}></Route>
         <Route path="login" element={<Login/>}></Route>
+        <Route path="todos" element={<Todos/>}></Route>
       </Routes>
-
       <Footer></Footer>
     </div>
   )

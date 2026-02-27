@@ -1,47 +1,39 @@
 import { useForm } from 'react-hook-form';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface User {
-    Email: string;
-    Fullname: string;
-    Mobileno: string;
-    Password: string;
+    email: string;
+    fullName: string;
+    mobileNo: string;
+    password: string;
 }
 
 function Register() {
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const registerUser = (formValues: any) => {
-        console.log(formValues);
-    };
+    const { register, handleSubmit, formState: { errors } } = useForm<User>();
+    const [message, setMessage] = useState('');
 
-     const [email, setEmail] = useState<User[]>([]);
-     const [fullname, setfullname] = useState<User[]>([]);
-      const [mobileno, setmobileno] = useState<User[]>([]);
-      const [password, setPassword] = useState<User[]>([]);
-    
-      useEffect (() => {
-         fetchallUsers();
-      },[]);
-      
-      const fetchallUsers = async ()=> {
-        try{
-            const response = await fetch('http://localhost:4000/Register',
-                { method: "POST",
-                    headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ email, fullname, mobileno, password }),
-    
-                });
+    const registerUser = async (formValues: User) => {
+        setMessage('');
+        try {
+            const response = await fetch('http://localhost:4000/users/auth', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formValues),
+            });
             const parsedresponse = await response.json();
-            setEmail(parsedresponse.email);
-            setfullname(parsedresponse.fullName);
-            setmobileno(parsedresponse.mobileNo);
-            setPassword(parsedresponse.password);
-        }catch(error){
+            if (response.ok) {
+                setMessage('Registration successful!');
+                // Optionally, redirect or store token here
+            } else {
+                setMessage(parsedresponse.message || 'Registration failed');
+            }
+        } catch (error) {
+            setMessage('Registration failed');
             console.error("Error fetching login:", error);
         }
-      };
+    };
 
     return (
         <div className="container py-3">
@@ -130,6 +122,7 @@ function Register() {
                                         Register
                                     </button>
                                 </div>
+                                {message && <div className="mt-3 text-center text-info">{message}</div>}
                             </form>
                         </div>
                     </div>

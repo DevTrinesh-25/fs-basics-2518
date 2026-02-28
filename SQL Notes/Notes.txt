@@ -1,0 +1,897 @@
+3-11-25
+=======
+
+FrontEnd-SQL
+Python-SQL
+SQL
+> Full Stack with Python / Java / MERN Stack
+> AI Masters / Data Analytics (SQL, Python, Power BI) / Data Science
+> Python
+> Azure Data Engineering
+SQL 
+> It stands for Structured Query Language.
+> It is a database computer language used to retrieve and manage data in relational databases.
+Database - Internal Storage / SSD / Hard Disk'
+            64 GB / 128 GB / 256 GB
+                Unstructured Data - Text / Image / Videos / Audios
+                Structured Data
+> Common databases that use SQL are My Sql, Postgres Sql, MS Sql Server, MS Access, Oracle Db, Sysbase, Informix, SQLite etc...
+> It is developed in 1970 by IBM.
+> SQL is used for tasks like reading, updating, inserting & deleting data.
+Why learn SQL?
+--------------
+> It is a foundation of data Science, data analytics & full stack development.
+> Helps us in query & analyze data directly from databases.
+> Used by Data Analyst, Data Scientist, Full Stack Engineer, AI Engineer & Azure Data Engineer, Python Developer.
+> Works with all the major database systems like My Sql, Postgres Sql, MS Sql Server, MS Access, Oracle Db, Sysbase, Informix, SQLite etc...
+Features of SQL:
+> DDL (Data Definition Language)
+> DML (Data Manipulation Language)
+> DRL (Data Retrival Language)
+> Filtering & Sorting
+> Joins
+> Functions
+> Security - Manage user roles & permissions.
+How SQL Works:
+> A database stores data in tables (Excel Sheets / Google Sheets).
+> Each table has columns (fields) and rows (records)
+> SQL lets you query those tables to find insights or make updates.
+Example:
+    SELECT * from employees where department = 'HR';
+
+4-11-25
+=======
+
+Python: Programming Language Writing functionalities
+Database: SQL To retrieve & manage data present in database.
+Python & SQL
+Java Python / Javascript Database (SQL)
+Data Analytics / Data Science / AI Azure Data Engineering (SQL)
+Commandline Interface Commands
+Postgres SQL
+
+Database: It is used to stored application data  permanently.
+> Collection of tables.
+> Each Table has rows (records) & columns (fields)
+Eg. user
+username, id, mobile, email, address
+manisha34 34 9012390812 manisha.g@gmail.com Madhapur, Hyderabad. -> Row
+
+> SQL (Structured Query Language) A way of communicating with database.
+
+Queries
+> CRUD Operations
+C- Create -> Registrating an account in flipkart
+R- Read -> Login
+U Update -> Update Profile
+D Delete -> Deactivating account
+
+> Common databases that use SQL are My Sql, Postgres Sql, MS Sql Server, MS Access, Oracle Db, Sysbase, Informix, SQLite etc...
+> Postgres Sql
+> Link to download it.
+https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+
+Postgres Sql Server
+DBeaver GUI (Graphical User Interface) of Database
+> Link to download it
+https://dbeaver.io/download/
+
+> Login into any web application
+http://flipkart.com
+
+> Username & Password
+> Mobile no & Otp
+> Email Password
+> Ecommerce application
+> Developers dev
+> Testers - qa I
+> DevOps Engineers qa
+> Customers prod
+
+7-11-25
+=======
+
+> Insertion of row in table
+Syntax:
+    INSERT INTO table_name (column1, column2, column3, ..., columnN)
+        VALUES 
+            (value1, value2, value3, ..., valueN),
+            (value1, value2, value3, ..., valueN),
+            (value1, value2, value3, ..., valueN)
+Alter Table
+1. Add a new column
+    Syntax:
+        ALTER TABLE table_name
+            ADD COLUMN column_name data_type;
+2. Rename column
+    Syntax:
+        ALTER TABLE table_name
+        RENAME COLUMN old_name TO new_name
+3. Modify Data Type:
+    Syntax:
+        ALTER TABLE table_name
+            ALTER COLUMN column_name TYPE new_data_type
+4. Add a Constraint
+    Syntax:
+        ALTER TABLE table_name
+            ADD CONSTRAINT constraint_name constraint_type (column_name)
+        
+        
+        ALTER TABLE table_name
+            ALTER COLUMN column_name SET NOT NULL
+    
+Queries:
+--------
+create table student(
+    id SERIAL,
+    name VARCHAR(50),
+    age SMALLINT,
+    fees DECIMAL(7, 2),
+    dob DATE,
+    admission_time TIMESTAMP,
+    is_active BOOLEAN
+)
+create table instructor(
+    id SERIAL,
+    name VARCHAR(50),
+    age smallint,
+    phone_no VARCHAR(10),
+    email VARCHAR(100),
+    date_of_joining DATE
+) 
+insert into student (name, age, fees, dob, admission_time, is_active)
+    values 
+        ('Amulya', 22, 45000.50, '2002-07-15', '2025-11-07 09:45:33', true),
+        ('Divya Ramesh', 28, 35000.50, '2002-07-15', '2025-11-09 09:45:33', true),
+        ('Ashaz Khan', 22, 45000.50, '2002-07-15', '2025-11-07 09:45:33', true)
+        
+alter table student
+    add column address VARCHAR(200)
+    
+alter table student
+    rename column name to full_name
+    
+alter table student
+    alter column dob type TIMESTAMP
+    
+alter table student
+    add constraint unique_name unique (full_name)
+    
+    
+alter table student
+    add column email VARCHAR(100)
+    
+alter table STUDENT
+    add constraint UNIQUE_EMAIL unique (email)
+    
+ALTER TABLE STUDENT
+    ALTER COLUMN full_name SET NOT NULL
+        
+    
+insert into student (age, fees, dob, admission_time, is_active)
+    values 
+        (22, 45000.50, '2002-07-15', '2025-11-07 09:45:33', true)
+
+10-11-25
+=========
+
+Drop a Column
+    Syntax:
+        ALTER TABLE table_name
+            DROP COLUMN column_name
+6. Rename Table
+    Syntax:
+        ALTER TABLE table_name
+            RENAME TO new_table_name
+DROP
+1. Drop a table
+    Syntax:
+        DROP TABLE table_name
+    > First verify if table exist, if exist delete it otherwise skip it.
+        Syntax:
+            DROP TABLE IF EXISTS table_name
+DATA MANIPULATION LANGUAGE (DML)
+--------------------------------
+> DML Queries are used to manipulate the data stored inside tables. i.e insert, update & delete records.
+1. INSERT - Add new records.
+    Syntax:
+        INSERT INTO table_name (column1, column2, column3, ..., columnN)
+            VALUES 
+                (value1, value2, value3, ..., valueN),
+                (value1, value2, value3, ..., valueN),
+                (value1, value2, value3, ..., valueN)
+2. UPDATE - Modify existing records.
+    Syntax:
+        UPDATE table_name
+            SET column_name1 = value1, column_name2 = value2, column_name3 = value3
+            WHERE condition
+3. DELETE - Remove specific records.
+    Syntax:
+        DELETE FROM table_name
+            WHERE condition;
+
+11-11-25
+========
+
+DQL (Data Query Language)
+> DQL is used to retrieve data from database tables. 
+> It allows us to query, filter, sort & display information stored in database.
+Main Command: SELECT
+-------------
+    Syntax:
+        SELECT column1, column2, column3,...
+            FROM table_name
+            WHERE condition
+            ORDER BY column1 [ASC|DESC]
+> Retrieve all columns:
+    SELECT * FROM table_name
+> Retrieve specific columns:
+    SELECT column1, column2, column3 FROM table_name
+    PRICE - 1000
+    DISCOUNT - 10
+    DISCOUNTED PRICE - 
+        Orginal Price - (Original Price * Discount)
+                        ---------------------------
+                                        100
+        1000 - 1000 * 10 / 100
+Operators & Clauses
+
+12-11-25
+========
+
+SQL Operators & Clauses'
+i. where
+ii. order by
+iii. GROUP BY Clause:
+    Syntax:
+        SELECT column, AGG_FUNC(column)
+            FROM table_name
+            GROUP BY column;
+iv. Having Clause
+    Syntax:
+        SELECT column, AGG_FUNC(column)
+            FROM table_name
+            GROUP BY column
+            HAVING condition
+Operators
+---------
+1. AND / OR / NOT Operators
+            city = 'Chennai'
+            department = 'HR'
+    > AND:
+        SELECT column1, column2, column3,...
+            FROM table_name
+            WHERE condition1 AND condition2 AND condition3
+            ORDER BY column1 [ASC|DESC]
+    > AND:
+        SELECT column1, column2, column3,...
+            FROM table_name
+            WHERE condition1 OR condition2 OR condition3
+            ORDER BY column1 [ASC|DESC]
+
+Queries
+--------
+create table employees(
+    id SERIAL,
+    name VARCHAR(50),
+    department VARCHAR(50),
+    salary DECIMAL(10, 2),
+    city VARCHAR(50),
+    joining_date DATE
+)
+    
+INSERT INTO employees (name, department, salary, city, joining_date)
+VALUES
+    ('Arun Kumar', 'HR', 52000.00, 'Chennai', '2022-03-15'),
+    ('Sneha Reddy', 'Finance', 64000.00, 'Hyderabad', '2021-11-20'),
+    ('Rahul Nair', 'IT', 75000.00, 'Bangalore', '2023-01-05'),
+    ('Divya Iyer', 'Marketing', 58000.00, 'Mumbai', '2022-07-10'),
+    ('Vikram Singh', 'Sales', 61000.00, 'Delhi', '2023-04-25'),
+    ('Meera Pillai', 'Operations', 67000.00, 'Kochi', '2021-09-12'),
+    ('Karthik Raj', 'Engineering', 88000.00, 'Pune', '2022-12-01'),
+    ('Priya Sharma', 'IT', 72000.00, 'Bangalore', '2023-02-18'),
+    ('Sanjay Das', 'Finance', 69500.00, 'Kolkata', '2022-05-30'),
+    ('Lakshmi Menon', 'HR', 54000.00, 'Chennai', '2023-06-22');
+    
+select * from employees where department = 'Marketing'
+    
+select * from employees where salary > 60000
+    
+select name, salary from employees where salary > 60000 order by salary asc
+select department, COUNT(*) as total_employees
+from employees
+group by department 
+having count(*) > 7
+select department, ROUND(AVG(salary), 2) as avg_salary, 
+    from employees
+    group by department
+    having AVG(salary) > 45000
+select * from employees where city = 'Chennai' and department = 'HR' and salary > 50000 order by salary asc
+select * from employees where city = 'Chennai' or city = 'Hyderabad'
+select * from employees where not department = 'IT'
+
+13-11-25
+=========
+
+String: Collection of characters.
+    Sub String
+Operators:
+2. LIKE Operator: 
+    Syntax:
+        SELECT * FROM table_name
+            WHERE column_name LIKE 'A%' -> Employees whose name starts with 'A'
+        SELECT * FROM table_name
+            WHERE column_name LIKE '%a' -> Employees whose name ends with 'a'
+3. IN Operator:
+    Syntax:
+        SELECT * FROM table_name
+            WHERE column_name IN (value1, value2, value3, ..., valueN)
+4. BETWEEN Operator:
+    Syntax:
+        SELECT * FROM table_name
+            WHERE column_name BETWEEN min_value AND max_value
+    2023-01-01 - 2023-12-31
+5. IS NULL / IS NOT NULL
+    Syntax:
+        SELECT * FROM table_name
+            WHERE column_name is NULL;
+        SELECT * FROM table_name
+            WHERE column_name is NOT NULL;
+13. DISTINCT Clause
+    Syntax:
+        SELECT DISTINCT column_name1, column_name2, ... FROM table_name
+Mixed Examples:
+- Employees whose 
+    names ends with 'a' 
+    from Finance or Engineering
+    sort by salary from high to low.
+    select * from employees
+    where 
+        name like '%Menon' and 
+        department in ('Finance', 'Engineering')
+    order by salary desc
+
+Queries
+-------
+select * from employees where city like 'Bang%'
+select * from employees where department like '%ce'
+select * from employees where department = 'Engineering' or department = 'Operations' or department = 'Sales'
+select * from employees 
+    where 
+    department in ('Engineering', 'Operations', 'Sales') 
+    and 
+    city in ('Hyderabad', 'Chennai')
+select * from employees where 
+    salary between 50000 and 70000
+select * from employees where joining_date between '2023-01-01' and '2023-12-31' order by joining_date asc
+INSERT INTO employees (name, department, salary, city, joining_date)
+VALUES
+    ('Ravi Menon', 'HR', 52000.00, 'Chennai', '2022-03-15'),
+    ('Asha Pillai', 'Finance', NULL, 'Hyderabad', '2021-11-20'),          -- salary missing
+    ('Vikram Joshi', 'IT', 75000.00, NULL, '2023-01-05'),                 -- city missing
+    ('Divya Iyer', 'Marketing', 58000.00, 'Mumbai', NULL),                -- joining date missing
+    ('Kiran Reddy', NULL, 61000.00, 'Delhi', '2023-04-25'),               -- department missing
+    ('Manoj Kumar', 'Operations', 67000.00, 'Kochi', '2021-09-12'),
+    ('Karthik Raj', 'Engineering', NULL, NULL, '2022-12-01'),             -- salary + city missing
+    ('Priya Nair', 'IT', 72000.00, 'Bangalore', '2023-02-18'),
+    ('Suresh Varma', 'Finance', 69500.00, 'Kolkata', NULL),               -- joining date missing
+    ('Lakshmi Devi', 'HR', NULL, 'Chennai', '2023-06-22');                -- salary missing
+select * from employees where department is not null
+select distinct department, city from employees where city is not null
+select * from employees
+    where 
+        name like '%Menon' and 
+        department in ('Finance', 'Engineering')
+    order by salary desc
+
+14-11-25
+========
+
+Aggregration + Grouping + Filtering + Sorting
+Get departments with total salary > 2,00,000 sorted using total salary from highest to lowest.
+    SELECT department, SUM(salary) AS total_salary
+        FROM employees
+        GROUP BY department
+        HAVING SUM(salary) > 200000
+        ORDER BY total_salary DESC;
+> Employees whose age is between 25 - 35 or salary greater than 70 K & sort by joining date.
+    BETWEEN + LOGICAL OPERATOR(OR) + ORDERING
+    SELECT * FROM employees
+        WHERE age BETWEEN 25 AND 35 OR salary > 70000
+        ORDER BY joining_date DESC
+> Get unique cities where employees work, excluding Hyderabad
+    select distinct city from employees where city != 'Hyderabad' order by city asc
+> Get Departments in bangalore with more than 3 employees earning above 50000
+    SELECT department, COUNT(*) AS emp_count
+        FROM employees
+        WHERE city = 'Bangalore' AND salary > 50000
+        GROUP BY department
+        HAVING COUNT(*) > 3
+        ORDER BY emp_count DESC;
+SQL KEYS
+--------
+1. Unique Key
+2. Primary Key
+3. Foreign Key
+1. Unique Key (Constraint) does not allow duplicate values in a column of a table. It prevents two records having same values in a column
+    Eg. Email, Mobile No, Fullname, Aadhar Card No, Pan Card
+Features:
+> It can accept NULL Values.
+> It cannot duplicate values.
+> It can also be used as a foreign key in another table.
+> A table can have more than one unique column.
+Create SQL Unique key:
+    Syntax:
+        CREATE TABLE table_name(
+            column1 data_type UNIQUE KEY,
+            column2 data_type,
+            column3 data_type,
+            ...,...
+        )
+
+17-11-25
+========
+
+Primary Key
+Foreign Key
+Netflix App:
+    Customers
+        Name, Email, Mobile No, Subscription Details, Bank Account
+    Movies
+        Name, Rating, Video, Genre
+    Customer Movie table
+    1 - Movie 1, Movie2, ..., 
+Amazon
+    Customers
+        Name, Email & Mobile No, Address 1, Address 2, Address 3,...
+    Products
+    Orders:
+        Order Id,
+        Products,
+        Total Amount
+    Addresses
+Primary Key:
+        > Creating primary key for new table.
+            Syntax:
+                
+                CREATE TABLE table_name(
+                    column1 data_type PRIMARY KEY,
+                    column2 data_type,
+                    column3 data_type,
+                    .., ..,
+                    columnN data_type
+                )
+        > Creating Primary Key for existing column.
+            Syntax:
+                ALTER TABLE table_name 
+                    ADD CONSTRAINT CONSTRAINT_NAME PRIMARY KEY (column_name)
+        > Dropping an SQL Primary Key:
+            ALTER TABLE table_name DROP CONSTRAINT CONSTRAINT_NAME;
+Foreign Key:
+    > Creating primary key for new table.
+        Syntax:
+            
+            CREATE TABLE table_name(
+                column1 data_type PRIMARY KEY,
+                column2 data_type,
+                column3 data_type,
+                .., ..,
+                columnN data_type,
+                CONSTRAINT CONSTRAINT_NAME
+                    FOREIGN KEY (column_name)
+                    REFERENCES table_name(column_name)
+            )
+    > Add Foreign key for existing table.
+        Syntax:
+            ALTER TABLE child_table_name
+                ADD CONSTRAINT CONSTRAINT_NAME
+                    FOREIGN KEY (column_name)
+                    REFERENCES parent_table_name(column_name)
+            
+    > Dropping an SQL Foreign Key:
+        ALTER TABLE table_name DROP CONSTRAINT CONSTRAINT_NAME;
+JOINS
+
+Queries
+--------
+create table vehicles(
+    id SERIAL primary KEY,
+    owner VARCHAR(50),
+    registration_no VARCHAR(20) unique,
+    model VARCHAR(50)
+)
+INSERT INTO vehicles (owner, registration_no, model) VALUES
+('Rahul Sharma', 'MH12AB1234', 'Honda City'),
+('Sanjay Kumar', 'DL09CD5678', 'Hyundai Creta'),
+('Priya Reddy', 'KA05EF2468', 'Maruti Swift'),
+('Anita Desai', 'GJ01GH7854', 'Toyota Innova'),
+('Vikram Singh', 'UP32JK9087', 'Tata Nexon'),
+('Ayesha Khan', 'TN10LM1122', 'Kia Seltos'),
+('Rohit Verma', 'RJ14NP3344', 'Mahindra XUV300'),
+('Neha Gupta', 'WB06QR5567', 'Volkswagen Polo'),
+('Arjun Nair', 'KL07ST7788', 'Honda Amaze'),
+('Suresh Das', 'CG04UV9900', 'Ford EcoSport');
+alter table users add constraint users_p_key primary key (id)
+alter table USERS drop constraint users_p_key
+create table customers(
+    id SERIAL primary KEY,
+    name VARCHAR(50),
+    mobile_no VARCHAR(20) unique
+)
+create table orders(
+    id SERIAL primary KEY,
+    order_date DATE,
+    customer_id INT,
+    
+    constraint fk_customers
+        foreign key (customer_id)
+        references customers (id)
+    
+)
+INSERT INTO customers (name, mobile_no)
+    VALUES ('Rahul Kumar', '9876543210');
+INSERT INTO orders (order_date, customer_id)
+VALUES ('2025-11-17', NULL)
+create table address(
+    id SERIAL primary KEY,
+    address_line1 VARCHAR(200),
+    address_line2 VARCHAR(200),
+    city VARCHAR(100),
+    state VARCHAR(100),
+    pin_code INT,
+    customer_id INT,
+    
+    constraint fk_customers_address
+        foreign key (customer_id)
+        references customers (id)
+    
+)
+alter table orders add column address_id INT
+alter table orders add constraint fk_address foreign key (address_id) references address(id)
+    
+    
+select * from orders
+
+18-11-25
+========
+
+OINS:
+> Join is used to get data from two or more tables.
+Types:
+1. Inner Join: Retrieve only the rows that have matching values in both tables based on join condition. (If there is not match, the row will be excluded from the result)
+2. Outer Join: All rows from one or both tables. Even there is no matching record in a table.
+    i. Left Outer Join: All rows of left table & matching rows of right table.
+    ii. Right Outer Join: All rows of right table & matching rows of left table.
+    iii. Full Outer Join: All rows of both the tables even condition is not matching.
+> Inner Join:
+    Syntax:
+        SELECT * FROM table1 JOIN table2;
+    eg.
+        customers
+        orders
+> Left Outer Join:
+    Syntax:
+        SELECT * FROM table1 LEFT JOIN table2 ON table1.column = table2.column;
+    Eg.
+        Students & Courses.
+        Students who haven't enrolled course 
+
+Queries
+--------
+create table customers(
+    id SERIAL primary KEY,
+    name VARCHAR(50),
+    mobile_no VARCHAR(20) unique
+)
+create table orders(
+    id SERIAL primary KEY,
+    order_date DATE,
+    customer_id INT,
+    
+    constraint fk_customers
+        foreign key (customer_id)
+        references customers (id)
+    
+)
+INSERT INTO customers (name, mobile_no)
+    VALUES ('Rahul Kumar', '9876543210');
+INSERT INTO orders (order_date, customer_id)
+VALUES ('2025-11-17', NULL)
+create table address(
+    id SERIAL primary KEY,
+    address_line1 VARCHAR(200),
+    address_line2 VARCHAR(200),
+    city VARCHAR(100),
+    state VARCHAR(100),
+    pin_code INT,
+    customer_id INT,
+    
+    constraint fk_customers_address
+        foreign key (customer_id)
+        references customers (id)
+    
+)
+create table customers (
+    id SERIAL primary key,
+    name VARCHAR(50) not null,
+    age int not null,
+    address VARCHAR(100)
+)
+create table orders (
+    id SERIAL primary key,
+    order_date DATE,
+    customer_id INT,
+    amount NUMERIC(18, 2),
+    constraint fk_customer
+        foreign key (customer_id)
+        references customers(id)
+)
+INSERT INTO orders (order_date, customer_id, amount) VALUES
+    ('2025-10-25', 6, 10000),
+select c.name, c.age, c.address, o.order_date, o.amount from customers c join orders o on c.id = o.customer_id and c.id = 3
+CREATE TABLE courses (
+    id SERIAL PRIMARY KEY,
+    course_name VARCHAR(100) NOT NULL,
+    course_code VARCHAR(20) UNIQUE NOT NULL,
+    duration_months INT CHECK(duration_months > 0),
+    fees DECIMAL(10,2) CHECK(fees >= 0),
+    description TEXT
+);
+CREATE TABLE students2 (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT CHECK(age > 0),
+    gender VARCHAR(10),
+    email VARCHAR(100) UNIQUE,
+    phone VARCHAR(15),
+    address VARCHAR(200),
+    enrollment_date DATE DEFAULT CURRENT_DATE,
+    course_id INT,
+    constraint fk_course
+        foreign key (course_id)
+        references courses(id)
+);
+INSERT INTO courses (course_name, course_code, duration_months, fees, description)
+VALUES
+('Full Stack Development', 'FSD101', 6, 45000.00, 'Covers frontend and backend technologies'),
+('Data Science', 'DS201', 8, 60000.00, 'Machine Learning, AI, Statistics'),
+('Cloud Computing', 'CC301', 4, 35000.00, 'AWS, Azure and DevOps basics'),
+('Cyber Security', 'CS401', 5, 50000.00, 'Network security and ethical hacking'),
+('UI/UX Design', 'UX501', 3, 30000.00, 'User interface and user experience design');
+INSERT INTO students2 (name, age, gender, email, phone, address, enrollment_date, course_id)
+VALUES
+('Rahul Sharma', 21, 'Male', 'rahul.sharma@example.com', '9876543210', 'Delhi, India', CURRENT_DATE, NULL),
+('Priya Verma', 23, 'Female', 'priya.verma@example.com', '9876512345', 'Mumbai, India', CURRENT_DATE, 2),
+('Amit Kumar', 22, 'Male', 'amit.kumar@example.com', '9988776655', 'Bangalore, India', CURRENT_DATE, NULL),
+('Sneha Gupta', 20, 'Female', 'sneha.g@example.com', '9090909090', 'Chennai, India', CURRENT_DATE, 3),
+('Vikram Singh', 24, 'Male', 'vikram.singh@example.com', '9123456789', 'Hyderabad, India', CURRENT_DATE, 4);
+select s.name, c.course_name from students2 s left join courses c on s.course_id = c.id
+
+19-11-25
+========
+
+Right Outer Join: Returns all the rows of right table and matching rows of left table.
+    Syntax:
+        SELECT column_name
+            FROM table_name1
+            RIGHT JOIN table_name2
+            ON table_name1.column = table_name2.column
+Package Delivery
+    -> Drivers
+    -> Deliveries
+        -> Displays all the deliveries whether or not a driver is assigned.
+FULL OUTER JOIN: It returns all the records of both the tables, whether condition is matching or not.
+    Syntax:
+        SELECT column_name
+            FROM table_name1
+            FULL OUTER JOIN table_name2
+            ON table_name1.column = table_name2.column
+Need first order information along with customer & address information.
+
+Queries
+-------
+CREATE TABLE customers (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    phone VARCHAR(15),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+INSERT INTO customers (name, email, phone)
+    VALUES ('Rahul Sharma', 'rahul.sharma@example.com', '9876543210');
+CREATE TABLE address (
+    id SERIAL PRIMARY KEY,
+    customer_id INT NOT NULL,
+    street VARCHAR(150),
+    city VARCHAR(100),
+    state VARCHAR(100),
+    postal_code VARCHAR(20),
+    country VARCHAR(100),
+    CONSTRAINT fk_customer
+        FOREIGN KEY (customer_id)
+        REFERENCES customers(id)
+);
+INSERT INTO address (customer_id, street, city, state, postal_code, country)
+VALUES (1, 'MG Road', 'Bengaluru', 'Karnataka', '560001', 'India');
+INSERT INTO address (customer_id, street, city, state, postal_code, country)
+VALUES (1, 'Sector 62', 'Noida', 'Uttar Pradesh', '201301', 'India');
+CREATE TABLE orders (
+    id SERIAL PRIMARY KEY,
+    order_date DATE NOT NULL,
+    total_amount DECIMAL(10, 2) NOT NULL,
+    customer_id INT NOT NULL,
+    address_id INT not null,
+    CONSTRAINT fk_customer
+        FOREIGN KEY (customer_id)
+        REFERENCES customers(id),
+        
+     CONSTRAINT fk_address
+        FOREIGN KEY (address_id)
+        REFERENCES address(id)
+);
+INSERT INTO orders (order_date, total_amount, customer_id, address_id)
+VALUES ('2025-01-10', 2499.50, 1, 1);
+INSERT INTO orders (order_date, total_amount, customer_id, address_id)
+VALUES ('2025-01-12', 1499.00, 1, 2);
+select o.order_date, o.total_amount, c.name as customer_name, c.email, a.street, a.city, a.state  from orders o 
+    join customers c on o.customer_id = c.id
+    join address a on a.id = o.address_id
+    and o.id = 1
+2 mins 
+
+20-11-25
+========
+SUB Queries: A subquery (Inner Query/Nested Query) is a query inside another SQL Query.
+    > It included sub query in parentheses ()
+    > The result of sub query is used by main/outer query.
+    > To break complex queries into smaller parts.
+    > To filter data dyamically based on another query.
+    > To perform calculations like MAX, MIN, AVG for conditon retrieval.
+Types:
+1. Single-row subquery:
+    Returns one row and one column.
+    > Often use with =, >, <, <=, >=
+2. Multiple-rows subquery
+    > Returns multiple rows.
+3. Multiple-column subquery
+    > Multiple columns.
+        > (col1, col2, .., colN) = (subquery)
+    > Find the transactions with the highest amount per account returning both account_id & transaction_type
+4. Correlated subquery
+    > Sub query refers to columns from main/outer query.
+    > Sub query will be executed for every row of main/outer query.
+Banking Domain
+1. Customers
+2. Accounts
+3. Transactions
+    CREATE TABLE customers (
+        id SERIAL PRIMARY KEY,
+        name VARCHAR(100) NOT NULL,
+        email VARCHAR(100) UNIQUE,
+        created_at DATE DEFAULT CURRENT_DATE
+    )
+    CREATE TABLE accounts (
+        id SERIAL PRIMARY KEY,
+        account_no VARCHAR(12) NOT NULL UNIQUE,
+        account_type VARCHAR(50) NOT NULL,
+        balance DECIMAL(15, 2) DEFAULT 0,
+        customer_id INT,
+        CONSTRAINT fk_customer
+            FOREIGN KEY (customer_id)
+            REFERENCES customers(id)
+    )
+    CREATE TABLE transactions (
+        id SERIAL PRIMARY KEY,
+        transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        transaction_type VARCHAR(10) NOT NULL,
+        amount DECIMAL(15, 2) NOT NULL, 
+        account_id INT NOT NULL REFERENCES accounts(id)
+    ) 
+> Find the highest transaction in the bank
+> Find all the customers who made debit transactions.
+    SELECT a.customer_id from accounts a 
+        join transactions t on t.account_id = a.id 
+        where t.transaction_type = 'Debit'
+> Find accounts whose balance is greater than average balance of their account type.
+    select AVG(balance) from accounts where account_type = ''
+
+Queries
+-------
+
+CREATE TABLE customers (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    created_at DATE DEFAULT CURRENT_DATE
+)
+CREATE TABLE accounts (
+    id SERIAL PRIMARY KEY,
+    account_no VARCHAR(12) NOT NULL UNIQUE,
+    account_type VARCHAR(50) NOT NULL,
+    balance DECIMAL(15, 2) DEFAULT 0,
+    customer_id INT,
+    CONSTRAINT fk_customer
+        FOREIGN KEY (customer_id)
+        REFERENCES customers(id)
+)
+CREATE TABLE transactions (
+    id SERIAL PRIMARY KEY,
+    transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    transaction_type VARCHAR(10) NOT NULL,
+    amount DECIMAL(15, 2) NOT NULL, 
+    account_id INT NOT NULL REFERENCES accounts(id)
+)
+INSERT INTO customers (name, email)
+    VALUES
+    ('Rahul Sharma', 'rahul@example.com'),
+    ('Priya Mehta', 'priya@example.com'),
+    ('Amit Singh', 'amit@example.com');
+INSERT INTO accounts (account_no, account_type, balance, customer_id)
+VALUES
+('ACC100001', 'Savings', 15000.50, 1),
+('ACC100002', 'Current', 50000.00, 1),
+('ACC100003', 'Savings', 22000.75, 2),
+('ACC100004', 'Salary', 45000.00, 3);
+INSERT INTO transactions (transaction_type, amount, account_id)
+    VALUES
+        ('Credit', 5000.00, 1),
+        ('Debit', 2000.00, 1),
+        ('Credit', 10000.00, 2),
+        ('Credit', 15000.00, 3),
+        ('Debit', 5000.00, 4),
+        ('Credit', 8000.00, 4);
+select MAX(amount) as maximum_transaction from transactions
+select t.id as transaction_id, account_id, amount, a.account_no, a.account_type, a.balance, c.name from transactions t
+    join accounts a on a.id = t.account_id 
+    join customers c on c.id = a.customer_id
+    where amount = (select MAX(amount) as maximum_transaction from transactions)
+select name from customers where id in 
+    (
+        SELECT a.customer_id from accounts a 
+            join transactions t on t.account_id = a.id 
+            where t.transaction_type = 'Debit'
+    )
+    
+select account_id, MAX(amount) from transactions group by account_id
+select * from transactions where (account_id, amount) in (select account_id, MAX(amount) from transactions group by account_id)
+    
+select * from accounts a where balance > (select AVG(balance) from accounts where account_type = a.account_type)
+
+21-11-25
+=========
+
+atabase Adminstrator - Access 
+DCL - Data Control Language
+> To grant access rights to user.
+> To revoke access right when not necessary.
+> To ensure only authorized users can perform database operations.
+DCL Commands.
+i. GRANT
+ii. REVOKE
+# To create a new user in database server.
+    CREATE USER username WITH PASSWORD password;
+> To give permission to a database.
+    GRANT CONNECT ON DATABASE database_name to username
+> TO give access to public schema:
+    GRANT USAGE ON schema public to username;
+> To give table permissions Inside Schema
+    GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO username;
+> To give access to Sequence for every table:
+    GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO developer;
+REVOKE
+> Revoke privileges for existing tables:
+    REVOKE SELECT, INSERT ON ALL TABLES IN SCHEMA public FROM username;
+> Revoke privileges of Schema:
+    REVOKE USAGE ON SCHEMA public from username;
+> Revoke connection to the database:
+    REVOKE CONNECT ON DATABASE database_name from username;
+> Drop the user
+    DROP USER username;
+Project - Online bookstore
+Tables
+1. Authors - Store author information (id, name, email, mobile no)
+2. Categories - Store book categories (id, name, description)
+3. Books - Store book details (id, title, author_id, price, category_id, available_stock)
+4. Customers - Store customer information (id, name, email, mobil_no)
+5. Orders - Store order related information (id, customer_id, order_date, total_amount)
+6. Order Items - Store books purchased for a order - (id, order_id, book_id, quantity)

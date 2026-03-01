@@ -87,6 +87,92 @@ http://flipkart.com
 > Testers - qa I
 > DevOps Engineers qa
 > Customers prod
+6-11-25
+=======
+
+I want to connect to a database remote/local.
+
+Parameters ?
+-> host localhost
+-> port 5432
+-> username postgres
+-> password 7
+
+Postgres Sql Server
+-> databases
+-> Each Database
+-> tables
+-> Rows (records) & Columns (fields)
+
+#Creation of table
+
+Syntax:
+
+CREATE TABLE table_name (
+column1 datatype),
+column2 datatype,
+column3 datatype,
+.......
+Column datatype 
+)
+
+Eg:
+
+Data Type: It is nothing but type of information which we want to store in column of a table.
+
+CREATE TABLE student(
+id SERIAL,
+name VARCHAR(50), Variable length of characters 50
+age SMALLINT,
+fees DECIMAL(6, 2),
+dob DATE,
+admission_time TIMESTAMP,
+is_active BOOLEAN true / false
+)
+
+9,99,999.99
+
+Snake Case: Python
+
+is_account_activated
+is_user_loggedin
+phone_no
+email_address
+
+Camel Case: Javascript / Java
+
+isAccountActivated true / false
+isUserLoggedIn
+phoneNo
+emailAddress
+is_account hr@digitaledify.ai
+emailAddress = hr@digitaledify.ai
+
+SQL Data Types:
+
+1. Numeric Types: (Integers / Decimals / Floating points)
+
+i. SMALL INT-2 Bytes
+ii. INTEGER/INT-4 Bytes
+iii. BIGINT 8 Bytes
+iv. DECIMAL(p, s) Exact number with precision. Eg. 45.50
+v. SERIAL: Auto increment integer 1, 2, 3,...
+
+2. Character Types
+
+CHAR(n)
+VARCHAR(n)
+TEXT
+
+3. Data & Time Types
+DATE
+TIME
+TIMESTAMP
+TIMESTAMPTZ
+
+4. Boolean Types
+
+BOOLEAN true / false
 
 7-11-25
 =======

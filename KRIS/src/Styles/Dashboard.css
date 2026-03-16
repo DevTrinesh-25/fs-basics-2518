@@ -1,0 +1,58 @@
+body{
+    background:#f4f6fb;
+    }
+
+    .sidebar{
+    height:100vh;
+    background:#0b1c3f;
+    color:white;
+    padding:20px;
+    }
+    
+    .sidebar a{
+    display:block;
+    color:white;
+    padding:10px;
+    text-decoration:none;
+    border-radius:6px;
+    margin-bottom:5px;
+    }
+    
+    .sidebar a:hover{
+    background:#ffc107;
+    color:black;
+    } 
+    
+    .profile{
+    text-align:center;
+    margin-bottom:20px;
+    }
+    
+    .profile img{
+    width:70px;
+    border-radius:50%;
+    }
+    
+    .topbar{
+    background:white;
+    padding:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .card-box{
+    padding:15px;
+    border-radius:10px;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    }
+    
+    .yellow{background:#ffb703;}
+    .blue{background:#2c3e90;}
+    .green{background:#2e7d32;}
+    .black{background:#2b2b2b;}
+    
+    .icon{
+    font-size:30px;
+    }

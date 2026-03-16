@@ -65,6 +65,10 @@ Favicon/asset served at /vite.svg (referenced in index.html).
 src/assets/react.svg
 React logo image imported in App.tsx.
 
+To create a new component of React:
+
+  command: npm create vite@latest 
+
 2-2-26
 ========
 
@@ -438,3 +442,6 @@ Syntax:
 
     </form>
 
+React Project:
+Figma:
+https://www.figma.com/design/9I3MaasX4tZ9xpxyY8gIJd/KRIS--Community-?node-id=0-1&p=f

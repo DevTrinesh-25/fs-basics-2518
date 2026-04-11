@@ -1,0 +1,50 @@
+.main-container {
+  height: 100vh;
+}
+
+/* LEFT SIDE */
+.left-section {
+  background: linear-gradient(rgba(0,0,80,0.7), rgba(0,0,80,0.7)),
+              url("https://images.unsplash.com/photo-1551434678-e076c223a692");
+  background-size: cover;
+  color: white;
+  padding: 60px;
+}
+
+.left-section .logo {
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.left-section h3 {
+  font-weight: bold;
+}
+
+.left-section p {
+  margin-top: 15px;
+  max-width: 400px;
+}
+
+/* RIGHT SIDE */
+.right-section {
+  background-color: #f8f9fa;
+}
+
+.form-box {
+  width: 400px;
+}
+
+.form-control {
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+button {
+  height: 45px;
+}
+
+.login-link {
+  color: blue;
+  cursor: pointer;
+}

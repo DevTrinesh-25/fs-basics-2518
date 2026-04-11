@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from './slices/counter.slice';
 import vendorReducer from './slices/vendor.slice';
-import userReducer from './slices/Users.slice';
+import userReducer from './slices/users.slice';
 import employeeReducer from './slices/employees.slice';
 
 const store = configureStore({

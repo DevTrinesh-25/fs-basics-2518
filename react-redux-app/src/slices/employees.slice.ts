@@ -1,4 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
 
 const employeeSlice = createSlice({
     name: 'employees',

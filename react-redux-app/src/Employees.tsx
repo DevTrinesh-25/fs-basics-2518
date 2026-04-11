@@ -1,5 +1,6 @@
 import {useSelector, useDispatch } from 'react-redux';
 import { deleteEmployee } from './slices/employees.slice';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function Employees(){
     const dispatch = useDispatch();
@@ -11,7 +12,8 @@ function Employees(){
     console.log(employees);
     return(
        <div className='container'>
-                   <h2 className='text-center my-4'>Employees</h2>
+                   <h2 className='text-center my-4'>Employees</h2> 
+                   <button className='btn btn-success'>Add Employee</button>
                    <table className="table">
                        <thead>
                            <tr>
@@ -32,7 +34,7 @@ function Employees(){
                                <td>{employees.salary}</td>
                                <td>{employees.createdAt}</td>
                                <td>
-                                   <i className="fa-solid fa-trash text-danger" onClick={() => dispatch(deleteEmployee(employees.vendorId))}></i>
+                                   <i className="fa-solid fa-trash text-danger" onClick={() => dispatch(deleteEmployee(employees.id))}></i>
                                </td>
                            </tr>
                            ))}

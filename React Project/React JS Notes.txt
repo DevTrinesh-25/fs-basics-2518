@@ -65,6 +65,11 @@ Favicon/asset served at /vite.svg (referenced in index.html).
 src/assets/react.svg
 React logo image imported in App.tsx.
 
+
+To create a new react project:
+syntax:
+      npm create vite@latest
+
 2-2-26
 ========
 

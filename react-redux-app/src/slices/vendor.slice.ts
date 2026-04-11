@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-
+import '@fortawesome/fontawesome-free/css/all.min.css';
 const vendorsSlice = createSlice({
     name: 'vendors',
     initialState: {

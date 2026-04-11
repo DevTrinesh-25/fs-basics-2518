@@ -1,0 +1,58 @@
+/* Card styling */
+.table-card {
+  border-radius: 12px;
+  border: none;
+}
+
+/* Header */
+.custom-table thead th {
+  background-color: #f4f6f9;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 14px;
+  text-align: left;
+}
+
+/* Rows */
+.custom-table tbody td {
+  padding: 16px 14px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 15px;
+}
+
+/* Row spacing look */
+.custom-table tbody tr:hover {
+  background-color: #fafafa;
+}
+
+/* Action button */
+.action-btn {
+  background-color: #1e63d5;
+  color: white;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 14px;
+  border: none;
+}
+
+.action-btn:hover {
+  background-color: #174bb0;
+}
+
+/* 3 dots icon */
+.dots {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Prevent breaking */
+.custom-table td,
+.custom-table th {
+  white-space: nowrap;
+}
+
+.main-content {
+  margin-left: 70px;   /* same as sidebar width */
+  padding: 20px;
+}

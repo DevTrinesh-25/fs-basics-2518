@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteVendor } from './slices/vendor.slice';
+import '@fortawesome/fontawesome-free/css/solid.css';
 
 function Vendors() {
     const dispatch = useDispatch();

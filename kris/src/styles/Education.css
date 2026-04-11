@@ -1,0 +1,48 @@
+.edu-container {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  margin-left: 170px;
+  margin-top: 70px;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0 10px;
+  color: #333;
+  
+}
+
+/* Cards */
+.edu-card {
+  background: #dbe3ef;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.edu-card h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.edu-card p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #444;
+}
+
+.edu-card span {
+  font-size: 12px;
+  color: #666;
+}
+
+.edu-card ul {
+  margin-top: 5px;
+  padding-left: 15px;
+  font-size: 12px;
+  color: #444;
+}

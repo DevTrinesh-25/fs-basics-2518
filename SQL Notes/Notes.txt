@@ -586,6 +586,7 @@ create table vehicles(
     registration_no VARCHAR(20) unique,
     model VARCHAR(50)
 )
+
 INSERT INTO vehicles (owner, registration_no, model) VALUES
 ('Rahul Sharma', 'MH12AB1234', 'Honda City'),
 ('Sanjay Kumar', 'DL09CD5678', 'Hyundai Creta'),
@@ -597,13 +598,17 @@ INSERT INTO vehicles (owner, registration_no, model) VALUES
 ('Neha Gupta', 'WB06QR5567', 'Volkswagen Polo'),
 ('Arjun Nair', 'KL07ST7788', 'Honda Amaze'),
 ('Suresh Das', 'CG04UV9900', 'Ford EcoSport');
+
 alter table users add constraint users_p_key primary key (id)
+
 alter table USERS drop constraint users_p_key
+
 create table customers(
     id SERIAL primary KEY,
     name VARCHAR(50),
     mobile_no VARCHAR(20) unique
 )
+
 create table orders(
     id SERIAL primary KEY,
     order_date DATE,
@@ -611,13 +616,15 @@ create table orders(
     
     constraint fk_customers
         foreign key (customer_id)
-        references customers (id)
-    
+        references customers (id)   
 )
+
 INSERT INTO customers (name, mobile_no)
     VALUES ('Rahul Kumar', '9876543210');
+
 INSERT INTO orders (order_date, customer_id)
 VALUES ('2025-11-17', NULL)
+
 create table address(
     id SERIAL primary KEY,
     address_line1 VARCHAR(200),
@@ -633,15 +640,15 @@ create table address(
     
 )
 alter table orders add column address_id INT
+
 alter table orders add constraint fk_address foreign key (address_id) references address(id)
-    
     
 select * from orders
 
 18-11-25
 ========
 
-OINS:
+JOINS:
 > Join is used to get data from two or more tables.
 Types:
 1. Inner Join: Retrieve only the rows that have matching values in both tables based on join condition. (If there is not match, the row will be excluded from the result)
@@ -679,10 +686,13 @@ create table orders(
         references customers (id)
     
 )
+
 INSERT INTO customers (name, mobile_no)
     VALUES ('Rahul Kumar', '9876543210');
+
 INSERT INTO orders (order_date, customer_id)
 VALUES ('2025-11-17', NULL)
+
 create table address(
     id SERIAL primary KEY,
     address_line1 VARCHAR(200),
@@ -712,8 +722,10 @@ create table orders (
         foreign key (customer_id)
         references customers(id)
 )
+
 INSERT INTO orders (order_date, customer_id, amount) VALUES
     ('2025-10-25', 6, 10000),
+
 select c.name, c.age, c.address, o.order_date, o.amount from customers c join orders o on c.id = o.customer_id and c.id = 3
 CREATE TABLE courses (
     id SERIAL PRIMARY KEY,

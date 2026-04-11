@@ -1,0 +1,32 @@
+.guarantor-container {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  margin-left: 170px;
+  margin-top: 70px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.guarantor-card {
+  background: #dbe3ef;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.guarantor-card h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.guarantor-card p {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #555;
+}

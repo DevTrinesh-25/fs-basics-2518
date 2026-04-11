@@ -1,6 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
+import { fetchUsers } from './slices/users.slice';
 import { useEffect } from 'react';
-import { fetchUsers } from './slices/Users.slice';
+/*import { addUser } from './slices/users.slice';
+import { useState } from 'react';*/
 
 function Users() {
     const dispatch = useDispatch<any>();
@@ -11,7 +13,7 @@ function Users() {
     return (
         <div className="container mt-4">
             <h1 className="text-center mb-4">Users</h1>
-
+              <button className="btn btn-success mb-4" onClick={() => dispatch(fetchUsers())}>Add User</button>
             {isLoading ? (
                 <div className="d-flex justify-content-center align-items-center" style={{ height: '50vh' }}>
                     <div className="spinner-border text-primary" role="status" style={{ width: '5rem', height: '5rem' }}>

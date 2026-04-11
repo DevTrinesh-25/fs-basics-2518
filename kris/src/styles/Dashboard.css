@@ -1,0 +1,22 @@
+.card-box{
+    padding:15px;
+    border-radius:10px;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-left: 250px;   /* same as sidebar width */
+    padding: 20px;
+    margin-left: var(--sidebar-width);
+    }
+    
+    .yellow{background:#ffb703;}
+    .blue{background:#2c3e90;}
+    .green{background:#2e7d32;}
+    .black{background:#2b2b2b;}
+    
+    .icon{
+    font-size:30px;
+    }
+
+  

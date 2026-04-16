@@ -53,8 +53,8 @@ const Sidebar: React.FC<Props> = ({ active, onSelect }) => {
       </button>
 
       <button
-        className={`sidebar-btn ${active === "job" ? "active" : ""}`}
-        onClick={() => onSelect("job")}
+        className={`sidebar-btn ${active === "jobDetails" ? "active" : ""}`}
+        onClick={() => onSelect("jobDetails")}
       >
         Job Details
       </button>

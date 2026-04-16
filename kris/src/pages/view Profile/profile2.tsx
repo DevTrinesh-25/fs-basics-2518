@@ -1,4 +1,4 @@
-import "../../styles/profile.css";
+import "../../styles/profile2.css";
 
 const ProfileCard = () => {
   return (

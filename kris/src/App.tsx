@@ -25,40 +25,23 @@ import Education from './pages/Emp Profile/Education'
 import EducationForm from './pages/Emp Profile/EducationForm' 
 import Guarantor from './pages/Emp Profile/guarantor'
 import GuarantorForm from './pages/Emp Profile/guarantorForm' 
-import FamilyDetails from './pages/Emp Profile/FamilyDetails'
+import FamilyDetails from './pages/Emp Profile/familyDetails'
 import FamilyDetailsForm from './pages/Emp Profile/familyDetailsForm'
-
-// function App() {
-//   const location = useLocation();
-//   const isLoginPage = location.pathname === "/login";
-//   const isRegisterPage = location.pathname === "/register";
-//   return (
-//     <div>
-//       {!isLoginPage && <Sidebar />}
-//       {!isLoginPage && <Navbar />}
-//       <div className={!isLoginPage ? "main-content" : ""}>
-//       <div className={!isRegisterPage? "main-content" : ""}>
-//       <Routes>
-//         <Route path="/login" element={<Login />}></Route>
-//         <Route path="/dashboard/*" element={<Dashboard />}></Route>
-//         <Route path="/leave-management" element={<LeaveManagement />}></Route>
-//         <Route path="/leaverecall" element={<LeaveRecall />}></Route>
-//         <Route path="/leavehistory" element={<LeaveHistory />}></Route>
-//         <Route path="/leavesetting" element={<LeaveSetting/>}></Route>
-//         <Route path='/reliefofficers' element={<ReliefOfficers/>}></Route>
-//         <Route path='/register' element={<Register/>}></Route>
-//       </Routes>
-//     </div>
-//     </div>  
-//     </div> 
-//       )
-// }
+import JobDetails from './pages/Emp Profile/jobDetails'
+import UploadDocuments from './pages/Emp Profile/uploadDoc'
+import ViewDocuments from './pages/Emp Profile/viewDoc'
+import FinancialDetails from './pages/Emp Profile/financial'
+import FinancialForm from './pages/Emp Profile/financialForm'
+import EmpMgmt from './pages/EmpMgmt'
+import EmpProfile from './pages/view Profile/empProfile'
 
 function App() {
   const location = useLocation();
 
-  const hideLayout = ["/login", "/empregister","/emplogin", "/empdashboard","/empleave","/educationForm","/Nextofkin","/guarantor","/guarantorForm",
-    "/annualLeave","/sickLeave","/empLeaveRecall","/updateProfile","/profile","/contact","/education","/familyDetails","/familyDetailsForm"].includes(location.pathname);
+  const hideLayout = ["/login", "/empregister","/emplogin", "/empdashboard","/empleave","/educationForm",
+    "/Nextofkin","/guarantor","/guarantorForm","/viewDoc","/annualLeave","/sickLeave","/empLeaveRecall",
+    "/updateProfile","/profile","/contact","/education","/familyDetails","/familyDetailsForm","/jobDetails",
+    "/uploadDoc","/financial","/financialForm"].includes(location.pathname);
 
   return (
     <div>
@@ -92,6 +75,13 @@ function App() {
           <Route path="/guarantorForm" element={<GuarantorForm/>}/>
           <Route path="/familyDetails" element={<FamilyDetails/>}/>
           <Route path="/familyDetailsForm" element={<FamilyDetailsForm/>}/>
+          <Route path="/jobDetails" element={<JobDetails/>}/>
+          <Route path="/uploadDoc" element={<UploadDocuments/>}/>
+          <Route path="/viewDoc" element={<ViewDocuments/>}/>
+          <Route path="/financial" element={<FinancialDetails/>}/>
+          <Route path="/financialForm" element={<FinancialForm/>}/>
+          <Route path="/empmgmt" element={<EmpMgmt />} />
+          <Route path="/empProfile" element={<EmpProfile />} />
         </Routes>
         
       </div>

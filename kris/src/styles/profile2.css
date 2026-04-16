@@ -17,13 +17,14 @@
   flex: 1;
   background: #f5f7fb;
   border-radius: 14px;
-  padding: 40px 20px;
+  padding: 20px 1px;
   position: relative;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  width:936px;
-  margin-top: 60px;
-  margin-left: 170px;
+  width:636px;
+  margin-top: 20px;
+  margin-right: 100px;
+  margin-left: 20px;
 }
 
 /* Edit Button */
@@ -97,11 +98,6 @@
 .row p {
   font-size: 16px;
   color: #6b7280;
-}
-
-/* Content area */
-.content {
-  flex: 1;
 }
 
 /* Bottom Values */

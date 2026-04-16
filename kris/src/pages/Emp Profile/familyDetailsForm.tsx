@@ -19,7 +19,7 @@ const FamilyDetailsForm = ({ data, onBack }: any) => {
   // ✅ API CALL (FETCH)
   const handleSubmit = async () => {
     try {
-      const response = await fetch("http://localhost:4000/familydetails", {
+      const response = await fetch(`http://localhost:4000/familydetails/${data.id}`, {
         method: "PUT", // or PUT
         headers: {
           "Content-Type": "application/json"

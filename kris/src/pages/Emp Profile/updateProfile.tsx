@@ -7,7 +7,9 @@ import Contact from "../Emp Profile/contact"
 import NextOfKin from "../Emp Profile/Nextofkin";
 import Education from "../Emp Profile/Education";
 import Guarantor from "../Emp Profile/guarantor";
-import FamilyDetails from "../Emp Profile/FamilyDetails";
+import FamilyDetails from "../Emp Profile/familyDetails";
+import JobDetails from "../Emp Profile/jobDetails";
+import FinancialDetails from "../Emp Profile/financial";
 
 
 const UpdateProfile = () => {
@@ -28,8 +30,12 @@ const UpdateProfile = () => {
         return <Guarantor />;
       case "familyDetails":
         return <FamilyDetails />;
+      case "jobDetails":
+        return <JobDetails />;
+      case "financial":
+        return <FinancialDetails />;
       default:
-        return <div>Select a section</div>;
+        return <Profile />;
     }
   };
 
@@ -38,7 +44,7 @@ const UpdateProfile = () => {
       <Sidebar2 active={activeTab} onSelect={setActiveTab} />
       <div className="main-section">
         <Navbar2/>
-      <div style={{ flex: 1 }}>{renderContent()}</div>
+      <div className="content">{renderContent()}</div>
      </div>
     </div>
   );

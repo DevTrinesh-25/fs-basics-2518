@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import "../../styles/EducationForm.css";
 
-const EducationForm = () => {
+interface EducationFormProps {
+  data?: any;
+  onBack?: () => void;
+}
+
+const EducationForm = ({ data, onBack }: EducationFormProps) => {
   const [formData, setFormData] = useState({
     institution: "",
     department: "",
@@ -14,23 +19,20 @@ const EducationForm = () => {
 
   const [loading, setLoading] = useState(false);
 
-  // ✅ GET API (Prefill Data)
+  // ✅ Prefill Data from props
   useEffect(() => {
-    fetch("http://localhost:4000/education/3")
-      .then((res) => res.json())
-      .then((data) => {
-        setFormData({
-          institution: data.institution || "",
-          department: data.department || "",
-          course: data.course || "",
-          location: data.location || "",
-          startDate: data.startDate || "",
-          endDate: data.endDate || "",
-          description: data.description || ""
-        });
-      })
-      .catch((err) => console.log(err));
-  }, []);
+    if (data) {
+      setFormData({
+        institution: data.institution || "",
+        department: data.department || "",
+        course: data.degree || data.course || "",
+        location: data.location || "",
+        startDate: data.startDate || "",
+        endDate: data.endDate || "",
+        description: data.description || data.desc || ""
+      });
+    }
+  }, [data]);
 
   // ✅ Handle Input
   const handleChange = (e: any) => {
@@ -58,6 +60,7 @@ const EducationForm = () => {
       console.log(result);
 
       alert("Updated Successfully ✅");
+      if (onBack) onBack();
     } catch (error) {
       console.error(error);
       alert("Error ❌");
@@ -68,6 +71,7 @@ const EducationForm = () => {
 
   return (
     <div className="form-container">
+      {onBack && <button className="back-btn" onClick={onBack}>Back</button>}
       <h3>Academic Records / Academic Details</h3>
 
       <form onSubmit={handleSubmit}>
@@ -146,7 +150,7 @@ const EducationForm = () => {
           </div>
 
           {/* Description */}
-          <div style={{ gridColumn: "span 2" }}>
+          <div className="full-width">
             <label>Description</label>
             <textarea
               name="description"

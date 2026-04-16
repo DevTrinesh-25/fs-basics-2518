@@ -1,6 +1,6 @@
 body{
     background:#f4f6fb;
-    overflow-x: hidden;
+    overflow-x: hidden;  
     }
 
     .sidebar{
@@ -12,7 +12,8 @@ body{
     background:#0b1c3f;
     color:white;
     padding:20px;
-    overflow-y:auto
+    overflow-y:auto;
+    z-index: 1000;
     }
     
     .sidebar a{

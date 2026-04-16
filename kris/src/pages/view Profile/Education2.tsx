@@ -1,7 +1,6 @@
 import { useState } from "react";
-import "../../styles/Education.css";
-import EducationForm from "../Emp Profile/EducationForm";
-
+import "../../styles/Education2.css";
+import EducationForm2 from "../view Profile/EducationForm2";
 
 const Education = () => {
   const [view, setView] = useState<"list" | "form">("list");
@@ -80,7 +79,7 @@ const Education = () => {
       ))}
       </>
       ) : (
-         <EducationForm
+         <EducationForm2
           data={selectedItem}
           onBack={() => setView("list")}
         />

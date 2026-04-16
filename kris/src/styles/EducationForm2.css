@@ -2,7 +2,8 @@
   background: #ffffff;
   padding: 20px;
   border-radius: 12px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+  margin-right: 20px;
 }
 
 .form-container h3 {
@@ -40,16 +41,6 @@ textarea {
 
 .full-width {
   grid-column: span 2;
-}
-
-.update-btn {
-  margin-top: 20px;
-  background: #3c8c1f;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
 }
 
 .edu-card {

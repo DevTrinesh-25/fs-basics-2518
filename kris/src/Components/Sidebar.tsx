@@ -15,13 +15,13 @@ import '../styles/Sidebar.css'
             <img src="https://i.pravatar.cc/100" alt="profile" />
             <h6>KRIS Admin</h6>
           </div>
-          <a href="#"><i className="bi bi-speedometer2"></i> Dashboard</a>
+          <Link to="/dashboard"><i className="bi bi-speedometer2"></i> Dashboard</Link>
           <a href="#"><i className="bi bi-envelope"></i> Messages</a>
           <a href="#"><i className="bi bi-briefcase"></i> Jobs</a>
           <a href="#"><i className="bi bi-people"></i> Candidates</a>
           <a href="#"><i className="bi bi-file-earmark"></i> Resumes</a>
-          <a href="#"><i className="bi bi-person-badge"></i> Employees</a>
-          <Link to="/leave-management"><i className="bi bi-calendar"></i> Leave Management</Link> 
+          <Link to="/empmgmt"><i className="bi bi-person-badge"></i> Employee Management</Link>
+          <Link to="/leave-management"><i className="bi bi-calendar"></i> Leave Management</Link>
           <a href="#"><i className="bi bi-graph-up"></i> Performance</a>
           <a href="#"><i className="bi bi-cash-stack"></i> Payroll</a>  
 

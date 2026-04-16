@@ -1,0 +1,26 @@
+
+.financial-container2{
+  background: #f7f9fc;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  margin-right: 150px;
+}
+.row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.row div {
+  flex: 1;
+}
+
+.financial-card input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #dde3ec;
+  margin-top: 5px;
+}

@@ -1,0 +1,63 @@
+/* Page background */
+.view-container {
+  background: #eef2f6;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Main card */
+.view-card {
+  background: #f7f9fc;
+  padding: 30px;
+  border-radius: 12px;
+  width: 75%;
+  margin: auto;
+}
+
+/* Title */
+.view-card h3 {
+  margin-bottom: 20px;
+}
+
+/* Grid */
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* Each document box */
+.doc-box {
+  background: #dde3ec;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.doc-box:hover {
+  background: #d3dae5;
+}
+
+/* PDF Icon */
+.doc-box img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+/* File name */
+.doc-box p {
+  font-size: 13px;
+}
+
+/* Download button */
+.download-btn {
+  margin-top: 25px;
+  background: #2e7d32;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

@@ -150,7 +150,7 @@ const NextOfKin = () => {
         </div>
 
         {/* Address */}
-        <div style={{ gridColumn: "span 2" }}>
+        <div className="full-width">
           <textarea
             name="address"
             value={formData.address}

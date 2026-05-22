@@ -43,7 +43,7 @@ const Login = () => {
       localStorage.setItem("token", data.token);
 
       // 👉 Navigate to dashboard
-      window.location.href = "/dashboard";
+      window.location.href = "/empdashboard";
 
     } catch (error) {
       console.error(error);
@@ -68,6 +68,7 @@ const Login = () => {
 
               <label>E-mail Address</label>
               <input
+                placeholder="Enter the email"
                 type="email"
                 name="email"
                 className="form-control"
@@ -77,6 +78,7 @@ const Login = () => {
 
               <label className="mt-3">Password</label>
               <input
+                placeholder="Enter the password"
                 type="password"
                 name="password"
                 className="form-control"
@@ -86,7 +88,14 @@ const Login = () => {
 
               <div className="d-flex justify-content-between mt-2">
                 <div>
-                  <input type="checkbox" /> <span>Remember me</span>
+                  <label className="form-check-label d-flex align-items-center">
+                    <input
+                      type="checkbox"
+                      id="rememberMe"
+                      className="form-check-input me-2"
+                    />
+                    Remember me
+                  </label>
                 </div>
                 <span className="link">Reset Password?</span>
               </div>

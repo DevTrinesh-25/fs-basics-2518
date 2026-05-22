@@ -88,12 +88,14 @@ const AnnualLeave = () => {
 
         <form onSubmit={handleSubmit}>
           {/* Leave Type */}
-          <label>Leave Type</label>
+          <label htmlFor="leaveType">Leave Type</label>
           <input
+            id="leaveType"
             type="text"
             name="leaveType"
             value={formData.leaveType}
             readOnly
+            title="Leave type"
           />
 
           {/* Dates Row */}
@@ -101,6 +103,7 @@ const AnnualLeave = () => {
             <div>
               <label>Start Date</label>
               <input
+                placeholder="Enter start date"
                 type="date"
                 name="startDate"
                 onChange={handleChange}
@@ -109,7 +112,12 @@ const AnnualLeave = () => {
 
             <div>
               <label>End Date</label>
-              <input type="date" name="endDate" onChange={handleChange} />
+              <input
+                placeholder="Enter end date"
+                type="date"
+                name="endDate"
+                onChange={handleChange}
+              />
             </div>
           </div>
 
@@ -118,6 +126,7 @@ const AnnualLeave = () => {
             <div>
               <label>Duration</label>
               <input
+                placeholder="Enter duration"
                 type="number"
                 name="duration"
                 value={formData.duration}
@@ -128,6 +137,7 @@ const AnnualLeave = () => {
             <div>
               <label>Resumption Date</label>
               <input
+                placeholder="Enter resumption date"
                 type="date"
                 name="resumptionDate"
                 onChange={handleChange}
@@ -138,6 +148,7 @@ const AnnualLeave = () => {
           {/* Reason */}
           <label>Reason for leave</label>
           <textarea
+            placeholder="Enter reason for leave"
             name="reason"
             onChange={handleChange}
           ></textarea>
@@ -146,11 +157,16 @@ const AnnualLeave = () => {
           <label>
             Attach handover document (pdf, jpg, docx or any other format)
           </label>
-          <input type="file" name="file" onChange={handleChange} />
+          <input
+            placeholder="Choose a file"
+            type="file"
+            name="file"
+            onChange={handleChange}
+          />
 
           {/* Dropdown */}
-          <label>Choose Relief Officer</label>
-          <select name="reliefOfficer" onChange={handleChange}>
+          <label htmlFor="reliefOfficer">Choose Relief Officer</label>
+          <select id="reliefOfficer" name="reliefOfficer" onChange={handleChange} title="Choose Relief Officer">
             <option value="">Select your relief officer</option>
             <option value="Officer1">Officer 1</option>
             <option value="Officer2">Officer 2</option>

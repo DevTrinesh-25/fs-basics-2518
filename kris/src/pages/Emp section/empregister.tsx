@@ -111,15 +111,15 @@ const Register = () => {
             </div>
             
             <div className="form-check mt-3">
-              <input type="checkbox" className="form-check-input" />
-              <label className="form-check-label">
+              <input type="checkbox" className="form-check-input" id="newsletter" title="Subscribe to KRIS newsletters" />
+              <label className="form-check-label" htmlFor="newsletter">
                 Yes, I want to receive KRIS newsletters
               </label>
             </div>
 
             <div className="form-check">
-              <input type="checkbox" className="form-check-input" />
-              <label className="form-check-label">
+              <input type="checkbox" className="form-check-input" id="terms" title="Agree to terms and privacy policy" />
+              <label className="form-check-label" htmlFor="terms">
                 I agree to all the Terms, Privacy Policy
               </label>
             </div>

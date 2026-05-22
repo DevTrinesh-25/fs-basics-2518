@@ -204,10 +204,10 @@ const LeaveSetting: React.FC = () => {
               <table className="table custom-table mb-0">
                 <thead>
                   <tr>
-                    <th style={{ width: "30%" }}>Leave Plan</th>
-                    <th style={{ width: "15%" }}>Duration</th>
-                    <th style={{ width: "25%" }}>Recall</th>
-                    <th style={{ width: "30%" }}>Actions</th>
+                    <th style={{ "width": "30%" }}>Leave Plan</th>
+                    <th style={{ "width": "15%" }}>Duration</th>
+                    <th style={{ "width": "25%" }}>Recall</th>
+                    <th style={{ "width": "30%" }}>Actions</th>
                   </tr>
                 </thead>
 

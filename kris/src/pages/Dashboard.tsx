@@ -18,7 +18,7 @@ const Dashboard: React.FC = () => {
         
         {/* Applied Jobs */}
         <div className="col-md-6" >
-          <div className="card" style={{ marginLeft: '190px', marginRight: '90px', width: '500px' ,paddingRight: '60px'}}>
+          <div className="card dashboard-card-left">
             <div className="card-header">
               Applied Jobs
             </div>
@@ -41,7 +41,7 @@ const Dashboard: React.FC = () => {
 
         {/* Payroll */}
         <div className="col-md-6">
-          <div className="card" style={{ marginLeft: '150px' }}>
+          <div className="card dashboard-card-right">
             <div className="card-header">
               April Payroll
             </div>
@@ -67,17 +67,19 @@ type PayrollProps = {
 };
 
 const Payroll: React.FC<PayrollProps> = ({ name, percent, color }) => {
-    return (
-      <div className="mb-3">
-        <div className="d-flex justify-content-between">
-          <span>{name}</span>
-          <span>{percent}</span>
-        </div>
-        <div className={`progress mt-2 ${color}`}>
-          <div className={`progress-bar ${color}`} style={{ width: percent }}></div>
-        </div>
+  const widthClass = percent === "80%" ? "progress-width-80" : percent === "60%" ? "progress-width-60" : "progress-width-50";
+
+  return (
+    <div className="mb-3">
+      <div className="d-flex justify-content-between">
+        <span>{name}</span>
+        <span>{percent}</span>
       </div>
-    );
+      <div className={`progress mt-2 ${color}`}>
+        <div className={`progress-bar ${color} ${widthClass}`}></div>
+      </div>
+    </div>
+  );
 };
 
 

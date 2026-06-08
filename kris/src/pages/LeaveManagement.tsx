@@ -10,7 +10,7 @@ function LeaveManagement() {
               <h5 className="fw-bold">📖 Leave Management</h5>
             </div>
 
-            <div className="d-flex gap-3 mb-4 flex-wrap" style={{ marginLeft: '190px', width: '700px' }}>
+            <div className="leave-button-row">
               <button  className="btn leave-btn"  onClick={()=> navigate("/leavesetting")}>Leave Settings</button>
               <button className="btn leave-btn" onClick={()=> navigate("/leaverecall")}>Leave Recall</button>
               <button className="btn leave-btn" onClick={()=> navigate("/leavehistory")}>Leave History</button>

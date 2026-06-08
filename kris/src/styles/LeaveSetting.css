@@ -52,6 +52,18 @@
   white-space: nowrap;
 }
 
+.col-15 {
+  width: 15%;
+}
+
+.col-25 {
+  width: 25%;
+}
+
+.col-30 {
+  width: 30%;
+}
+
 .main-content {
   margin-left: 70px;   /* same as sidebar width */
   padding: 20px;

@@ -108,28 +108,29 @@ const LeaveRecall: React.FC = () => {
               <div className="row">
 
                 <div className="col-md-12 mb-2">
-                  <label>Employee Name</label>
-                  <input className="form-control" value={selectedLeave.name} disabled />
+                  <label htmlFor="recallEmployeeName">Employee Name</label>
+                  <input id="recallEmployeeName" className="form-control" value={selectedLeave.name} disabled />
                 </div>
 
                 <div className="col-md-12 mb-2">
-                  <label>Type</label>
-                  <input className="form-control" value={selectedLeave.type} disabled />
+                  <label htmlFor="recallType">Type</label>
+                  <input id="recallType" className="form-control" value={selectedLeave.type} disabled />
                 </div>
 
                 <div className="col-md-6 mb-2">
-                  <label>Start Date</label>
-                  <input  className="form-control" value={(selectedLeave.startDate)}  />
+                  <label htmlFor="recallStartDate">Start Date</label>
+                  <input id="recallStartDate" className="form-control" value={selectedLeave.startDate} disabled />
                 </div>
 
                 <div className="col-md-6 mb-2">
-                  <label>End Date</label>
-                  <input className="form-control" value={(selectedLeave.endDate)}  />
+                  <label htmlFor="recallEndDate">End Date</label>
+                  <input id="recallEndDate" className="form-control" value={selectedLeave.endDate} disabled />
                 </div>
 
                 <div className="col-md-6 mb-2">
-                  <label>Days Remaining</label>
+                  <label htmlFor="recallDaysRemaining">Days Remaining</label>
                   <input
+                    id="recallDaysRemaining"
                     type="number"
                     className="form-control"
                     value={daysRemaining}
@@ -138,8 +139,9 @@ const LeaveRecall: React.FC = () => {
                 </div>
 
                 <div className="col-md-6 mb-2">
-                  <label>New Resumption Date</label>
+                  <label htmlFor="recallResumptionDate">New Resumption Date</label>
                   <input
+                    id="recallResumptionDate"
                     type="date"
                     className="form-control"
                     value={resumptionDate}
@@ -193,7 +195,7 @@ function LeaveTable({leaves, onRecall}: {leaves: Leave[];
       <div className="container mt-4">
     <div className="container mt-4">   
     <h5>Ongoing Leave Applications</h5>  
-        <table className="table " style={{marginLeft: "90px", width: "100%"}}> 
+        <table className="table wide-table"> 
           <thead>
             <tr> 
               <th>Name</th>

@@ -77,8 +77,9 @@ const LeaveApplication = () => {
 
         <form onSubmit={handleSubmit}>
           {/* Leave Type */}
-          <label>Leave Type</label>
+          <label htmlFor="leaveType">Leave Type</label>
           <input
+            id="leaveType"
             type="text"
             name="leaveType"
             value={formData.leaveType}
@@ -88,8 +89,9 @@ const LeaveApplication = () => {
           {/* Dates Row */}
           <div className="row">
             <div>
-              <label>Start Date</label>
+              <label htmlFor="startDate">Start Date</label>
               <input
+                id="startDate"
                 type="date"
                 name="startDate"
                 onChange={handleChange}
@@ -97,16 +99,17 @@ const LeaveApplication = () => {
             </div>
 
             <div>
-              <label>End Date</label>
-              <input type="date" name="endDate" onChange={handleChange} />
+              <label htmlFor="endDate">End Date</label>
+              <input id="endDate" type="date" name="endDate" onChange={handleChange} />
             </div>
           </div>
 
           {/* Duration + Resumption */}
           <div className="row">
             <div>
-              <label>Duration</label>
+              <label htmlFor="duration">Duration</label>
               <input
+                id="duration"
                 type="number"
                 name="duration"
                 value={formData.duration}
@@ -115,8 +118,9 @@ const LeaveApplication = () => {
             </div>
 
             <div>
-              <label>Resumption Date</label>
+              <label htmlFor="resumptionDate">Resumption Date</label>
               <input
+                id="resumptionDate"
                 type="date"
                 name="resumptionDate"
                 onChange={handleChange}
@@ -125,21 +129,22 @@ const LeaveApplication = () => {
           </div>
 
           {/* Reason */}
-          <label>Reason for leave</label>
+          <label htmlFor="reason">Reason for leave</label>
           <textarea
+            id="reason"
             name="reason"
             onChange={handleChange}
           ></textarea>
 
           {/* File Upload */}
-          <label>
+          <label htmlFor="file">
             Attach handover document (pdf, jpg, docx or any other format)
           </label>
-          <input type="file" name="file" onChange={handleChange} />
+          <input id="file" type="file" name="file" onChange={handleChange} />
 
           {/* Dropdown */}
-          <label>Choose Relief Officer</label>
-          <select name="reliefOfficer" onChange={handleChange}>
+          <label htmlFor="reliefOfficer">Choose Relief Officer</label>
+          <select id="reliefOfficer" name="reliefOfficer" onChange={handleChange}>
             <option value="">Select your relief officer</option>
             <option value="Officer1">Officer 1</option>
             <option value="Officer2">Officer 2</option>

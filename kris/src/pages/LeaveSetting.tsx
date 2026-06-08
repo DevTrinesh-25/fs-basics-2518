@@ -94,8 +94,9 @@ const LeaveSetting: React.FC = () => {
 
             <div className="row">
               <div className="col-md-6 mb-3">
-                <label>Leave Plan Name</label>
+                <label htmlFor="leavePlanName">Leave Plan Name</label>
                 <input
+                  id="leavePlanName"
                   type="text"
                   name="leavePlan"
                   value={formData.leavePlan}
@@ -105,8 +106,9 @@ const LeaveSetting: React.FC = () => {
               </div>
 
               <div className="col-md-6 mb-3">
-                <label>Duration (days)</label>
+                <label htmlFor="durationDays">Duration (days)</label>
                 <input
+                  id="durationDays"
                   type="number"
                   name="duration"
                   value={formData.duration}
@@ -117,8 +119,9 @@ const LeaveSetting: React.FC = () => {
             </div>
 
             <div className="mb-3">
-              <label>Activate Leave Recall?</label>
+              <label htmlFor="recallOption">Activate Leave Recall?</label>
               <select
+                id="recallOption"
                 name="recall"
                 value={formData.recall}
                 onChange={handleChange}
@@ -133,8 +136,9 @@ const LeaveSetting: React.FC = () => {
 
             <div className="row">
               <div className="col-md-6 mb-3">
-                <label>Activate Level Bonus</label>
+                <label htmlFor="leaveBonusOption">Activate Level Bonus</label>
                 <select 
+                  id="leaveBonusOption"
                   name="leaveBonus"
                   value={formData.leaveBonus}
                   onChange={handleChange}
@@ -147,8 +151,9 @@ const LeaveSetting: React.FC = () => {
               </div>
 
               <div className="col-md-6 mb-3">
-                <label>Leave Bonus Percentage</label>
+                <label htmlFor="leaveBonusPercentage">Leave Bonus Percentage</label>
                 <input
+                  id="leaveBonusPercentage"
                   type="number"
                   name="leaveBonusPercentage"
                   value={formData.leaveBonusPercentage}
@@ -159,8 +164,9 @@ const LeaveSetting: React.FC = () => {
             </div>
 
             <div className="mb-3">
-              <label>Select Leave Allocation</label>
+              <label htmlFor="leaveAllocation">Select Leave Allocation</label>
               <select
+                id="leaveAllocation"
                 name="leaveAllocation"
                 value={formData.leaveAllocation}
                 onChange={handleChange}
@@ -173,8 +179,9 @@ const LeaveSetting: React.FC = () => {
             </div>
 
             <div className="mb-3">
-              <label>Reason For Recall</label>
+              <label htmlFor="reasonForRecall">Reason For Recall</label>
               <input
+                  id="reasonForRecall"
                   type="text"
                   name="Reason"
                   value={formData.Reason}
@@ -204,10 +211,10 @@ const LeaveSetting: React.FC = () => {
               <table className="table custom-table mb-0">
                 <thead>
                   <tr>
-                    <th style={{ "width": "30%" }}>Leave Plan</th>
-                    <th style={{ "width": "15%" }}>Duration</th>
-                    <th style={{ "width": "25%" }}>Recall</th>
-                    <th style={{ "width": "30%" }}>Actions</th>
+                    <th className="col-30">Leave Plan</th>
+                    <th className="col-15">Duration</th>
+                    <th className="col-25">Recall</th>
+                    <th className="col-30">Actions</th>
                   </tr>
                 </thead>
 

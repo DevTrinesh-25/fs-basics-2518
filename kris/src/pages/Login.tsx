@@ -50,7 +50,7 @@ import "../styles/Login.css"
 
           <input type={showPassword ? "text" : "password"} className="form-control" placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
 
-          <span className="input-group-text" style={{cursor:"pointer"}} onClick={()=>setShowPassword(!showPassword)} >
+          <span className="input-group-text clickable-icon" onClick={()=>setShowPassword(!showPassword)} >
             <i className={`bi ${showPassword ? "bi-eye-slash" : "bi-eye"}`}></i>
           </span>
 
@@ -58,9 +58,9 @@ import "../styles/Login.css"
 
         <div className="form-check text-white mb-3">
 
-          <input type="checkbox" className="form-check-input"/>
+          <input type="checkbox" className="form-check-input" id="rememberMe" title="Remember me"/>
 
-          <label className="form-check-label"> Remember me </label>
+          <label className="form-check-label" htmlFor="rememberMe"> Remember me </label>
 
         </div>
 

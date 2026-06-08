@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../styles/LeaveHistory.css";
 
 type Leave = {
   name: string;
@@ -51,7 +52,7 @@ function LeaveTable({leaves}: {leaves: Leave[]}) {
     return (
       <div className="container mt-4">
     <div className="container mt-4">    
-        <table className="table " style={{marginLeft: "160px", width: "90%"}}> 
+        <table className="table wide-table"> 
           <thead>
             <tr> 
               <th>Name</th>

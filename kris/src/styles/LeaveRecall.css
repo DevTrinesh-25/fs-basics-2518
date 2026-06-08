@@ -34,3 +34,8 @@
   border-radius: 12px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
+
+.wide-table {
+  margin-left: 90px;
+  width: 100%;
+}

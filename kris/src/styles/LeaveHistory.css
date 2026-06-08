@@ -1,0 +1,9 @@
+.wide-table {
+  margin-left: 160px;
+  width: 90%;
+}
+
+.wide-table th,
+.wide-table td {
+  white-space: nowrap;
+}
